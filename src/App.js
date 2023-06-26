@@ -8,7 +8,7 @@ import ProjectPage from './pages/Project';
 
 const router = createBrowserRouter([
     {
-        path: '/',
+        path: '/portfolio/',
         element: <RootLayout />,
         errorElement: <ErrorPage />,
         children: [
