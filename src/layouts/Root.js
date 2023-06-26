@@ -12,7 +12,7 @@ const RootLayout = () => {
     const [scrolled, setScrolled] = useState(false);
     const { pathname } = useLocation();
     const contentRef = useRef();
-    const match = useMatch('/');
+    const match = useMatch('/portfolio/');
 
     const menuOpenHandler = () => {
         setIsMenuOpen(!isMenuOpen);

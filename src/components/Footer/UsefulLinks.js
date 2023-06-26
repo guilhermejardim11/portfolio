@@ -6,13 +6,13 @@ const UsefulLinks = () => {
     return (
         <ul className={styles.links}>
             <li>
-                <Link to="/privacy-policy">Privacy Policy</Link>
+                <Link to="/portfolio/privacy-policy">Privacy Policy</Link>
             </li>
             <li>
-                <Link to="/terms-and-conditions">Terms and Conditions</Link>
+                <Link to="/portfolio/terms-and-conditions">Terms and Conditions</Link>
             </li>
             <li>
-                <Link to="/sitemap">Sitemap</Link>
+                <Link to="/portfolio/sitemap">Sitemap</Link>
             </li>
         </ul>
     );

@@ -1,9 +1,9 @@
-import { useEffect } from "react";
-import { NavLink, useLocation } from "react-router-dom";
+import { useEffect } from 'react';
+import { NavLink, useLocation } from 'react-router-dom';
 
-import styles from "./Menu.module.scss";
+import styles from './Menu.module.scss';
 
-import Socials from "../Socials/Socials";
+import Socials from '../Socials/Socials';
 
 const Menu = (props) => {
     const { pathname } = useLocation();
@@ -13,10 +13,12 @@ const Menu = (props) => {
     }, [pathname]);
 
     return (
-        <menu className={`${styles.menu} ${props.isMenuOpen ? styles.open : ""}`} >
+        <menu
+            className={`${styles.menu} ${props.isMenuOpen ? styles.open : ''}`}
+        >
             <nav>
                 <NavLink
-                    to="/"
+                    to='/portfolio/'
                     className={({ isActive }) =>
                         isActive ? styles.active : undefined
                     }
@@ -25,7 +27,7 @@ const Menu = (props) => {
                     Home
                 </NavLink>
                 <NavLink
-                    to="/projects"
+                    to='/portfolio/projects'
                     className={({ isActive }) =>
                         isActive ? styles.active : undefined
                     }
@@ -34,7 +36,7 @@ const Menu = (props) => {
                     Projects
                 </NavLink>
                 <NavLink
-                    to="/skills"
+                    to='/portfolio/skills'
                     className={({ isActive }) =>
                         isActive ? styles.active : undefined
                     }
@@ -43,7 +45,7 @@ const Menu = (props) => {
                     Skills
                 </NavLink>
                 <NavLink
-                    to="/contacts"
+                    to='/portfolio/contacts'
                     className={({ isActive }) =>
                         isActive ? styles.active : undefined
                     }

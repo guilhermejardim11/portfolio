@@ -9,7 +9,7 @@ const SectionTitle = (props) => {
         <div className={styles.title}>
             <h3>{props.title}</h3>
             {props.url && props.text && (
-                <Link to={props.url}>
+                <Link to={props.to}>
                     {props.text} <img src={arrow} alt="arrow" />
                 </Link>
             )}

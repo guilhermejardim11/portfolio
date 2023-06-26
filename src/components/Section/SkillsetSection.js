@@ -6,7 +6,7 @@ import SectionTitle from "../Section/SectionTitle";
 const SkillsetSection = () => {
     return (
         <Section>
-            <SectionTitle title="Skillset" url="/skills" text="View All" />
+            <SectionTitle title="Skillset" to="/portfolio/skills" text="View All" />
         </Section>
     );
 };

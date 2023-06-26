@@ -7,7 +7,7 @@ const Gallery = (props) => {
         <ul className={styles.gallery}>
             {props.projectList.map((project) => (
                 <li key={project.id}>
-                    <Link to={`/projects/${project.id}`}>
+                    <Link to={`/portfolio/projects/${project.id}`}>
                         <img
                             src={project.thumbnail}
                             alt={project.title}

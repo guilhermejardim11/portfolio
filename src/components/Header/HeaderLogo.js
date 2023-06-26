@@ -6,7 +6,7 @@ import logo from "../../assets/light/logos/logo.svg";
 
 const HeaderLogo = () => {
     return (
-        <Link to="/" className={styles.logo}>
+        <Link to="/portfolio/" className={styles.logo}>
             <img src={logo} alt="Guilherme Logo" />
         </Link>
     );

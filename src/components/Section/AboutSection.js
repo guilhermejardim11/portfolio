@@ -7,7 +7,7 @@ import SectionTitle from "./SectionTitle";
 const AboutSection = () => {
     return (
         <Section background pattern>
-            <SectionTitle title="About" url="/about" text="Know More" />
+            <SectionTitle title="About" to="/portfolio/about" text="Know More" />
             <About />
             <p>
                 Hello! I'm Guilherme Jardim and I'm a UX/UI Designer,

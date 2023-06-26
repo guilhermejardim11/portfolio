@@ -5,7 +5,7 @@ import SectionTitle from "./SectionTitle";
 const ProjectSection = (props) => {
     return (
         <Section>
-            <SectionTitle title="Projects" url="/projects" text="View All" />
+            <SectionTitle title="Projects" to="/portfolio/projects" text="View All" />
             <Gallery projectList={props.projectList} />
         </Section>
     );
