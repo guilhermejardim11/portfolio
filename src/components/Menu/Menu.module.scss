@@ -1,0 +1,44 @@
+@import '../../colors.scss';
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 150px 28px 50px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 9;
+    backdrop-filter: blur(5.1px);
+    background-color: rgba(243, 243, 255, 0.95);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s;
+
+    &.open {
+        opacity: 1;
+        pointer-events: all;
+    }
+
+    nav a {
+        margin-bottom: 4px;
+        padding: 12px 12px 6px;
+        font-family: 'roc-grotesk-wide', sans-serif;
+        font-size: 38px;
+        font-weight: 600;
+        line-height: 1;
+        text-transform: lowercase;
+        text-align: center;
+
+        &.active {
+            color: $MAGENTA;
+        }
+    }
+}
+
+.menu_socials li:not(:first-child):before {
+    background-color: $MAGENTA;
+}

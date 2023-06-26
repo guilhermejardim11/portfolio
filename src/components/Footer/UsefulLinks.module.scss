@@ -1,0 +1,15 @@
+.links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    position: relative;
+    list-style: none;
+
+    li a {
+        font-family: 'roc-grotesk-wide', sans-serif;
+        font-weight: 600;
+        font-size: 14px;
+        text-align: center;
+    }
+}

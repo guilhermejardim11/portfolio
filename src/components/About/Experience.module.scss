@@ -1,0 +1,40 @@
+@import "../../colors.scss";
+
+.years {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "roc-grotesk-wide", sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1;
+
+    span {
+        margin: 14px 16px 0 0;
+        font-size: 66px;
+        letter-spacing: -0.10em;
+
+        sup {
+            font-size: 34px;
+        }
+    }
+}
+
+.projects {
+    display: flex;
+    margin-top: 16px;
+    font-family: "roc-grotesk-wide", sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1;
+
+    & > div:not(:first-child) {
+        margin-left: 12px;
+    }
+
+    span {
+        font-size: 38px;
+        letter-spacing: -0.06em;
+        color: $MAGENTA;
+    }
+}
