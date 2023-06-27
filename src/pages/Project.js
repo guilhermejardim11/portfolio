@@ -1,16 +1,17 @@
-import { useParams } from "react-router-dom";
+import { useParams } from 'react-router-dom';
 
-import Banner from "../components/Banner/Banner";
+import ProjectBanner from '../components/Banner/ProjectBanner';
 
 const ProjectPage = () => {
     const params = useParams();
 
     return (
         <main>
-            <Banner background="">
-                <h1>{params.ID}</h1>
-                <p>Project Details</p>
-            </Banner>
+            <ProjectBanner
+                title={`${params.ID}`}
+                subtitle='Project Details'
+                background='https://www.shutterstock.com/image-photo/mountains-under-mist-morning-amazing-260nw-1725825019.jpg'
+            />
         </main>
     );
 };
