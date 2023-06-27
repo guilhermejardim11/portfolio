@@ -5,7 +5,7 @@ const MenuButton = (props) => {
         <button
             type="button"
             title="Open Menu"
-            className={`${props.isMenuOpen ? styles.active : ""}`}
+            className={`${styles.menu_button} ${props.isMenuOpen ? styles.active : ""}`}
             onClick={props.onClick}
         >
             <div></div>

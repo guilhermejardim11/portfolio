@@ -3,7 +3,7 @@ import styles from "./Experience.module.scss";
 
 const Experience = () => {
     return (
-        <div>
+        <>
             <div className={styles.years}>
                 <span>
                     <sup>+</sup>4
@@ -31,7 +31,7 @@ const Experience = () => {
                     <div>Identity Projects</div>
                 </Card>
             </div>
-        </div>
+        </>
     );
 };
 
