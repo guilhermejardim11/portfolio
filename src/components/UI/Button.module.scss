@@ -1,0 +1,11 @@
+@import "../../colors.scss";
+
+.button {
+    padding: 5px 12px 4px;
+    border-radius: 20px;
+    font-family: "roc-grotesk-wide", sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    color: $WHITE;
+    background-color: $MAGENTA;
+}

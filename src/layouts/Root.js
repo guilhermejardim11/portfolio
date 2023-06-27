@@ -6,6 +6,7 @@ import styles from './Root.module.scss';
 import Header from '../components/Header/Header';
 import Footer from '../components/Footer/Footer';
 import Menu from '../components/Menu/Menu';
+import Cookies from '../components/Cookies/Cookies';
 
 const RootLayout = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -47,6 +48,7 @@ const RootLayout = () => {
             <Menu closeMenu={closeMenuHandler} isMenuOpen={isMenuOpen} />
             <Outlet />
             <Footer />
+            <Cookies />
         </div>
     );
 };

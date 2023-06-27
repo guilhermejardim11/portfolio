@@ -1,0 +1,45 @@
+@import '../../colors.scss';
+
+.popup {
+    padding: 28px;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    color: $WHITE;
+    background-color: rgba($INDIGO, 0.96);
+    backdrop-filter: blur(5px);
+    z-index: 8;
+    transition: bottom 0.4s, opacity 0.3s;
+
+    &.hide {
+        bottom: -50px;
+        opacity: 0;
+    }
+
+    h6 {
+        margin-bottom: 20px;
+        font-size: 20px;
+        line-height: 28px;
+    }
+}
+
+.actions {
+    display: flex;
+
+    & > * {
+        margin-top: 20px;
+
+        &:not(:last-child) {
+            margin-right: 16px;
+        }
+    }
+
+    a {
+        padding: 5px 0 4px;
+        font-family: 'roc-grotesk-wide', sans-serif;
+        font-size: 12px;
+        font-weight: 600;
+        color: $LILAC;
+    }
+}
