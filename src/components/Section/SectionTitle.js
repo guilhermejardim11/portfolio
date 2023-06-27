@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 import styles from "./SectionTitle.module.scss";
 
-import arrow from "../../assets/light/icons/arrow.png";
+import arrow from "../../assets/light/icons/arrow.svg";
 
 const SectionTitle = (props) => {
     return (

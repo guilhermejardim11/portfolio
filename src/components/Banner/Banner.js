@@ -1,6 +1,6 @@
 import styles from './Banner.module.scss';
 
-import arrow from '../../assets/light/icons/arrow.png';
+import arrow from '../../assets/light/icons/arrow.svg';
 
 const Banner = (props) => {
     // const [innerHeight, setInnerHeight] = useState();
