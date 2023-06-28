@@ -1,5 +1,6 @@
 @import '../../colors.scss';
 
 .arrow path {
-	fill: $MAGENTA;
+	fill: var(--project-color, $MAGENTA);
+	transition: fill 0.3s;
 }

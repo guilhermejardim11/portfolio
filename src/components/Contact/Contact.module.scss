@@ -1,17 +1,18 @@
 @import '../../colors.scss';
 
 .contact {
-    margin-top: 20px;
+	margin-top: 20px;
 
-    h5 {
-        margin-bottom: 1px;
-        font-size: 13px;
-        color: $MAGENTA;
-    }
+	h5 {
+		margin-bottom: 1px;
+		font-size: 13px;
+		color: var(--project-color, $MAGENTA);
+		transition: color 0.3s;
+	}
 
-    a {
-        font-family: "roc-grotesk-wide", sans-serif;
-        font-size: 15px;
-        font-weight: 600;
-    }
+	a {
+		font-family: 'roc-grotesk-wide', sans-serif;
+		font-size: 15px;
+		font-weight: 600;
+	}
 }

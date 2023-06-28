@@ -1,7 +1,8 @@
-@import "../../colors.scss";
+@import '../../colors.scss';
 
 .dot {
-    margin: 0 auto;
-    border-radius: 50%;
-    background-color: $MAGENTA;
+	margin: 0 auto;
+	border-radius: 50%;
+	background-color: var(--project-color, $MAGENTA);
+	transition: background-color 0.3s;
 }
