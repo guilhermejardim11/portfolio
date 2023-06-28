@@ -1,17 +1,18 @@
-import { useParams } from 'react-router-dom';
+import { useLoaderData } from 'react-router-dom';
 
 import ProjectBanner from '../components/Banner/ProjectBanner';
 
 const ProjectPage = () => {
-    const params = useParams();
+    const project = useLoaderData();
 
     return (
         <main>
             <ProjectBanner
-                title={`${params.ID}`}
-                subtitle='Project Details'
-                background='https://www.shutterstock.com/image-photo/mountains-under-mist-morning-amazing-260nw-1725825019.jpg'
+                title={project.title}
+                tags={project.tags}
+                thumbnail={project.thumbnail}
             />
+            {project.content}
         </main>
     );
 };
