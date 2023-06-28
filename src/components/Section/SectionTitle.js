@@ -1,20 +1,20 @@
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
 
-import styles from "./SectionTitle.module.scss";
+import styles from './SectionTitle.module.scss';
 
-import arrow from "../../assets/light/icons/arrow.svg";
+import Arrow from '../UI/Arrow';
 
 const SectionTitle = (props) => {
-    return (
-        <div className={styles.title}>
-            <h3>{props.title}</h3>
-            {props.to && props.text && (
-                <Link to={props.to}>
-                    {props.text} <img src={arrow} alt="arrow" />
-                </Link>
-            )}
-        </div>
-    );
+	return (
+		<div className={styles.title}>
+			<h3>{props.title}</h3>
+			{props.to && props.text && (
+				<Link to={props.to}>
+					{props.text} <Arrow />
+				</Link>
+			)}
+		</div>
+	);
 };
 
 export default SectionTitle;

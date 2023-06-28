@@ -1,59 +1,59 @@
 @import '../../colors.scss';
 
 .banner {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding-bottom: 50px;
-    position: relative;
-    height: 100vh;
-    width: 100%;
-    text-align: center;
-    background-position: center;
-    background-size: cover;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding-bottom: 50px;
+	position: relative;
+	height: 100vh;
+	width: 100%;
+	text-align: center;
+	background-position: center;
+	background-size: cover;
 
-    h1 {
-        margin-bottom: 3px;
-        font-size: 38px;
-    }
+	h1 {
+		margin-bottom: 3px;
+		font-size: 38px;
+	}
 
-    h2 {
-        margin-top: 11px;
-        font-size: 20px;
-        color: $MAGENTA;
-    }
+	h2 {
+		margin-top: 11px;
+		font-size: 20px;
+		color: $MAGENTA;
+	}
 }
 
 .scroll_down {
-    position: absolute;
-    bottom: 14px;
-    left: 26px;
-    transform: rotate(-90deg);
-    transform-origin: top left;
-    animation: down-animation ease-in-out 3s infinite;
+	position: absolute;
+	bottom: 14px;
+	left: 26px;
+	transform: rotate(-90deg);
+	transform-origin: top left;
+	animation: down-animation ease-in-out 3s infinite;
 
-    & > * {
-        display: inline-block;
-        vertical-align: middle;
-    }
+	& > * {
+		display: inline-block;
+		vertical-align: middle;
+	}
 
-    img {
-        transform: scaleX(-1);
-    }
+	svg {
+		transform: scaleX(-1);
+	}
 
-    div {
-        margin: 1px 0 0 12px;
-        font-family: 'roc-grotesk-wide', sans-serif;
-        font-weight: 600;
-        font-size: 10px;
-        line-height: 1;
-        text-transform: uppercase;
-    }
+	div {
+		margin: 3px 0 0 12px;
+		font-family: 'roc-grotesk-wide', sans-serif;
+		font-weight: 600;
+		font-size: 10px;
+		line-height: 1;
+		text-transform: uppercase;
+	}
 }
 
 @keyframes down-animation {
-    50% {
-        transform: rotate(-90deg) translateX(12px);
-    }
+	50% {
+		transform: rotate(-90deg) translateX(12px);
+	}
 }
