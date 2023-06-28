@@ -1,0 +1,20 @@
+@import '../../colors.scss';
+
+.color_1,
+.color_2,
+.color_3 {
+	transition: fill 0.3s;
+}
+
+.color_1 {
+	fill: $INDIGO;
+}
+
+.color_2 {
+	fill: var(--project-color, $MAGENTA);
+}
+
+.color_3 {
+	fill: $INDIGO;
+	opacity: 0.3;
+}

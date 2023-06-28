@@ -1,15 +1,15 @@
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
 
-import styles from "./HeaderLogo.module.scss";
+import styles from './HeaderLogo.module.scss';
 
-import logo from "../../assets/light/logos/logo.svg";
+import Logo from '../UI/Logo';
 
 const HeaderLogo = () => {
-    return (
-        <Link to="/portfolio/" className={styles.logo}>
-            <img src={logo} alt="Guilherme Logo" />
-        </Link>
-    );
+	return (
+		<Link to='/portfolio/' className={styles.logo}>
+			<Logo />
+		</Link>
+	);
 };
 
 export default HeaderLogo;
