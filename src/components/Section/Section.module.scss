@@ -1,7 +1,12 @@
 @import "../../colors.scss";
 
 .section {
-    padding: 68px 28px;
+    padding: 68px 0;
+
+    & > * {
+        padding-right: 28px;
+        padding-left: 28px;
+    }
 }
 
 .background {

@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-import { Outlet, useLocation, useMatch } from 'react-router-dom';
+import { Outlet, useLocation } from 'react-router-dom';
 
 import styles from './Root.module.scss';
 
@@ -9,51 +9,50 @@ import Menu from '../components/Menu/Menu';
 import Cookies from '../components/Cookies/Cookies';
 
 const RootLayout = () => {
-    const [isMenuOpen, setIsMenuOpen] = useState(false);
-    const [scrolled, setScrolled] = useState(false);
-    const { pathname } = useLocation();
-    const contentRef = useRef();
-    // const match = useMatch('/portfolio/');
+	const [isMenuOpen, setIsMenuOpen] = useState(false);
+	const [isScrolled, setIsScrolled] = useState(false);
+	const { pathname } = useLocation();
+	const contentRef = useRef();
 
-    const menuOpenHandler = () => {
-        setIsMenuOpen(!isMenuOpen);
-    };
+	const menuOpenHandler = () => {
+		setIsMenuOpen(!isMenuOpen);
+	};
 
-    const closeMenuHandler = () => {
-        setIsMenuOpen(false);
-    };
+	const closeMenuHandler = () => {
+		setIsMenuOpen(false);
+	};
 
-    const onScrollHandler = () => {
-        const scrollTop = contentRef.current.scrollTop;
-        setScrolled(scrollTop > window.innerHeight / 3);
-    };
+	const onScrollHandler = () => {
+		const scrollTop = contentRef.current.scrollTop;
+		setIsScrolled(scrollTop > window.innerHeight / 4);
+	};
 
-    // FIX Scroll Top - This works well when visiting new pages. But when returning to previous page, it scrolls to the top instead of returning to the desired position.
-    useEffect(() => {
-        contentRef.current.scrollTo(0, 0);
-    }, [pathname]);
+	// TODO Scroll Top - This works well when visiting new pages. But when returning to previous page, it scrolls to the top instead of returning to the desired position.
+	useEffect(() => {
+		contentRef.current.scrollTo({
+			top: 0,
+			behavior: 'smooth',
+		});
+	}, [pathname]);
 
-    return (
-        <div
-            className={styles.content}
-            style={{ overflowY: isMenuOpen ? 'hidden' : 'auto' }}
-            onScroll={onScrollHandler}
-            ref={contentRef}
-        >
-            <Header
-                isScrolled={
-                    scrolled
-                    // || match == null
-                }
-                onMenuOpen={menuOpenHandler}
-                isMenuOpen={isMenuOpen}
-            />
-            <Menu closeMenu={closeMenuHandler} isMenuOpen={isMenuOpen} />
-            <Outlet />
-            <Footer />
-            <Cookies />
-        </div>
-    );
+	return (
+		<div
+			className={styles.content}
+			onScroll={onScrollHandler}
+			ref={contentRef}
+			style={{ overflowY: isMenuOpen ? 'hidden' : 'auto' }}
+		>
+			<Header
+				onMenuOpen={menuOpenHandler}
+				isMenuOpen={isMenuOpen}
+				isScrolled={isScrolled}
+			/>
+			<Menu closeMenu={closeMenuHandler} isMenuOpen={isMenuOpen} />
+			<Outlet />
+			<Footer />
+			<Cookies />
+		</div>
+	);
 };
 
 export default RootLayout;

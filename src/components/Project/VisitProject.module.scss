@@ -1,0 +1,30 @@
+@import '../../colors.scss';
+
+.visit_project {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	text-transform: lowercase;
+
+	h4 {
+		color: var(--project-color, $MAGENTA);
+		transition: color 0.3s;
+	}
+
+	h5 {
+		margin-top: 5px;
+		font-size: 24px;
+	}
+
+	a {
+        padding-right: 12px;
+        position: relative;
+	}
+
+    img {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+}

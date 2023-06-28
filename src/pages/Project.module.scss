@@ -1,0 +1,20 @@
+.project_content section {
+	& > * {
+		margin-bottom: 38px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+	}
+
+	& > img {
+		margin: 68px 0;
+		padding: 0;
+	}
+
+	br {
+		content: '';
+		display: block;
+		margin: 16px;
+	}
+}
