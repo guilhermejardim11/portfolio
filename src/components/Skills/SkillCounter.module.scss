@@ -27,6 +27,8 @@
 	}
 
 	svg g {
+		transition: fill 0.3s;
+
 		&:nth-child(1) {
 			fill: $GRAY;
 		}

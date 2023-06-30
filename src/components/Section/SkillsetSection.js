@@ -2,7 +2,7 @@ import styles from './SkillsetSection.module.scss';
 
 import Section from '../Section/Section';
 import SectionTitle from '../Section/SectionTitle';
-import SkillCounter from '../UI/SkillCounter';
+import SkillCounter from '../Skills/SkillCounter';
 
 import figma from '../../assets/light/icons/figma.svg';
 import adobecc from '../../assets/light/icons/adobecc.svg';
