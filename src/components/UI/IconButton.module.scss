@@ -1,0 +1,20 @@
+@import '../../colors.scss';
+
+.button {
+	display: flex;
+    align-items: center;
+    justify-content: center;
+	position: relative;
+	height: 50px;
+	width: 50px;
+	font-size: 0;
+
+	.dot {
+		border: 1px solid rgba($LILAC2, 0.25);
+		box-shadow: 0 4px 6px rgba($INDIGO, 0.1);
+		position: absolute;
+		top: 6px;
+		left: 6px;
+		background-color: $WHITE2;
+	}
+}

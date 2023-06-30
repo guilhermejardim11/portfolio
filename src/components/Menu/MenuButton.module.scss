@@ -1,24 +1,18 @@
 @import '../../colors.scss';
 
-.menu_button {
+.button {
 	position: relative;
 	height: 50px;
 	width: 50px;
 	font-size: 0;
 
-	&:before {
-		content: '';
-		border-radius: 50%;
+	.dot {
 		position: absolute;
 		top: 11px;
-		right: 11px;
-		height: 28px;
-		width: 28px;
-		background-color: var(--project-color, $MAGENTA);
-		transition: background-color 0.3s;
+		left: 11px;
 	}
 
-	div {
+	i {
 		position: absolute;
 		top: 24px;
 		left: 16px;
@@ -49,7 +43,7 @@
 		}
 	}
 
-	&.active div {
+	&.active i {
 		left: 14px;
 		background-color: transparent;
 		transform: rotate(225deg);

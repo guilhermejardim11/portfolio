@@ -1,16 +1,27 @@
-import styles from "./MenuButton.module.scss";
+import { useState } from 'react';
+
+import styles from './MenuButton.module.scss';
+
+import Dot from '../UI/Dot';
 
 const MenuButton = (props) => {
-    return (
-        <button
-            type="button"
-            title="Open Menu"
-            className={`${styles.menu_button} ${props.isMenuOpen ? styles.active : ""}`}
-            onClick={props.onClick}
-        >
-            <div></div>
-        </button>
-    );
+	const [isActive, setIsActive] = useState(false);
+
+	const onClickHandler = () => {
+		props.onClick();
+		setIsActive(!isActive);
+	};
+
+	return (
+		<button
+			type='button'
+			className={`${styles.button} ${isActive && styles.active}`}
+			onClick={onClickHandler}
+		>
+			<Dot size='28' className={styles.dot} />
+			<i></i>
+		</button>
+	);
 };
 
 export default MenuButton;

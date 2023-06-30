@@ -7,6 +7,7 @@ import Header from '../components/Header/Header';
 import Footer from '../components/Footer/Footer';
 import Menu from '../components/Menu/Menu';
 import Cookies from '../components/Cookies/Cookies';
+import ScrollTop from '../components/UI/ScrollTop';
 
 const RootLayout = () => {
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -27,13 +28,15 @@ const RootLayout = () => {
 		setIsScrolled(scrollTop > window.innerHeight / 4);
 	};
 
-	// TODO Scroll Top - This works well when visiting new pages. But when returning to previous page, it scrolls to the top instead of returning to the desired position.
-	useEffect(() => {
-		contentRef.current.scrollTo({
+	const scrollToTop = () => {
+		return contentRef.current.scrollTo({
 			top: 0,
 			behavior: 'smooth',
 		});
-	}, [pathname]);
+	};
+
+	// TODO This works well when visiting new pages, but when returning to previous page it scrolls to the top instead of returning to the previous position.
+	useEffect(() => scrollToTop(), [pathname]);
 
 	return (
 		<div
@@ -51,6 +54,7 @@ const RootLayout = () => {
 			<Outlet />
 			<Footer />
 			<Cookies />
+			<ScrollTop onClick={scrollToTop} isScrolled={isScrolled} />
 		</div>
 	);
 };
