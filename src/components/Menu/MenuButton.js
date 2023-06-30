@@ -15,6 +15,7 @@ const MenuButton = (props) => {
 	return (
 		<button
 			type='button'
+			title='Menu Button'
 			className={`${styles.button} ${isActive && styles.active}`}
 			onClick={onClickHandler}
 		>

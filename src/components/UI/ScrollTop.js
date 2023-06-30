@@ -10,6 +10,7 @@ const ScrollTop = (props) => {
 	return (
 		<IconButton
 			className={`${styles.button} ${!props.isScrolled ? styles.hidden : ''}`}
+			title='Scroll Top Button'
 			onClick={onClickHandler}
 		/>
 	);
