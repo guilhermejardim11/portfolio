@@ -20,38 +20,43 @@ const projectList = [
 	},
 ];
 
-const router = createBrowserRouter([
+const router = createBrowserRouter(
+	[
+		{
+			path: '/',
+			element: <RootLayout />,
+			errorElement: <ErrorPage />,
+			children: [
+				{
+					index: true,
+					element: <HomePage />,
+					loader: () => {
+						return projectList;
+					},
+				},
+				{
+					path: 'projects',
+					element: <ProjectsPage />,
+					loader: () => {
+						return projectList;
+					},
+				},
+				{
+					path: 'projects/:ID',
+					element: <ProjectPage />,
+					loader: ({ params }) => {
+						return projectList.find(
+							(project) => project.id === params.ID
+						);
+					},
+				},
+			],
+		},
+	],
 	{
-		path: '/portfolio/',
-		element: <RootLayout />,
-		errorElement: <ErrorPage />,
-		children: [
-			{
-				index: true,
-				element: <HomePage />,
-				loader: () => {
-					return projectList;
-				},
-			},
-			{
-				path: 'projects',
-				element: <ProjectsPage />,
-				loader: () => {
-					return projectList;
-				},
-			},
-			{
-				path: 'projects/:ID',
-				element: <ProjectPage />,
-				loader: ({ params }) => {
-					return projectList.find(
-						(project) => project.id === params.ID
-					);
-				},
-			},
-		],
-	},
-]);
+		basename: '/portfolio',
+	}
+);
 
 const App = () => {
 	return (

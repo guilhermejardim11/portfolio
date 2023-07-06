@@ -14,11 +14,7 @@ import javascript from '../../assets/light/icons/javascript.svg';
 const SkillsetSection = () => {
 	return (
 		<Section>
-			<SectionTitle
-				title='Skillset'
-				to='/portfolio/skills'
-				text='View All'
-			/>
+			<SectionTitle title='Skillset' to='/skills' text='View All' />
 			<div className={styles.skills}>
 				<SkillCounter label='Figma' icon={figma} level={4} />
 				<SkillCounter label='Adobe CC' icon={adobecc} level={3} />
