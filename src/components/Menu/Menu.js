@@ -1,17 +1,10 @@
-import { useEffect } from 'react';
-import { NavLink, useLocation } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 import styles from './Menu.module.scss';
 
 import Socials from '../Socials/Socials';
 
 const Menu = (props) => {
-	const { pathname } = useLocation();
-
-	useEffect(() => {
-		props.closeMenu(false);
-	}, [pathname]);
-
 	return (
 		<menu
 			className={`${styles.menu} ${props.isMenuOpen ? styles.open : ''}`}

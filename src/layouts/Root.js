@@ -25,7 +25,7 @@ const RootLayout = () => {
 
 	const onScrollHandler = () => {
 		const scrollTop = contentRef.current.scrollTop;
-		setIsScrolled(scrollTop > window.innerHeight / 4);
+		setIsScrolled(scrollTop > 50);
 	};
 
 	const scrollToTop = () => {
@@ -36,7 +36,10 @@ const RootLayout = () => {
 	};
 
 	// TODO This works well when visiting new pages, but when returning to previous page it scrolls to the top instead of returning to the previous position.
-	useEffect(() => scrollToTop(), [pathname]);
+	useEffect(() => {
+		scrollToTop();
+		closeMenuHandler();
+	}, [pathname]);
 
 	return (
 		<div
@@ -47,11 +50,12 @@ const RootLayout = () => {
 		>
 			<Header
 				onMenuOpen={menuOpenHandler}
+				closeMenu={closeMenuHandler}
 				isMenuOpen={isMenuOpen}
 				isScrolled={isScrolled}
 			/>
 			<Menu closeMenu={closeMenuHandler} isMenuOpen={isMenuOpen} />
-			<Outlet />
+			<Outlet context={[isScrolled, isMenuOpen]} />
 			<Footer />
 			<Cookies />
 			<ScrollTop onClick={scrollToTop} isScrolled={isScrolled} />
