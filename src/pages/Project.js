@@ -23,7 +23,7 @@ const ProjectPage = () => {
 				tags={project.tags}
 				thumbnail={project.thumbnail}
 			/>
-			<div className={styles.project_content}>
+			<div className={styles.content}>
 				{project.content}
 			</div>
 		</main>

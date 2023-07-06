@@ -13,8 +13,16 @@ const projectList = [
 	{
 		id: 'imoukubo',
 		title: 'imoukubo',
-		tags: ['Brand Identity', 'UX/UI', 'Web Dev'],
+		tags: ['Identity', 'UX/UI', 'Development'],
 		color: '#FF7200',
+		thumbnail: imoukubo_thumb,
+		content: <Page_imoukubo />,
+	},
+	{
+		id: 'melsport',
+		title: 'Melsport',
+		tags: ['UX/UI', 'Development'],
+		color: '#188779',
 		thumbnail: imoukubo_thumb,
 		content: <Page_imoukubo />,
 	},
