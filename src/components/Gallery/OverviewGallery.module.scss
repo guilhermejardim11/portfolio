@@ -1,0 +1,30 @@
+@import '../../colors.scss';
+
+.gallery {
+	li:not(:last-child) {
+		margin-bottom: 28px;
+	}
+}
+
+.thumbnail {
+	position: relative;
+
+	&::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		background-color: $GRAY;
+		z-index: 1;
+		mix-blend-mode: color;
+	}
+}
+
+.content {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 13px 16px 10px;
+}
