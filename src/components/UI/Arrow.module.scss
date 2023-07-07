@@ -4,3 +4,7 @@
 	fill: var(--project-color, $MAGENTA);
 	transition: fill 0.3s;
 }
+
+[data-theme='dark'] .arrow path {
+	fill: var(--project-color, $D_MAGENTA);
+}

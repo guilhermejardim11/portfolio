@@ -50,3 +50,7 @@
 		transition: color 0.3s;
 	}
 }
+
+[data-theme='dark'] .projects span {
+	color: var(--project-color, $D_MAGENTA);
+}

@@ -1,19 +1,31 @@
 @import '../../colors.scss';
 
 .header {
-    display: flex;
-    justify-content: space-between;
-    padding: 43px 16px 14px;
-    position: fixed;
-    top: 0;
-    right: 0;
-    left: 0;
-    z-index: 10;
-    transition: padding-top 0.3s, box-shadow 0.3s, background-color 0.3s;
+	display: flex;
+	justify-content: space-between;
+	border-bottom: 1px solid transparent;
+	padding: 43px 16px 14px;
+	position: fixed;
+	top: 0;
+	right: 0;
+	left: 0;
+	z-index: 10;
+	transition: border-color 0.2s, padding-top 0.3s, background-color 0.3s;
 
-    &.scrolled {
-        padding: 9px 16px 7px;
-        backdrop-filter: blur(1.6px);
-        background-color: rgba($WHITE, 0.95);
-    }
+	&.scrolled {
+		padding: 9px 16px 7px;
+		border-color: $WHITE;
+		backdrop-filter: blur(1.6px);
+		background-color: rgba($WHITE, 0.95);
+	}
+
+	.actions {
+		display: flex;
+		gap: 6px;
+	}
+}
+
+[data-theme='dark'] .header.scrolled {
+	border-color: $D_INDIGO2;
+	background-color: rgba($D_INDIGO, 0.95);
 }

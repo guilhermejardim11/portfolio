@@ -47,3 +47,13 @@
 		}
 	}
 }
+
+[data-theme='dark'] .title {
+	h3::before {
+		background-color: var(--project-color, $D_MAGENTA);
+	}
+
+	a {
+		color: var(--project-color, $MAGENTA);
+	}
+}

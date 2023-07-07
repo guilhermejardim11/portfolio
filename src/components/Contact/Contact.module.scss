@@ -16,3 +16,7 @@
 		font-weight: 600;
 	}
 }
+
+[data-theme='dark'] .contact h5 {
+	color: var(--project-color, $D_MAGENTA);
+}

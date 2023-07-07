@@ -1,6 +1,6 @@
 import styles from './Profile.module.scss';
 
-import avatar from '../../assets/image/avatar.jpg';
+import avatar from '../../assets/images/avatar.jpg';
 
 const Profile = () => {
 	return (

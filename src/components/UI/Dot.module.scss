@@ -2,8 +2,12 @@
 
 .dot {
 	margin: 0 auto;
-    padding: 0 !important;
+	padding: 0 !important;
 	border-radius: 50%;
 	background-color: var(--project-color, $MAGENTA);
 	transition: background-color 0.3s;
+}
+
+[data-theme='dark'] .dot {
+	background-color: var(--project-color, $D_MAGENTA);
 }

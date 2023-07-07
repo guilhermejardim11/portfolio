@@ -5,4 +5,10 @@
 	border: 1px solid $WHITE2;
 	background-color: $WHITE;
 	overflow: hidden;
+	transition: border-color 0.3s, background-color 0.3s;
+}
+
+[data-theme='dark'] .card {
+	border-color: $D_INDIGO2;
+	background-color: $INDIGO;
 }

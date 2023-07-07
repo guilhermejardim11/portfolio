@@ -1,43 +1,17 @@
 @import '../../colors.scss';
 
 .banner {
-    position: relative;
+	position: relative;
 
-    &::before,
-    &::after {
-        content: '';
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        z-index: 0;
-    }
+	h1 {
+		margin-bottom: 6px;
+	}
 
-    &::before {
-        background-color: $INDIGO;
-        mix-blend-mode: color;
-        opacity: .9;
-    }
-
-    &::after {
-        background-color: rgba($WHITE, .8);
-        backdrop-filter: blur(3px);
-    }
-
-    & > * {
-        z-index: 1;
-    }
-
-    h1 {
-        margin-bottom: 6px;
-    }
-
-    ul {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 4px;
-        max-width: calc(100vw - 56px);
-    }
+	ul {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		gap: 4px;
+		max-width: calc(100vw - 56px);
+	}
 }
