@@ -1,4 +1,4 @@
-import background from '../../assets/light/images/background.jpg';
+import background from '../../assets/image/background.jpg';
 
 import Banner from './Banner';
 import Dot from '../UI/Dot';

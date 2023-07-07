@@ -7,6 +7,7 @@ import ProjectsPage from './pages/Projects';
 import ProjectPage from './pages/Project';
 
 import Page_imoukubo from './pages/projects/Page_imoukubo';
+
 import imoukubo_thumb from './assets/projects/imoukubo/thumb.jpg';
 import ukubo_thumb from './assets/projects/ukubo/thumb.jpg';
 import melsport_thumb from './assets/projects/melsport/thumb.jpg';
