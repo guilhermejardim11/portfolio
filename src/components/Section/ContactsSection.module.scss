@@ -7,20 +7,24 @@
 		align-items: center;
 		margin-bottom: 38px;
 		font-size: 24px;
+	}
 
-		span {
-			width: 100%;
-			max-width: 260px;
+	span {
+		width: 100%;
+		max-width: 260px;
 
-			&:nth-child(2) {
-				text-align: right;
-				color: var(--project-color, $MAGENTA);
-				transition: color 0.3s;
-			}
+		&:nth-child(2) {
+			text-align: right;
+			color: var(--project-color, $MAGENTA);
+			transition: color 0.3s;
 		}
 	}
 
 	p {
 		margin-bottom: 28px;
 	}
+}
+
+[data-theme='dark'] .contacts span:nth-child(2) {
+	color: var(--project-color, $D_MAGENTA);
 }

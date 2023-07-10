@@ -28,8 +28,19 @@
 	font-weight: 600;
 	line-height: 1;
 
-	& > div:not(:first-child) {
-		margin-left: 12px;
+	& > div {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		flex: 1 1 0px;
+		padding: 8px;
+		text-align: center;
+		aspect-ratio: 1;
+
+		&:not(:first-child) {
+			margin-left: 12px;
+		}
 	}
 
 	span {
@@ -38,4 +49,8 @@
 		color: var(--project-color, $MAGENTA);
 		transition: color 0.3s;
 	}
+}
+
+[data-theme='dark'] .projects span {
+	color: var(--project-color, $D_MAGENTA);
 }

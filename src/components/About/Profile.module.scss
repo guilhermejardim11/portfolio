@@ -1,13 +1,21 @@
 @import '../../colors.scss';
 
 .profile {
-    margin-bottom: 38px;
+	margin-bottom: 38px;
+}
 
-    img {
-        margin: 0 auto 38px;
-        border-radius: 50%;
-        height: 140px;
-        width: 140px;
-        object-fit: cover;
-    }
+.avatar {
+	margin: 0 auto 38px;
+	border-radius: 50%;
+	height: 140px;
+	width: 140px;
+	background-color: $WHITE;
+	overflow: hidden;
+
+	img {
+		height: 100%;
+		width: 100%;
+		object-fit: cover;
+		z-index: 1;
+	}
 }

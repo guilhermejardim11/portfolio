@@ -6,7 +6,7 @@ import Logo from '../UI/Logo';
 
 const HeaderLogo = () => {
 	return (
-		<Link to='/portfolio/' className={styles.logo}>
+		<Link to='/' className={styles.logo}>
 			<Logo />
 		</Link>
 	);

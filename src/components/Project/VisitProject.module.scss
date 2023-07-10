@@ -18,13 +18,17 @@
 	}
 
 	a {
-        padding-right: 12px;
-        position: relative;
+		padding-right: 12px;
+		position: relative;
 	}
 
-    img {
-        position: absolute;
-        top: 0;
-        right: 0;
-    }
+	img {
+		position: absolute;
+		top: 0;
+		right: 0;
+	}
+}
+
+[data-theme='dark'] .visit_project h4 {
+	color: var(--project-color, $D_MAGENTA);
 }

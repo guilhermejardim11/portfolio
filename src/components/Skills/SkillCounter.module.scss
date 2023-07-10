@@ -38,3 +38,13 @@
 		}
 	}
 }
+
+[data-theme='dark'] .counter svg g {
+	&:nth-child(1) {
+		fill: $D_INDIGO2;
+	}
+
+	&:nth-child(2) {
+		fill: var(--project-color, $D_MAGENTA);
+	}
+}

@@ -27,7 +27,7 @@
 			position: absolute;
 			height: 2px;
 			background-color: $INDIGO;
-			transition: top 0.4s, left 0.4s, width 0.4s, transform 0.4s;
+			transition: top 0.4s, left 0.4s, width 0.4s, transform 0.4s, background-color 0.2s;
 		}
 
 		&::before {
@@ -61,5 +61,14 @@
 		&::after {
 			width: 24px;
 		}
+	}
+}
+
+[data-theme='dark'] .button i {
+	background-color: $WHITE;
+
+	&::before,
+	&::after {
+		background-color: $WHITE;
 	}
 }

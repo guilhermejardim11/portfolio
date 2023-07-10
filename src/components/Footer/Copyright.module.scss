@@ -7,4 +7,9 @@
     font-size: 14px;
     color: $LILAC;
     text-align: center;
+    transition: color 0.3s;
+}
+
+[data-theme='dark'] .copyright {
+    color: $D_LILAC;
 }

@@ -7,6 +7,7 @@
     padding: 50px 28px;
     position: relative;
     background-color: $LILAC2;
+    transition: background-color 0.3s;
 
     &::before {
         content: "";
@@ -15,7 +16,17 @@
         left: 0;
         right: 0;
         bottom: 0;
-        background-image: url("../../assets/light/images/pattern.png");
+        background-image: url("../../assets/images/light/pattern.svg");
         opacity: 0.2;
+    }
+}
+
+[data-theme='dark'] .footer {
+    background-color: $D_INDIGO2;
+
+    &::before {
+        background-image: url("../../assets/images/dark/pattern.svg");
+        opacity: 0.4;
+        mix-blend-mode: exclusion;
     }
 }

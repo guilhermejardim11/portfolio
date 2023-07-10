@@ -1,24 +1,29 @@
 @import '../../colors.scss';
 
 .socials {
-    margin-bottom: 15px;
-    position: relative;
-    padding: 0;
-    list-style: none;
-    display: flex;
+	margin-bottom: 15px;
+	position: relative;
+	padding: 0;
+	list-style: none;
+	display: flex;
 
-    li {
-        padding: 0 3px;
+	li {
+		padding: 0 3px;
 
-        &:not(:first-child):before {
-            content: '';
-            border-radius: 50%;
-            position: absolute;
-            top: 23px;
-            left: -2px;
-            height: 4px;
-            width: 4px;
-            background-color: $LILAC;
-        }
-    }
+		&:not(:first-child)::before {
+			content: '';
+			border-radius: 50%;
+			position: absolute;
+			top: 23px;
+			left: -2px;
+			height: 4px;
+			width: 4px;
+			background-color: $LILAC;
+			transition: background-color 0.3s;
+		}
+	}
+}
+
+[data-theme='dark'] .socials li:not(:first-child)::before {
+	background-color: $D_LILAC;
 }

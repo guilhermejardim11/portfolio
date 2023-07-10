@@ -10,3 +10,7 @@
 	background-color: var(--project-color, $MAGENTA);
 	transition: background-color 0.3s;
 }
+
+[data-theme='dark'] .button {
+	background-color: var(--project-color, $D_MAGENTA);
+}

@@ -16,7 +16,7 @@
 	background-color: rgba($WHITE2, 0.95);
 	opacity: 0;
 	pointer-events: none;
-	transition: opacity 0.3s;
+	transition: opacity 0.3s, background-color 0.3s;
 
 	&.open {
 		opacity: 1;
@@ -43,4 +43,14 @@
 .menu_socials li:not(:first-child):before {
 	background-color: var(--project-color, $MAGENTA);
 	transition: background-color 0.3s;
+}
+
+[data-theme='dark'] {
+	.menu {
+		background-color: rgba($D_INDIGO, 0.97);
+
+		nav a.active {
+			color: var(--project-color, $D_MAGENTA);
+		}
+	}
 }

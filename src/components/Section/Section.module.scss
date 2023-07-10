@@ -1,25 +1,38 @@
-@import "../../colors.scss";
+@import '../../colors.scss';
 
 .section {
-    padding: 68px 0;
+	padding: 68px 0;
 
-    & > * {
-        padding-right: 28px;
-        padding-left: 28px;
-    }
+	& > * {
+		padding-right: 28px;
+		padding-left: 28px;
+	}
 }
 
 .background {
-    background-color: $WHITE2;
+	background-color: $WHITE2;
+    transition: background-color 0.3s;
 }
 
 .pattern::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image: url("../../assets/light/images/pattern.png");
-    opacity: 0.5;
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-image: url('../../assets/images/light/pattern.svg');
+	opacity: 0.6;
+    transition: background-image 0.3s, opacity 0.3s;
+}
+
+[data-theme='dark'] {
+	.background {
+		background-color: $D_INDIGO;
+	}
+
+	.pattern::before {
+		background-image: url('../../assets/images/dark/pattern.svg');
+		opacity: 0.4;
+	}
 }

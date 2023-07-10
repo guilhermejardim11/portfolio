@@ -1,4 +1,33 @@
 .logo {
-    margin-bottom: 28px;
-    height: 50px;
+	margin-bottom: 28px;
+	height: 50px;
+
+	path {
+		&:nth-child(1) {
+			fill: #17182b;
+		}
+
+		&:nth-child(2) {
+			fill: #04050d;
+		}
+
+		&:nth-child(3) {
+			fill: #090a16;
+			opacity: 1;
+		}
+	}
+}
+
+[data-theme='dark'] .logo path {
+	&:nth-child(1) {
+		fill: #ffffff;
+	}
+
+	&:nth-child(2) {
+		fill: #dfdfdf;
+	}
+
+	&:nth-child(3) {
+		fill: #ececec;
+	}
 }

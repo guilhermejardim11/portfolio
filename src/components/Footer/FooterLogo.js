@@ -1,9 +1,9 @@
-import styles from "./FooterLogo.module.scss";
+import styles from './FooterLogo.module.scss';
 
-import logo from "../../assets/light/logos/logo-mono.svg";
+import Logo from '../UI/Logo';
 
 const FooterLogo = () => {
-    return <img src={logo} alt="Guilherme Logo" className={styles.logo} />;
+	return <Logo className={styles.logo} />;
 };
 
 export default FooterLogo;

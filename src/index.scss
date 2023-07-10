@@ -1,12 +1,13 @@
 @import './colors.scss';
 
 body {
-    min-height: 100vh;
-    min-width: 100vw;
-    color: $INDIGO;
-    background-color: $WHITE;
-    font-family: 'roc-grotesk', sans-serif;
-    font-weight: 400;
+	min-height: 100vh;
+	min-width: 100vw;
+	color: $INDIGO;
+	background-color: $WHITE;
+	font-family: 'roc-grotesk', sans-serif;
+	font-weight: 400;
+	transition: color 0.3s, background-color 0.3s;
 }
 
 h1,
@@ -15,21 +16,30 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: 'roc-grotesk-wide', sans-serif;
-    font-weight: 600;
-    line-height: 1;
+	font-family: 'roc-grotesk-wide', sans-serif;
+	font-weight: 600;
+	line-height: 1;
 }
 
 b {
-    font-weight: 600;
+	font-weight: 600;
 }
 
 em,
 i {
-    font-style: italic;
+	font-style: italic;
 }
 
 p {
-    font-size: 16px;
-    line-height: 30px;
+	font-size: 16px;
+	line-height: 30px;
+}
+
+main {
+	min-height: calc(100vh - 363px);
+}
+
+[data-theme='dark'] {
+	color: $WHITE;
+	background-color: $INDIGO;
 }
