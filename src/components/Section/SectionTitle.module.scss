@@ -1,4 +1,4 @@
-@import '../../colors.scss';
+@import '../../variables.scss';
 
 .title {
 	display: flex;
@@ -22,7 +22,7 @@
 			height: 32px;
 			width: 32px;
 			background-color: var(--project-color, $MAGENTA);
-			transition: background-color 0.3s;
+			transition: background-color $ANIMATION_TIME;
 			z-index: -1;
 		}
 	}
@@ -35,7 +35,7 @@
 		line-height: 1;
 		text-transform: uppercase;
 		color: var(--project-color, $MAGENTA);
-		transition: color 0.3s;
+		transition: color $ANIMATION_TIME;
 
 		& > * {
 			display: inline-block;

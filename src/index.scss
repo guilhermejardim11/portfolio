@@ -1,4 +1,4 @@
-@import './colors.scss';
+@import './variables.scss';
 
 body {
 	min-height: 100vh;
@@ -7,7 +7,7 @@ body {
 	background-color: $WHITE;
 	font-family: 'roc-grotesk', sans-serif;
 	font-weight: 400;
-	transition: color 0.3s, background-color 0.3s;
+	transition: color $ANIMATION_TIME, background-color $ANIMATION_TIME;
 }
 
 h1,

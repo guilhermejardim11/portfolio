@@ -1,4 +1,4 @@
-@import '../../colors.scss';
+@import '../../variables.scss';
 
 .banner {
 	display: flex;
@@ -14,7 +14,7 @@
 	background-size: cover;
 	background-blend-mode: hard-light;
 	background-color: $WHITE;
-	transition: background-color 0.3s, background-blend-mode 0.3s;
+	transition: background-color $ANIMATION_TIME, background-blend-mode $ANIMATION_TIME;
 
 	&::before,
 	&::after {
@@ -51,7 +51,7 @@
 		margin-top: 11px;
 		font-size: 20px;
 		color: var(--project-color, $MAGENTA);
-		transition: color 0.3s;
+		transition: color $ANIMATION_TIME;
 	}
 }
 

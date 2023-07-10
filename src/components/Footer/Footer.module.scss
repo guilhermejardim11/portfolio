@@ -1,4 +1,4 @@
-@import "../../colors.scss";
+@import "../../variables.scss";
 
 .footer {
     display: flex;
@@ -7,7 +7,7 @@
     padding: 50px 28px;
     position: relative;
     background-color: $LILAC2;
-    transition: background-color 0.3s;
+    transition: background-color $ANIMATION_TIME;
 
     &::before {
         content: "";

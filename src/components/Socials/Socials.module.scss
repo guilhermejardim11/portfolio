@@ -1,4 +1,4 @@
-@import '../../colors.scss';
+@import '../../variables.scss';
 
 .socials {
 	margin-bottom: 15px;
@@ -19,7 +19,7 @@
 			height: 4px;
 			width: 4px;
 			background-color: $LILAC;
-			transition: background-color 0.3s;
+			transition: background-color $ANIMATION_TIME;
 		}
 	}
 }
