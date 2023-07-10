@@ -1,9 +1,13 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.c866f78b.css",
-    "main.js": "/portfolio/static/js/main.b30e2be9.js",
+    "main.css": "/portfolio/static/css/main.ed63c628.css",
+    "main.js": "/portfolio/static/js/main.0cfa0efb.js",
     "static/media/background.jpg": "/portfolio/static/media/background.67b9c9ccd78df6d0fcc1.jpg",
+    "static/media/imoukubo_2.jpg": "/portfolio/static/media/imoukubo_2.83f701765517c34b597c.jpg",
+    "static/media/imoukubo_5.jpg": "/portfolio/static/media/imoukubo_5.7f28fdf6eb29eab79e89.jpg",
     "static/media/thumb.jpg": "/portfolio/static/media/thumb.40daf2d7deac7e32c5e2.jpg",
+    "static/media/imoukubo_4.jpg": "/portfolio/static/media/imoukubo_4.a83c82cec715bd560c00.jpg",
+    "static/media/imoukubo_3.jpg": "/portfolio/static/media/imoukubo_3.c112bb094723591e24b7.jpg",
     "service-worker.js": "/portfolio/service-worker.js",
     "static/media/avatar.jpg": "/portfolio/static/media/avatar.c2665cf4494635c027d5.jpg",
     "static/media/reactjs.svg": "/portfolio/static/media/reactjs.d811e3cda9ad4ae5ef0b4e102f8081a1.svg",
@@ -17,11 +21,11 @@
     "static/media/linkedin.svg": "/portfolio/static/media/linkedin.a4f8ed8ec3e27e9fc7058cdfb1ad8a86.svg",
     "static/media/css.svg": "/portfolio/static/media/css.fb729540f36809bc4118744ffb803eeb.svg",
     "static/media/html.svg": "/portfolio/static/media/html.9727c24ef73d597de9b344d035834814.svg",
-    "main.c866f78b.css.map": "/portfolio/static/css/main.c866f78b.css.map",
-    "main.b30e2be9.js.map": "/portfolio/static/js/main.b30e2be9.js.map"
+    "main.ed63c628.css.map": "/portfolio/static/css/main.ed63c628.css.map",
+    "main.0cfa0efb.js.map": "/portfolio/static/js/main.0cfa0efb.js.map"
   },
   "entrypoints": [
-    "static/css/main.c866f78b.css",
-    "static/js/main.b30e2be9.js"
+    "static/css/main.ed63c628.css",
+    "static/js/main.0cfa0efb.js"
   ]
 }
