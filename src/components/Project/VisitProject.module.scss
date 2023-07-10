@@ -1,4 +1,4 @@
-@import '../../colors.scss';
+@import '../../variables.scss';
 
 .visit_project {
 	display: flex;
@@ -9,7 +9,7 @@
 
 	h4 {
 		color: var(--project-color, $MAGENTA);
-		transition: color 0.3s;
+		transition: color $ANIMATION_TIME;
 	}
 
 	h5 {
@@ -21,14 +21,25 @@
 		padding-right: 12px;
 		position: relative;
 	}
+}
 
-	img {
-		position: absolute;
-		top: 0;
-		right: 0;
+.arrow {
+	position: absolute;
+	top: 0;
+	right: 0;
+
+	path {
+		fill: $INDIGO;
+		transition: fill $ANIMATION_TIME;
 	}
 }
 
-[data-theme='dark'] .visit_project h4 {
-	color: var(--project-color, $D_MAGENTA);
+[data-theme='dark'] {
+	.visit_project h4 {
+		color: var(--project-color, $D_MAGENTA);
+	}
+
+	.arrow path {
+		fill: $WHITE;
+	}
 }
