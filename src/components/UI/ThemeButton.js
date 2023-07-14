@@ -1,14 +1,10 @@
-import { useContext, useEffect } from 'react';
+import { useContext } from 'react';
 import { ThemeContext } from '../../context/ThemeContext';
 
 import styles from './ThemeButton.module.scss';
 
 const ThemeButton = (props) => {
 	const themeContext = useContext(ThemeContext);
-
-	useEffect(() => {
-		console.log(themeContext.isDarkMode);
-	}, []);
 
 	return (
 		<ThemeContext.Consumer>

@@ -8,12 +8,14 @@ import Footer from '../components/Footer/Footer';
 import Menu from '../components/Menu/Menu';
 import Cookies from '../components/Cookies/Cookies';
 import ScrollTop from '../components/UI/ScrollTop';
+import { useTranslation } from 'react-i18next';
 
 const RootLayout = () => {
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
 	const [isScrolled, setIsScrolled] = useState(false);
 	const { pathname } = useLocation();
 	const contentRef = useRef();
+	const [t, i18n] = useTranslation();
 
 	const menuOpenHandler = () => {
 		setIsMenuOpen(!isMenuOpen);
@@ -35,10 +37,13 @@ const RootLayout = () => {
 		});
 	};
 
+	useEffect(() => {
+		closeMenuHandler();
+	}, [pathname, i18n.resolvedLanguage]);
+
 	// TODO This works well when visiting new pages, but when returning to previous page it scrolls to the top instead of returning to the previous position.
 	useEffect(() => {
 		scrollToTop();
-		closeMenuHandler();
 	}, [pathname]);
 
 	return (

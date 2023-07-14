@@ -1,3 +1,4 @@
+import { Suspense } from 'react';
 import ReactDOM from 'react-dom/client';
 import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 
@@ -7,10 +8,14 @@ import App from './App';
 import './reset.scss';
 import './index.scss';
 
+import './i18next';
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
 	<ContextWrapper>
-		<App />
+		<Suspense fallback='loading'>
+			<App />
+		</Suspense>
 	</ContextWrapper>
 );
 
