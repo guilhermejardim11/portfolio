@@ -1,4 +1,4 @@
-@import '../../colors.scss';
+@import '../../variables.scss';
 
 .button {
 	display: flex;
@@ -15,7 +15,7 @@
 		top: 6px;
 		left: 6px;
 		background-color: $WHITE2;
-		transition: background-color 0.3s, border-color 0.3s;
+		transition: background-color $ANIMATION_TIME, border-color $ANIMATION_TIME;
 	}
 }
 

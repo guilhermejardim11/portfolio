@@ -1,4 +1,4 @@
-@import '../../colors.scss';
+@import '../../variables.scss';
 
 .years {
 	display: flex;
@@ -47,7 +47,7 @@
 		font-size: 38px;
 		letter-spacing: -0.06em;
 		color: var(--project-color, $MAGENTA);
-		transition: color 0.3s;
+		transition: color $ANIMATION_TIME;
 	}
 }
 

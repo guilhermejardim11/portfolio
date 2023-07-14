@@ -1,3 +1,5 @@
+@import '../../variables.scss';
+
 .banner {
 	padding-top: 45px;
 	position: fixed;
@@ -6,7 +8,7 @@
 	width: calc(100% - 200px);
 	z-index: 11;
 	transform: translateX(-50%);
-	transition: padding-top 0.3s, opacity 0.3s;
+	transition: padding-top $ANIMATION_TIME, opacity $ANIMATION_TIME;
 
 	&.scrolled {
 		padding-top: 11px;

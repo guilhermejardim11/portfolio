@@ -1,9 +1,9 @@
-@import '../../colors.scss';
+@import '../../variables.scss';
 
 .button {
 	opacity: 0;
 	pointer-events: none;
-	transition: opacity 0.3s;
+	transition: opacity $ANIMATION_TIME;
 
 	svg {
 		height: 28px;
@@ -14,7 +14,7 @@
 		&:nth-child(1),
 		&:nth-child(2),
 		&:nth-child(3) {
-			transition: transform 0.3s, opacity 0.3s;
+			transition: transform $ANIMATION_TIME, opacity $ANIMATION_TIME;
 		}
 
 		&:nth-child(1) {

@@ -1,4 +1,4 @@
-@import '../../colors.scss';
+@import '../../variables.scss';
 
 .menu {
 	display: flex;
@@ -16,7 +16,7 @@
 	background-color: rgba($WHITE2, 0.95);
 	opacity: 0;
 	pointer-events: none;
-	transition: opacity 0.3s, background-color 0.3s;
+	transition: opacity $ANIMATION_TIME, background-color $ANIMATION_TIME;
 
 	&.open {
 		opacity: 1;
@@ -35,14 +35,14 @@
 
 		&.active {
 			color: var(--project-color, $MAGENTA);
-			transition: color 0.3s;
+			transition: color $ANIMATION_TIME;
 		}
 	}
 }
 
 .menu_socials li:not(:first-child):before {
 	background-color: var(--project-color, $MAGENTA);
-	transition: background-color 0.3s;
+	transition: background-color $ANIMATION_TIME;
 }
 
 [data-theme='dark'] {

@@ -1,4 +1,4 @@
-@import "../../colors.scss";
+@import "../../variables.scss";
 
 .copyright {
     margin-bottom: 15px;
@@ -7,7 +7,7 @@
     font-size: 14px;
     color: $LILAC;
     text-align: center;
-    transition: color 0.3s;
+    transition: color $ANIMATION_TIME;
 }
 
 [data-theme='dark'] .copyright {

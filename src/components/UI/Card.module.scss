@@ -1,11 +1,11 @@
-@import '../../colors.scss';
+@import '../../variables.scss';
 
 .card {
 	border-radius: 12px;
 	border: 1px solid $WHITE2;
 	background-color: $WHITE;
 	overflow: hidden;
-	transition: border-color 0.3s, background-color 0.3s;
+	transition: border-color $ANIMATION_TIME, background-color $ANIMATION_TIME;
 }
 
 [data-theme='dark'] .card {

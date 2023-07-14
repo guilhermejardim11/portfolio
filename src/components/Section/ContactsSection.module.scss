@@ -1,4 +1,4 @@
-@import '../../colors.scss';
+@import '../../variables.scss';
 
 .contacts {
 	h4 {
@@ -16,7 +16,7 @@
 		&:nth-child(2) {
 			text-align: right;
 			color: var(--project-color, $MAGENTA);
-			transition: color 0.3s;
+			transition: color $ANIMATION_TIME;
 		}
 	}
 

@@ -1,4 +1,4 @@
-@import '../../colors.scss';
+@import '../../variables.scss';
 
 .section {
 	padding: 68px 0;
@@ -11,7 +11,7 @@
 
 .background {
 	background-color: $WHITE2;
-    transition: background-color 0.3s;
+    transition: background-color $ANIMATION_TIME;
 }
 
 .pattern::before {
@@ -23,7 +23,7 @@
 	bottom: 0;
 	background-image: url('../../assets/images/light/pattern.svg');
 	opacity: 0.6;
-    transition: background-image 0.3s, opacity 0.3s;
+    transition: background-image $ANIMATION_TIME, opacity $ANIMATION_TIME;
 }
 
 [data-theme='dark'] {

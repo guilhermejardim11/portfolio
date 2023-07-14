@@ -1,6 +1,6 @@
 import styles from './VisitProject.module.scss';
 
-import external from '../../assets/light/icons/external.svg';
+import ExternalArrow from '../UI/ExternalArrow';
 
 const VisitProject = (props) => {
 	return (
@@ -9,7 +9,7 @@ const VisitProject = (props) => {
 			<h5>
 				<a href={props.url} target='_blank' rel='external'>
 					{props.text}
-					<img src={external} alt='external' />
+					<ExternalArrow className={styles.arrow} />
 				</a>
 			</h5>
 		</div>
