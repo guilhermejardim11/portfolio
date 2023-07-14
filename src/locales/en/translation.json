@@ -1,0 +1,52 @@
+{
+	"banner": {
+		"hello": "Hello! I'm Guilherme",
+		"job": "UI/UX Designer",
+		"swipe": "Swipe"
+	},
+	"cookies": {
+		"title": "Cookies",
+		"desc": "We use cookies to give you a better overall experience by saving your preferences. By clicking 'Accept', you are agreeing with the use of cookies."
+	},
+	"footer": {
+		"copyright": "© Copyright {{date}} Guilherme Jardim.",
+		"rights": "All rights reserved."
+	},
+	"page": {
+		"home": "Home",
+		"projects": "Projects",
+		"skills": "Skills",
+		"contacts": "Contacts",
+		"privacy_policy": "Privacy Policy",
+		"terms_and_conditions": "Terms and Conditions",
+		"sitemap": "Sitemap"
+	},
+	"section": {
+		"projects": {
+			"title": "Projects"
+		},
+		"about": {
+			"title": "About",
+			"desc": "Hi there! I'm Guilherme Jardim and I'm a UX/UI Designer from Portugal, and I have the goal to improve the quality of my projects and broaden my skillset!",
+			"years": "years of experience",
+			"uxui_projects": "UX/UI Projects",
+			"frontend_projects": "Front-End Projects",
+			"identity_projects": "Identity Projects"
+		},
+		"skillset": {
+			"title": "Skillset"
+		},
+		"contacts": {
+			"title": "Contacts",
+			"got_a_project": "Got a project?",
+			"lets_talk": "Let's talk!",
+			"desc": "I'm always interested in new projects! You can reach me by email or message me in LinkedIn, and I'll be more than happy to answer!"
+		}
+	},
+	"see_more": "See More",
+	"know_more": "Know More",
+	"view_all": "View All",
+	"view_all_f": "View All",
+	"accept": "Accept",
+	"email": "Email"
+}

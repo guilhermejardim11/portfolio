@@ -1,15 +1,17 @@
-import styles from "./Copyright.module.scss";
+import { useTranslation } from 'react-i18next';
+import styles from './Copyright.module.scss';
 
 const Copyright = () => {
-    let date = new Date().getFullYear();
+	const [t, i18n] = useTranslation();
+	let date = new Date().getFullYear();
 
-    return (
-        <div className={styles.copyright}>
-            © Copyright {date} Guilherme Jardim.
-            <br />
-            All rights reserved.
-        </div>
-    );
+	return (
+		<div className={styles.copyright}>
+			{t('footer.copyright', { date: date })}
+			<br />
+			{t('footer.rights')}
+		</div>
+	);
 };
 
 export default Copyright;

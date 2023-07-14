@@ -27,6 +27,6 @@
     &::before {
         background-image: url("../../assets/images/dark/pattern.svg");
         opacity: 0.4;
-        mix-blend-mode: exclusion;
+        mix-blend-mode: color-burn;
     }
 }

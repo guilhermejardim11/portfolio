@@ -1,11 +1,13 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 import styles from './Cookies.module.scss';
 
 import Button from '../UI/Button';
 
 const Cookies = () => {
+	const [t, i18n] = useTranslation();
 	const [agreedCookies, setAgreedCookies] = useState(false);
 	const [hidePopup, setHidePopup] = useState(false);
 
@@ -26,15 +28,11 @@ const Cookies = () => {
 	return (
 		!agreedCookies && (
 			<div className={`${styles.popup} ${hidePopup && styles.hide}`}>
-				<h6>Cookies</h6>
-				<p>
-					We use cookies to give you a better overall experience by
-					saving your preferences. By clicking 'Accept', you are
-					agreeing with the use of cookies.
-				</p>
+				<h6>{t('cookies.title')}</h6>
+				<p>{t('cookies.desc')}</p>
 				<div className={styles.actions}>
-					<Link to='/privacy-policy'>See More</Link>
-					<Button onClick={closeCookiesPopupHandler}>Accept</Button>
+					<Link to='/privacy-policy'>{t('see_more')}</Link>
+					<Button onClick={closeCookiesPopupHandler}>{t('accept')}</Button>
 				</div>
 			</div>
 		)

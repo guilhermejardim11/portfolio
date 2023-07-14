@@ -1,18 +1,21 @@
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 import styles from './UsefulLinks.module.scss';
 
 const UsefulLinks = () => {
+	const [t, i18n] = useTranslation();
+
 	return (
 		<ul className={styles.links}>
 			<li>
-				<Link to='/privacy-policy'>Privacy Policy</Link>
+				<Link to='/privacy-policy'>{t('page.privacy_policy')}</Link>
 			</li>
 			<li>
-				<Link to='/terms-and-conditions'>Terms and Conditions</Link>
+				<Link to='/terms-and-conditions'>{t('page.terms_and_conditions')}</Link>
 			</li>
 			<li>
-				<Link to='/sitemap'>Sitemap</Link>
+				<Link to='/sitemap'>{t('page.sitemap')}</Link>
 			</li>
 		</ul>
 	);

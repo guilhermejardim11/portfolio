@@ -1,10 +1,13 @@
 import { NavLink } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 import styles from './Menu.module.scss';
 
 import Socials from '../Socials/Socials';
 
 const Menu = (props) => {
+	const [t, i18n] = useTranslation();
+
 	return (
 		<menu
 			className={`${styles.menu} ${props.isMenuOpen ? styles.open : ''}`}
@@ -17,7 +20,7 @@ const Menu = (props) => {
 					}
 					end
 				>
-					Home
+					{t('page.home')}
 				</NavLink>
 				<NavLink
 					to='/projects'
@@ -26,7 +29,7 @@ const Menu = (props) => {
 					}
 					end
 				>
-					Projects
+					{t('page.projects')}
 				</NavLink>
 				<NavLink
 					to='/skills'
@@ -35,7 +38,7 @@ const Menu = (props) => {
 					}
 					end
 				>
-					Skills
+					{t('page.skills')}
 				</NavLink>
 				<NavLink
 					to='/contacts'
@@ -44,7 +47,7 @@ const Menu = (props) => {
 					}
 					end
 				>
-					Contacts
+					{t('page.contacts')}
 				</NavLink>
 			</nav>
 

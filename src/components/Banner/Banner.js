@@ -1,8 +1,11 @@
+import { useTranslation } from 'react-i18next';
+
 import styles from './Banner.module.scss';
 
 import Arrow from '../UI/Arrow';
 
 const Banner = (props) => {
+	const [t, i18n] = useTranslation();
 	// const [innerHeight, setInnerHeight] = useState();
 
 	// useEffect(() => {
@@ -22,7 +25,7 @@ const Banner = (props) => {
 
 			<div className={styles.scroll_down}>
 				<Arrow />
-				<div>Swipe Down</div>
+				<div>{t('banner.swipe')}</div>
 			</div>
 		</div>
 	);

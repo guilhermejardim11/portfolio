@@ -11,9 +11,9 @@ const HomeBanner = () => {
 
 	return (
 		<Banner background={background}>
-			<h1 style={{ fontSize: '45px' }}>{t('hello')}</h1>
+			<h1 style={{ fontSize: '45px' }}>{t('banner.hello')}</h1>
 			<Dot />
-			<h2>{t('job')}</h2>
+			<h2>{t('banner.job')}</h2>
 			<br />
 			<LanguageSelector />
 		</Banner>
