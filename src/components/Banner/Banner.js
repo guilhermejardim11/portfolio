@@ -25,7 +25,7 @@ const Banner = (props) => {
 
 			<div className={styles.scroll_down}>
 				<Arrow />
-				<div>{t('banner.swipe')}</div>
+				<div>{t('swipe')}</div>
 			</div>
 		</div>
 	);

@@ -10,7 +10,7 @@ const ProjectSection = (props) => {
 	return (
 		<Section>
 			<SectionTitle
-				title={t('section.projects.title')}
+				title={t('projects')}
 				to='/projects'
 				text={t('view_all')}
 			/>

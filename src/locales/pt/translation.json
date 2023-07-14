@@ -1,52 +1,54 @@
 {
-	"banner": {
-		"hello": "Olá! Sou o Guilherme",
-		"job": "Designer UI/UX",
-		"swipe": "Arrasta"
-	},
-	"cookies": {
-		"title": "Cookies",
-		"desc": "Este website usa cookies para guardar as suas preferências, de modo a oferecer a melhor experiência possível. Ao carregar em 'Aceito', está a concordar com o uso das cookies."
-	},
-	"footer": {
-		"copyright": "© Copyright {{date}} Guilherme Jardim.",
-		"rights": "Todos os direitos reservados."
-	},
-	"page": {
-		"home": "Home",
-		"projects": "Projetos",
-		"skills": "Skills",
-		"contacts": "Contactos",
-		"privacy_policy": "Política de Privacidade",
-		"terms_and_conditions": "Termos e Condições",
-		"sitemap": "Mapa do site"
-	},
+	"hello": "Olá! Sou o Guilherme",
+	"job": "Designer UI/UX",
+
+	"home": "Home",
+	"project": "Projetos",
+	"projects": "Projetos",
+	"about": "Sobre",
+	"skills": "Skills",
+	"skillset": "Skillset",
+	"contacts": "Contactos",
+	"concept": "Contactos",
+
+	"privacy_policy": "Política de Privacidade",
+	"terms_and_conditions": "Termos e Condições",
+	"sitemap": "Mapa do site",
+
 	"section": {
-		"projects": {
-			"title": "Projetos"
-		},
 		"about": {
-			"title": "Sobre",
-			"desc": "Olá! Sou o Guilherme Jardim e sou um Designer UX/UI de Portugal, e tenho comom principal objetivo melhorar a qualidade dos meus projetos e aumentar os meus conhecimentos!",
+			"desc": "Olá! Sou o Guilherme Jardim e sou um Designer UX/UI de Portugal, e tenho como principal objetivo melhorar a qualidade dos meus projetos e aumentar os meus conhecimentos!",
 			"years": "anos de experiência",
 			"uxui_projects": "Projetos UX/UI",
 			"frontend_projects": "Projetos Front-End",
 			"identity_projects": "Projetos de Identidade"
 		},
-		"skillset": {
-			"title": "Skillset"
-		},
 		"contacts": {
-			"title": "Contactos",
 			"got_a_project": "Tem um projeto?",
 			"lets_talk": "Vamos falar!",
 			"desc": "Estou sempre interessado em novos projetos! Pode contactar-me por email ou por mensagem privada no LinkedIn, terei todo o gosto em responder!"
 		}
 	},
+
+	"visit": {
+		"website": "Visita o website em"
+	},
+
 	"see_more": "Ver Mais",
 	"know_more": "Saber Mais",
 	"view_all": "Ver Todos",
 	"view_all_f": "Ver Todas",
+	"swipe": "Arrasta",
+
 	"accept": "Aceitar",
-	"email": "Email"
+
+	"email": "Email",
+
+	"copyright": "© Copyright {{date}} Guilherme Jardim.",
+	"rights": "Todos os direitos reservados.",
+
+	"cookies": {
+		"title": "Cookies",
+		"desc": "Este website usa cookies para guardar as suas preferências, de modo a oferecer a melhor experiência possível. Ao carregar em 'Aceito', está a concordar com o uso das cookies."
+	}
 }

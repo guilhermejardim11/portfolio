@@ -11,7 +11,7 @@ const ContactsSection = () => {
 
 	return (
 		<Section background className={styles.contacts}>
-			<SectionTitle title={t('section.contacts.title')} />
+			<SectionTitle title={t('contacts')} />
 			<h4>
 				<span>{t('section.contacts.got_a_project')}</span>
 				<span>{t('section.contacts.lets_talk')}</span>

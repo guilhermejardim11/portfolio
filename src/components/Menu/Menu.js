@@ -20,7 +20,7 @@ const Menu = (props) => {
 					}
 					end
 				>
-					{t('page.home')}
+					{t('home')}
 				</NavLink>
 				<NavLink
 					to='/projects'
@@ -29,7 +29,7 @@ const Menu = (props) => {
 					}
 					end
 				>
-					{t('page.projects')}
+					{t('projects')}
 				</NavLink>
 				<NavLink
 					to='/skills'
@@ -38,7 +38,7 @@ const Menu = (props) => {
 					}
 					end
 				>
-					{t('page.skills')}
+					{t('skills')}
 				</NavLink>
 				<NavLink
 					to='/contacts'
@@ -47,7 +47,7 @@ const Menu = (props) => {
 					}
 					end
 				>
-					{t('page.contacts')}
+					{t('contacts')}
 				</NavLink>
 			</nav>
 

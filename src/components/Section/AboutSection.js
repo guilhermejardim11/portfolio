@@ -11,7 +11,7 @@ const AboutSection = () => {
 
 	return (
 		<Section background pattern>
-			<SectionTitle title={t('section.about.title')} to='/about' text={t('know_more')} />
+			<SectionTitle title={t('about')} to='/about' text={t('know_more')} />
 			<Profile />
 			<Dot style={{ marginTop: '38px', marginBottom: '24px' }} />
 			<Experience />

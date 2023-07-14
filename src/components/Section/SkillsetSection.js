@@ -27,7 +27,7 @@ const SkillsetSection = () => {
 
 	return (
 		<Section>
-			<SectionTitle title={t('section.skillset.title')} to='/skills' text={t('view_all_f')} />
+			<SectionTitle title={t('skillset')} to='/skills' text={t('view_all_f')} />
 			<div className={styles.skills}>
 				<SkillCounter
 					label='Figma'

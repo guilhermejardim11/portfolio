@@ -7,9 +7,9 @@ const Copyright = () => {
 
 	return (
 		<div className={styles.copyright}>
-			{t('footer.copyright', { date: date })}
+			{t('copyright', { date: date })}
 			<br />
-			{t('footer.rights')}
+			{t('rights')}
 		</div>
 	);
 };
