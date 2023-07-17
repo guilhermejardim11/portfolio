@@ -1,0 +1,25 @@
+@import '../../variables.scss';
+
+.banner {
+	align-items: flex-start;
+	padding: 130px 28px 6px;
+	border-bottom: 1px solid $WHITE2;
+	height: auto;
+	transition: border-color $ANIMATION_TIME;
+
+	h1 {
+		font-size: 28px;
+	}
+
+	ul {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		gap: 4px;
+		max-width: calc(100vw - 56px);
+	}
+}
+
+[data-theme='dark'] .banner {
+	border-color: $D_INDIGO2;
+}

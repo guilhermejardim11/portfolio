@@ -1,0 +1,24 @@
+@import '../../variables.scss';
+
+.go_back {
+	margin-bottom: 4px;
+
+	& > * {
+		display: inline-block;
+		vertical-align: middle;
+	}
+
+	svg {
+		transform: scaleX(-1);
+	}
+
+	div {
+		margin: 3px 0 0 12px;
+		font-family: 'roc-grotesk-wide', sans-serif;
+		font-weight: 600;
+		font-size: 12px;
+		line-height: 1;
+		text-transform: uppercase;
+		color: var(--project-color, $MAGENTA);
+	}
+}

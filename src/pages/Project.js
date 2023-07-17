@@ -3,7 +3,8 @@ import { useLoaderData } from 'react-router-dom';
 
 import styles from './Project.module.scss';
 
-import ProjectBanner from '../components/Banner/ProjectBanner';
+import ProjectBanner from '../components/Project/ProjectBanner';
+import ProjectDetails from '../components/Project/ProjectDetails';
 
 const ProjectPage = () => {
 	const project = useLoaderData();
@@ -18,14 +19,10 @@ const ProjectPage = () => {
 
 	return (
 		<main>
-			<ProjectBanner
-				title={project.title}
-				tags={project.tags}
-				thumbnail={project.thumbnail}
-			/>
-			<div className={styles.content}>
-				{project.content}
-			</div>
+			<ProjectBanner title={project.title} />
+			<ProjectDetails tags={project.tags} date={project.date} />
+
+			<div className={styles.content}>{project.content}</div>
 		</main>
 	);
 };
