@@ -4,7 +4,7 @@ import Card from '../../UI/Card';
 import styles from './Experience.module.scss';
 
 const Experience = () => {
-	const [t, i18n] = useTranslation();
+	const [t] = useTranslation();
 
 	return (
 		<>

@@ -10,7 +10,7 @@ import OverviewGallery from '../components/Gallery/OverviewGallery';
 const ProjectsPage = (props) => {
 	const projectList = useLoaderData();
 	const [isScrolled, isMenuOpen] = useOutletContext();
-	const [t, i18n] = useTranslation();
+	const [t] = useTranslation();
 
 	return (
 		<main className={styles.main}>

@@ -7,7 +7,7 @@ import styles from './Cookies.module.scss';
 import Button from '../UI/Button';
 
 const Cookies = () => {
-	const [t, i18n] = useTranslation();
+	const [t] = useTranslation();
 	const [agreedCookies, setAgreedCookies] = useState(false);
 	const [hidePopup, setHidePopup] = useState(false);
 

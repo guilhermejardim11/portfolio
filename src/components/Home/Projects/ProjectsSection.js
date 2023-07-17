@@ -5,7 +5,7 @@ import SectionTitle from '../../Section/SectionTitle';
 import MasonryGallery from '../../Gallery/MasonryGallery';
 
 const ProjectSection = (props) => {
-	const [t, i18n] = useTranslation();
+	const [t] = useTranslation();
 
 	return (
 		<Section>

@@ -6,7 +6,7 @@ import LanguageSelector from '../Language/LanguageSelector';
 import DownIndicator from '../Banner/DownIndicator';
 
 const HomeBanner = () => {
-	const [t, i18n] = useTranslation();
+	const [t] = useTranslation();
 
 	return (
 		<Banner>

@@ -7,7 +7,7 @@ import SectionTitle from '../../Section/SectionTitle';
 import Contact from './Contact';
 
 const ContactsSection = () => {
-	const [t, i18n] = useTranslation();
+	const [t] = useTranslation();
 
 	return (
 		<Section background className={styles.contacts}>

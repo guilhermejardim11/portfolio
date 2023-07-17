@@ -5,7 +5,7 @@ import styles from './DownIndicator.module.scss';
 import Arrow from '../UI/Arrow';
 
 const DownIndicator = () => {
-	const [t, i18n] = useTranslation();
+	const [t] = useTranslation();
 
 	return (
 		<div className={styles.scroll_down}>

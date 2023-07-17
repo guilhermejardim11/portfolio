@@ -5,7 +5,7 @@ import styles from './Profile.module.scss';
 import avatar from '../../../assets/images/avatar.jpg';
 
 const Profile = () => {
-	const [t, i18n] = useTranslation();
+	const [t] = useTranslation();
 
 	return (
 		<div className={styles.profile}>

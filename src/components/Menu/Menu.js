@@ -6,7 +6,7 @@ import styles from './Menu.module.scss';
 import Socials from '../Socials/Socials';
 
 const Menu = (props) => {
-	const [t, i18n] = useTranslation();
+	const [t] = useTranslation();
 
 	return (
 		<menu

@@ -14,7 +14,7 @@ import css from '../../../assets/icons/css.svg';
 import js from '../../../assets/icons/javascript.svg';
 
 const SkillsetSection = () => {
-	const [t, i18n] = useTranslation();
+	const [t] = useTranslation();
 
 	return (
 		<Section>

@@ -7,7 +7,7 @@ import Dot from '../../UI/Dot';
 import Experience from '../About/Experience';
 
 const AboutSection = () => {
-	const [t, i18n] = useTranslation();
+	const [t] = useTranslation();
 
 	return (
 		<Section background pattern>
