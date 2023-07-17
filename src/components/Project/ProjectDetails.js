@@ -1,14 +1,38 @@
+import { useTranslation } from 'react-i18next';
+
 import styles from './ProjectDetails.module.scss';
 
-const ProjectDetails = () => {
+const ProjectDetails = (props) => {
+	const [t, i18n] = useTranslation();
+
+	const options = {
+		year: 'numeric',
+		month: 'long',
+		day: 'numeric',
+	};
+
 	return (
-		<>
-			{/* {project.tags.map((tag) => (
-				<li key={tag}>
-					<Button>{tag}</Button>
-				</li>
-			))} */}
-		</>
+		<div className={styles.details}>
+			<span>{t('date')}:</span>
+			<div>{props.date.toLocaleString(i18n.language, options)}</div>
+
+			{props.tags.length > 0 && (
+				<>
+					<span>{t('tags')}:</span>
+					<div>
+						{props.tags.map((tag, index) =>
+							index !== 0 ? (
+								<>
+									<span>, </span> {tag}
+								</>
+							) : (
+								tag
+							)
+						)}
+					</div>
+				</>
+			)}
+		</div>
 	);
 };
 

@@ -44,6 +44,8 @@
 	"accept": "Accept",
 
 	"email": "Email",
+	"date": "Date",
+	"tags": "Tags",
 
 	"copyright": "© Copyright {{date}} Guilherme Jardim.",
 	"rights": "All rights reserved.",

@@ -21,7 +21,6 @@ const ProjectPage = () => {
 		<main>
 			<ProjectBanner title={project.title} />
 			<ProjectDetails tags={project.tags} date={project.date} />
-
 			<div className={styles.content}>{project.content}</div>
 		</main>
 	);
