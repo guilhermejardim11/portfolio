@@ -2,9 +2,9 @@ import { useTranslation } from 'react-i18next';
 
 import styles from './ContactsSection.module.scss';
 
-import Section from '../Section/Section';
-import SectionTitle from '../Section/SectionTitle';
-import Contact from '../Contact/Contact';
+import Section from '../../Section/Section';
+import SectionTitle from '../../Section/SectionTitle';
+import Contact from './Contact';
 
 const ContactsSection = () => {
 	const [t, i18n] = useTranslation();

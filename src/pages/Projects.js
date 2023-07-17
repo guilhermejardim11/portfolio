@@ -3,8 +3,8 @@ import { useTranslation } from 'react-i18next';
 
 import styles from './Projects.module.scss';
 
+import PageBanner from '../components/Page/PageBanner';
 import Section from '../components/Section/Section';
-import PageBanner from '../components/Banner/PageBanner';
 import OverviewGallery from '../components/Gallery/OverviewGallery';
 
 const ProjectsPage = (props) => {

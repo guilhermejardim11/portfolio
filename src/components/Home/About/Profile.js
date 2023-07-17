@@ -2,7 +2,7 @@ import { useTranslation } from 'react-i18next';
 
 import styles from './Profile.module.scss';
 
-import avatar from '../../assets/images/avatar.jpg';
+import avatar from '../../../assets/images/avatar.jpg';
 
 const Profile = () => {
 	const [t, i18n] = useTranslation();

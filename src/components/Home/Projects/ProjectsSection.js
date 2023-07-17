@@ -1,8 +1,8 @@
 import { useTranslation } from 'react-i18next';
 
-import Section from './Section';
-import SectionTitle from './SectionTitle';
-import MasonryGallery from '../Gallery/MasonryGallery';
+import Section from '../../Section/Section';
+import SectionTitle from '../../Section/SectionTitle';
+import MasonryGallery from '../../Gallery/MasonryGallery';
 
 const ProjectSection = (props) => {
 	const [t, i18n] = useTranslation();

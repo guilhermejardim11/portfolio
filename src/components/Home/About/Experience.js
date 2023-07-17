@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next';
 
-import Card from '../UI/Card';
+import Card from '../../UI/Card';
 import styles from './Experience.module.scss';
 
 const Experience = () => {
