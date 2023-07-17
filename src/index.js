@@ -1,4 +1,4 @@
-import { Suspense } from 'react';
+import { StrictMode, Suspense } from 'react';
 import ReactDOM from 'react-dom/client';
 import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 
@@ -12,11 +12,13 @@ import './i18next';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-	<ContextWrapper>
-		<Suspense fallback='loading'>
-			<App />
-		</Suspense>
-	</ContextWrapper>
+	<StrictMode>
+		<ContextWrapper>
+			<Suspense fallback='loading'>
+				<App />
+			</Suspense>
+		</ContextWrapper>
+	</StrictMode>
 );
 
 // If you want your app to work offline and load faster, you can change

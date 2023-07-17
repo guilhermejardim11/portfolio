@@ -8,18 +8,12 @@ import Section from '../Section/Section';
 import SectionTitle from '../Section/SectionTitle';
 import SkillCounter from '../Skills/SkillCounter';
 
-import figma_light from '../../assets/icons/light/figma.svg';
-import cc_light from '../../assets/icons/light/adobecc.svg';
-import react_light from '../../assets/icons/light/reactjs.svg';
-import html_light from '../../assets/icons/light/html.svg';
-import css_light from '../../assets/icons/light/css.svg';
-import js_light from '../../assets/icons/light/javascript.svg';
-import figma_dark from '../../assets/icons/dark/figma.svg';
-import cc_dark from '../../assets/icons/dark/adobecc.svg';
-import react_dark from '../../assets/icons/dark/reactjs.svg';
-import html_dark from '../../assets/icons/dark/html.svg';
-import css_dark from '../../assets/icons/dark/css.svg';
-import js_dark from '../../assets/icons/dark/javascript.svg';
+import figma from '../../assets/icons/figma.svg';
+import cc from '../../assets/icons/adobecc.svg';
+import react from '../../assets/icons/reactjs.svg';
+import html from '../../assets/icons/html.svg';
+import css from '../../assets/icons/css.svg';
+import js from '../../assets/icons/javascript.svg';
 
 const SkillsetSection = () => {
 	const [t, i18n] = useTranslation();
@@ -27,38 +21,18 @@ const SkillsetSection = () => {
 
 	return (
 		<Section>
-			<SectionTitle title={t('skillset')} to='/skills' text={t('view_all_f')} />
+			<SectionTitle
+				title={t('skillset')}
+				to='/skills'
+				text={t('view_all_f')}
+			/>
 			<div className={styles.skills}>
-				<SkillCounter
-					label='Figma'
-					icon={!themeContext.isDarkMode ? figma_light : figma_dark}
-					level={4}
-				/>
-				<SkillCounter
-					label='Adobe CC'
-					icon={!themeContext.isDarkMode ? cc_light : cc_dark}
-					level={3}
-				/>
-				<SkillCounter
-					label='React.js'
-					icon={!themeContext.isDarkMode ? react_light : react_dark}
-					level={4}
-				/>
-				<SkillCounter
-					label='HTML'
-					icon={!themeContext.isDarkMode ? html_light : html_dark}
-					level={5}
-				/>
-				<SkillCounter
-					label='SASS/SCSS'
-					icon={!themeContext.isDarkMode ? css_light : css_dark}
-					level={5}
-				/>
-				<SkillCounter
-					label='JavaScript'
-					icon={!themeContext.isDarkMode ? js_light : js_dark}
-					level={4}
-				/>
+				<SkillCounter label='Figma' icon={figma} level={4} />
+				<SkillCounter label='Adobe CC' icon={cc} level={3} />
+				<SkillCounter label='React.js' icon={react} level={4} />
+				<SkillCounter label='HTML' icon={html} level={5} />
+				<SkillCounter label='SASS/SCSS' icon={css} level={5} />
+				<SkillCounter label='JavaScript' icon={js} level={4} />
 			</div>
 		</Section>
 	);

@@ -16,6 +16,8 @@
 		position: absolute;
 		top: 16px;
 		left: calc(50% - 32px + 16px);
+		filter: invert(7%) sepia(6%) saturate(6450%) hue-rotate(200deg)
+			brightness(97%) contrast(92%);
 	}
 
 	span {
@@ -39,12 +41,19 @@
 	}
 }
 
-[data-theme='dark'] .counter svg g {
-	&:nth-child(1) {
-		fill: $D_INDIGO2;
+[data-theme='dark'] .counter {
+	img {
+		filter: invert(88%) sepia(100%) saturate(46%) hue-rotate(148deg)
+			brightness(112%) contrast(100%);
 	}
 
-	&:nth-child(2) {
-		fill: var(--project-color, $D_MAGENTA);
+	svg g {
+		&:nth-child(1) {
+			fill: $D_INDIGO2;
+		}
+
+		&:nth-child(2) {
+			fill: var(--project-color, $D_MAGENTA);
+		}
 	}
 }
