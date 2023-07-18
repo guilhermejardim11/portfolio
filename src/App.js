@@ -10,6 +10,7 @@ import Page_imoukubo from './pages/projects/Page_imoukubo';
 
 import imoukubo_thumb from './assets/projects/imoukubo/thumb.jpg';
 import ukubo_thumb from './assets/projects/ukubo/thumb.jpg';
+import ukubo_identity_thumb from './assets/projects/ukubo-identity/thumb.jpg';
 import melsport_thumb from './assets/projects/melsport/thumb.jpg';
 import vincera_thumb from './assets/projects/vincera/thumb.jpg';
 import padaria_guedes_thumb from './assets/projects/padaria-guedes/thumb.jpg';
@@ -29,6 +30,14 @@ const projectList = [
 		tags: ['UX/UI', 'Development'],
 		color: '#999999',
 		thumbnail: ukubo_thumb,
+		content: <Page_imoukubo />,
+	},
+	{
+		id: 'ukubo-brand',
+		title: 'UKUBO Identity Concept',
+		tags: ['Identity'],
+		color: '#2F3543',
+		thumbnail: ukubo_identity_thumb,
 		content: <Page_imoukubo />,
 	},
 	{
