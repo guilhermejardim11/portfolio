@@ -2,7 +2,7 @@ import styles from './Header.module.scss';
 
 import HeaderLogo from './HeaderLogo';
 import MenuButton from '../Menu/MenuButton';
-import ThemeButton from '../UI/ThemeButton';
+import ThemeButton from '../Theme/ThemeButton';
 
 const Header = (props) => {
 	return (
