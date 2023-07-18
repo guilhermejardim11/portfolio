@@ -1,0 +1,37 @@
+@import '../../variables.scss';
+
+.gallery {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 12px;
+	padding-top: 38px;
+
+	li {
+		&:nth-child(2n - 1) {
+			margin-top: -38px;
+		}
+	}
+
+	a {
+		border-radius: 12px;
+		position: relative;
+		overflow: hidden;
+	}
+
+	a::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		background-color: $GRAY;
+		z-index: 1;
+		mix-blend-mode: color;
+	}
+
+	img {
+		aspect-ratio: 1.5;
+		object-fit: cover;
+	}
+}

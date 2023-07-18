@@ -19,6 +19,14 @@ const projectList = [
 		content: <Imoukubo.Content />,
 	},
 	// {
+	// 	id: 'ukubo-brand',
+	// 	title: 'UKUBO Identity Concept',
+	// 	tags: ['Identity'],
+	// 	color: '#2F3543',
+	// 	thumbnail: ukubo_identity_thumb,
+	// 	content: <Page_imoukubo />,
+	// },
+	// {
 	// 	id: 'ukubo',
 	// 	title: 'UKUBO',
 	// 	tags: ['UX/UI', 'Development'],
