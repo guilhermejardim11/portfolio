@@ -2,20 +2,12 @@
 
 .profile {
 	margin-bottom: 38px;
-}
-
-.avatar {
-	margin: 0 auto 38px;
-	border-radius: 50%;
-	height: 140px;
-	width: 140px;
-	background-color: $WHITE;
-	overflow: hidden;
 
 	img {
-		height: 100%;
-		width: 100%;
+		margin: 0 auto 38px;
+		border-radius: 50%;
+		height: 140px;
+		width: 140px;
 		object-fit: cover;
-		z-index: 1;
 	}
 }

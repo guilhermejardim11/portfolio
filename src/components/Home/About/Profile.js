@@ -9,9 +9,7 @@ const Profile = () => {
 
 	return (
 		<div className={styles.profile}>
-			<div className={styles.avatar}>
-				<img src={avatar} alt='Guilherme Jardim' />
-			</div>
+			<img src={avatar} alt='Guilherme Jardim' />
 			<p>{t('section.about.desc')}</p>
 		</div>
 	);
