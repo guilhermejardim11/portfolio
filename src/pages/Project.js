@@ -15,7 +15,7 @@ const ProjectPage = () => {
 		return () => {
 			document.body.style = '';
 		};
-	}, [project.color]);
+	}, [project.colors]);
 
 	return (
 		<main>

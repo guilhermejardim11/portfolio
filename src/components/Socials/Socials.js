@@ -1,17 +1,12 @@
-import { useContext } from 'react';
-
 import styles from './Socials.module.scss';
 
 import linkedin from '../../assets/icons/linkedin.svg';
 import github from '../../assets/icons/github.svg';
 import dribbble from '../../assets/icons/dribbble.svg';
 
-import { ThemeContext } from '../../context/ThemeContext';
 import Social from './Social';
 
 const Socials = (props) => {
-	const themeContext = useContext(ThemeContext);
-
 	return (
 		<ul className={`${props.className} ${styles.socials}`}>
 			<Social
