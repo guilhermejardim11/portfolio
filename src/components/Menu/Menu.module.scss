@@ -34,14 +34,14 @@
 		text-align: center;
 
 		&.active {
-			color: var(--project-color, $MAGENTA);
+			color: var(--project-color-light, $MAGENTA);
 			transition: color $ANIMATION_TIME;
 		}
 	}
 }
 
 .menu_socials li:not(:first-child):before {
-	background-color: var(--project-color, $MAGENTA);
+	background-color: var(--project-color-light, $MAGENTA);
 	transition: background-color $ANIMATION_TIME;
 }
 
@@ -50,7 +50,7 @@
 		background-color: rgba($D_INDIGO, 0.97);
 
 		nav a.active {
-			color: var(--project-color, $D_MAGENTA);
+			color: var(--project-color-dark, $D_MAGENTA);
 		}
 	}
 }

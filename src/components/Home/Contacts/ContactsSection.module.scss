@@ -15,7 +15,7 @@
 
 		&:nth-child(2) {
 			text-align: right;
-			color: var(--project-color, $MAGENTA);
+			color: var(--project-color-light, $MAGENTA);
 			transition: color $ANIMATION_TIME;
 		}
 	}
@@ -26,5 +26,5 @@
 }
 
 [data-theme='dark'] .contacts span:nth-child(2) {
-	color: var(--project-color, $D_MAGENTA);
+	color: var(--project-color-dark, $D_MAGENTA);
 }

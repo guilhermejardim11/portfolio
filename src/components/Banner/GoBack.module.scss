@@ -19,6 +19,10 @@
 		font-size: 12px;
 		line-height: 1;
 		text-transform: uppercase;
-		color: var(--project-color, $MAGENTA);
+		color: var(--project-color-light, $MAGENTA);
 	}
+}
+
+[data-theme='dark'] .go_back div {
+	color: var(--project-color-dark, $D_MAGENTA);
 }

@@ -1,10 +1,10 @@
 @import '../../variables.scss';
 
 .arrow path {
-	fill: var(--project-color, $MAGENTA);
+	fill: var(--project-color-light, $MAGENTA);
 	transition: fill $ANIMATION_TIME;
 }
 
 [data-theme='dark'] .arrow path {
-	fill: var(--project-color, $D_MAGENTA);
+	fill: var(--project-color-dark, $D_MAGENTA);
 }

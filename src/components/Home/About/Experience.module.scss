@@ -50,11 +50,11 @@
 	span {
 		font-size: 38px;
 		letter-spacing: -0.06em;
-		color: var(--project-color, $MAGENTA);
+		color: var(--project-color-light, $MAGENTA);
 		transition: color $ANIMATION_TIME;
 	}
 }
 
 [data-theme='dark'] .projects span {
-	color: var(--project-color, $D_MAGENTA);
+	color: var(--project-color-dark, $D_MAGENTA);
 }

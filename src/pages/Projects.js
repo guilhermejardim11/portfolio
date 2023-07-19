@@ -15,7 +15,7 @@ const ProjectsPage = (props) => {
 	return (
 		<main className={styles.main}>
 			<PageBanner
-				title={t('page.projects')}
+				title={t('projects')}
 				isScrolled={isScrolled}
 				isMenuOpen={isMenuOpen}
 			/>

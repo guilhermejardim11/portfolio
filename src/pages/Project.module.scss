@@ -2,14 +2,15 @@
 	& > * {
 		margin-bottom: 38px;
 
-        &:last-child {
-            margin-bottom: 0;
-        }
+		&:last-child {
+			margin-bottom: 0;
+		}
 	}
 
 	& > img {
-		margin: 68px 0;
+		margin: 68px -28px;
 		padding: 0;
+		max-width: calc(100% + 56px);
 	}
 
 	br {

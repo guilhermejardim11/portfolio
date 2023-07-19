@@ -10,7 +10,7 @@ const ProjectPage = () => {
 	const project = useLoaderData();
 
 	useEffect(() => {
-		document.body.style = `--project-color: ${project.color}`;
+		document.body.style = `--project-color-light: ${project.colors[0]}; --project-color-dark: ${project.colors[1]};`;
 
 		return () => {
 			document.body.style = '';

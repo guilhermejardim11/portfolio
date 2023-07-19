@@ -36,7 +36,7 @@
 		}
 
 		&:nth-child(2) {
-			fill: var(--project-color, $MAGENTA);
+			fill: var(--project-color-light, $MAGENTA);
 		}
 	}
 }
@@ -53,7 +53,7 @@
 		}
 
 		&:nth-child(2) {
-			fill: var(--project-color, $D_MAGENTA);
+			fill: var(--project-color-dark, $D_MAGENTA);
 		}
 	}
 }

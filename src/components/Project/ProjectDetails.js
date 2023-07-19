@@ -1,3 +1,4 @@
+import { Fragment } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import styles from './ProjectDetails.module.scss';
@@ -20,15 +21,17 @@ const ProjectDetails = (props) => {
 				<>
 					<span>{t('tags')}:</span>
 					<div>
-						{props.tags.map((tag, index) =>
-							index !== 0 ? (
-								<>
-									<span>, </span> {tag}
-								</>
-							) : (
-								tag
-							)
-						)}
+						{props.tags.map((tag, index) => (
+							<Fragment key={index}>
+								{index !== 0 ? (
+									<>
+										<span>, </span> {tag}
+									</>
+								) : (
+									tag
+								)}
+							</Fragment>
+						))}
 					</div>
 				</>
 			)}

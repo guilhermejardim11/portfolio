@@ -1,12 +1,7 @@
 @import '../../variables.scss';
 
 .section {
-	padding: 68px 0;
-
-	& > * {
-		padding-right: 28px;
-		padding-left: 28px;
-	}
+	padding: 68px 28px;
 }
 
 .background {
@@ -28,11 +23,12 @@
 
 [data-theme='dark'] {
 	.background {
-		background-color: $D_INDIGO;
+		background-color: $D_INDIGO3;
 	}
 
 	.pattern::before {
 		background-image: url('../../assets/images/dark/pattern.svg');
-		opacity: 0.4;
+		opacity: 0.2;
+		mix-blend-mode: color-burn;
 	}
 }

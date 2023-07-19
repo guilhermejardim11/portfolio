@@ -11,7 +11,7 @@
 		}
 
 		&:nth-child(2) {
-			fill: var(--project-color, $MAGENTA);
+			fill: var(--project-color-light, $MAGENTA);
 		}
 
 		&:nth-child(3) {
@@ -25,5 +25,9 @@
 	&:nth-child(1),
 	&:nth-child(3) {
 		fill: $WHITE;
+	}
+
+	&:nth-child(2) {
+		fill: var(--project-color-dark, $MAGENTA);
 	}
 }

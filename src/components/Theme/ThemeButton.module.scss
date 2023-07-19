@@ -14,7 +14,8 @@
 		&:nth-child(1),
 		&:nth-child(2),
 		&:nth-child(3) {
-			transition: transform $ANIMATION_TIME, opacity $ANIMATION_TIME;
+			transition: fill $ANIMATION_TIME, transform $ANIMATION_TIME,
+				opacity $ANIMATION_TIME;
 		}
 
 		&:nth-child(1) {
@@ -23,7 +24,7 @@
 
 		&:nth-child(2),
 		&:nth-child(3) {
-			fill: var(--project-color, $MAGENTA);
+			fill: var(--project-color-light, $MAGENTA);
 		}
 
 		&:nth-child(2) {
@@ -42,15 +43,6 @@
 	}
 
 	&.active path {
-		&:nth-child(1) {
-			fill: $WHITE;
-		}
-
-		&:nth-child(2),
-		&:nth-child(3) {
-			fill: var(--project-color, $D_MAGENTA);
-		}
-
 		&:nth-child(2) {
 			transform: translate(-1912px, -200px);
 			opacity: 0;
@@ -59,6 +51,19 @@
 		&:nth-child(3) {
 			transform: translate(83px, -243px);
 			opacity: 1;
+		}
+	}
+}
+
+[data-theme='dark'] .button {
+	path {
+		&:nth-child(1) {
+			fill: $WHITE;
+		}
+
+		&:nth-child(2),
+		&:nth-child(3) {
+			fill: var(--project-color-dark, $D_MAGENTA);
 		}
 	}
 }

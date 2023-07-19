@@ -21,7 +21,7 @@
 			top: -2px;
 			height: 32px;
 			width: 32px;
-			background-color: var(--project-color, $MAGENTA);
+			background-color: var(--project-color-light, $MAGENTA);
 			transition: background-color $ANIMATION_TIME;
 			z-index: -1;
 		}
@@ -34,7 +34,7 @@
 		font-size: 10px;
 		line-height: 1;
 		text-transform: uppercase;
-		color: var(--project-color, $MAGENTA);
+		color: var(--project-color-light, $MAGENTA);
 		transition: color $ANIMATION_TIME;
 
 		& > * {
@@ -50,10 +50,10 @@
 
 [data-theme='dark'] .title {
 	h3::before {
-		background-color: var(--project-color, $D_MAGENTA);
+		background-color: var(--project-color-dark, $D_MAGENTA);
 	}
 
 	a {
-		color: var(--project-color, $MAGENTA);
+		color: var(--project-color-dark, $MAGENTA);
 	}
 }
