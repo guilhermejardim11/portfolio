@@ -1,0 +1,19 @@
+@import '../../../variables.scss';
+
+.modular_box {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 16px 20px;
+	padding: 28px;
+	background-color: $WHITE2;
+}
+
+section > .modular_box {
+    margin-left: -28px;
+    margin-right: -28px;
+}
+
+[data-theme='dark'] .modular_box {
+	background-color: $D_INDIGO3;
+}

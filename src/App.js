@@ -15,7 +15,7 @@ const projectList = [
 		date: new Date(Date.UTC(2012, 11, 20)),
 		tags: ['Brand Identity', 'UX/UI', 'Development'],
 		thumbnail: Imoukubo.thumbnail,
-		color: Imoukubo.color,
+		colors: Imoukubo.colors,
 		content: <Imoukubo.Content />,
 	},
 	// {

@@ -1,0 +1,40 @@
+@import '../../../variables.scss';
+
+.color {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 4px;
+
+	div {
+		margin: 4px;
+		border-radius: 50%;
+		position: relative;
+		height: 30px;
+		width: 30px;
+
+		&::before {
+			content: '';
+			border: 2px solid $GRAY;
+			border-radius: 50%;
+			position: absolute;
+			top: -4px;
+			left: -4px;
+			height: 38px;
+			width: 38px;
+			transition: border-color $ANIMATION_TIME;
+		}
+	}
+
+	span {
+		font-family: 'roc-grotesk-wide', sans-serif;
+		font-weight: 600;
+		font-size: 10px;
+		line-height: 1;
+		text-transform: uppercase;
+	}
+}
+
+[data-theme='dark'] .color div::before {
+	border-color: $INDIGO;
+}
