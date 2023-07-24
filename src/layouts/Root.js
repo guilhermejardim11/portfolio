@@ -10,12 +10,12 @@ import Cookies from '../components/Cookies/Cookies';
 import ScrollTop from '../components/UI/ScrollTop';
 import { useTranslation } from 'react-i18next';
 
-const RootLayout = () => {
+const RootLayout = (props) => {
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
 	const [isScrolled, setIsScrolled] = useState(false);
+	const [t, i18n] = useTranslation();
 	const { pathname } = useLocation();
 	const contentRef = useRef();
-	const [t, i18n] = useTranslation();
 
 	const menuOpenHandler = () => {
 		setIsMenuOpen(!isMenuOpen);
@@ -60,8 +60,12 @@ const RootLayout = () => {
 				isScrolled={isScrolled}
 			/>
 			<Menu closeMenu={closeMenuHandler} isMenuOpen={isMenuOpen} />
-			<Outlet context={[isScrolled, isMenuOpen]} />
-			<Footer />
+			{props.children ?? (
+				<>
+					<Outlet context={[isScrolled, isMenuOpen]} />
+					<Footer />
+				</>
+			)}
 			<Cookies />
 			<ScrollTop onClick={scrollToTop} isScrolled={isScrolled} />
 		</div>
