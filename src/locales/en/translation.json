@@ -56,33 +56,37 @@
 	},
 
 	"error": {
+		"default": {
+			"title": "An error occurred",
+			"message": "OMG! Something went wrong!"
+		},
 		"401": {
 			"title": "Let me in!!!",
-			"message": "You need an authorization type {{status}} to access this page. Sad for you, of course."
+			"message": "You need an authorization type <1>{{error}}</1> to access this page. Sad for you, of course."
 		},
 		"403": {
 			"title": "Where do you thing you are going?",
-			"message": "This place is forbidden, {{status}}. Don't even try it."
+			"message": "This place is forbidden, <1>{{error}}</1>. Don't even try it."
 		},
 		"400": {
 			"title": "Ooops...",
-			"message": "Nothing to see here, {{status}}. Move along!"
+			"message": "Nothing to see here, <1>{{error}}</1>. Move along!"
 		},
 		"503": {
 			"title": "I'm unavailable",
-			"message": "And that's all the information you're gonna get. Now move, {{status}}..."
+			"message": "And that's all the information you're gonna get. Now move, <1>{{error}}</1>..."
 		},
 		"408": {
 			"title": "Why...",
-			"message": "Why would you stop my request prematurely, ah? Wait... You clicked the link '{{status}}' times??? HOW?"
+			"message": "Why would you stop my request prematurely, ah? Wait... You clicked the link '<1>{{error}}</1>' times??? HOW?"
 		},
 		"404": {
 			"title": "Gotcha...",
-			"message": "Seems like this page is missing. Perhaps you should stop trying to hack my {{status}}th system."
+			"message": "Seems like this page is missing. Perhaps you should stop trying to hack my <1>{{error}}</1>th system."
 		},
 		"500": {
 			"title": "Well... This is awkward...",
-			"message": "Our server is, ah... taking a {{status}} hour break! Yea, sure, why not..."
+			"message": "Our server is, ah... taking a <1>{{error}}</1> hour break! Yea, sure, why not..."
 		}
 	}
 }
