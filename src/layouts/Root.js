@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import { Outlet, useLocation } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 import styles from './Root.module.scss';
 
@@ -8,7 +9,6 @@ import Footer from '../components/Footer/Footer';
 import Menu from '../components/Menu/Menu';
 import Cookies from '../components/Cookies/Cookies';
 import ScrollTop from '../components/UI/ScrollTop';
-import { useTranslation } from 'react-i18next';
 import LanguageOverlay from '../components/Language/LanguageOverlay';
 
 const RootLayout = (props) => {
@@ -53,6 +53,9 @@ const RootLayout = (props) => {
 			onScroll={onScrollHandler}
 			ref={contentRef}
 			style={{ overflowY: isMenuOpen ? 'hidden' : 'auto' }}
+			data-theme={
+				localStorage.getItem('isDarkMode') === '1' ? 'dark' : 'light'
+			}
 		>
 			<Header
 				onMenuOpen={menuOpenHandler}
@@ -69,7 +72,7 @@ const RootLayout = (props) => {
 			)}
 			<Cookies />
 			<ScrollTop onClick={scrollToTop} isScrolled={isScrolled} />
-			<LanguageOverlay isOpen={true} />
+			<LanguageOverlay isOpen={false} />
 		</div>
 	);
 };

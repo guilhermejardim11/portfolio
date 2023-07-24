@@ -16,6 +16,10 @@ body {
 	transition: color $ANIMATION_TIME, background-color $ANIMATION_TIME;
 }
 
+main {
+	height: calc(100% - 363px);
+}
+
 h1,
 h2,
 h3,
