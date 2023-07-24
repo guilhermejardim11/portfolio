@@ -1,12 +1,18 @@
 @import './variables.scss';
 
+html,
+body,
+#root,
+#root > div {
+	height: 100%;
+	transition: height $ANIMATION_TIME;
+}
+
 body {
-	min-height: 100vh;
-	min-width: 100vw;
-	color: $INDIGO;
-	background-color: $WHITE;
 	font-family: 'roc-grotesk', sans-serif;
 	font-weight: 400;
+	color: $INDIGO;
+	background-color: $WHITE;
 	transition: color $ANIMATION_TIME, background-color $ANIMATION_TIME;
 }
 
@@ -33,10 +39,6 @@ i {
 p {
 	font-size: 16px;
 	line-height: 30px;
-}
-
-main {
-	min-height: calc(100vh - 363px);
 }
 
 [data-theme='dark'] {

@@ -12,11 +12,28 @@
 	z-index: 10;
 	transition: border-color ($ANIMATION_TIME - 0.1s), padding-top $ANIMATION_TIME, background-color $ANIMATION_TIME;
 
+	&::before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background-image: linear-gradient($WHITE 10%, transparent 100%);
+		opacity: 0;
+		z-index: -1;
+		transition: opacity $ANIMATION_TIME, background-image $ANIMATION_TIME;
+	}
+
 	&.scrolled {
 		padding: 9px 16px 7px;
 		border-color: $WHITE;
 		backdrop-filter: blur(1.6px);
 		background-color: rgba($WHITE, 0.95);
+
+		&::before {
+			opacity: 1;
+		}
 	}
 
 	.actions {
@@ -25,7 +42,13 @@
 	}
 }
 
-[data-theme='dark'] .header.scrolled {
-	border-color: $D_INDIGO2;
-	background-color: rgba($D_INDIGO, 0.95);
+[data-theme='dark'] .header {
+	&:before {
+		background-image: linear-gradient($D_INDIGO 10%, transparent 100%);
+	}
+
+	&.scrolled {
+		border-color: $D_INDIGO2;
+		background-color: rgba($D_INDIGO, 0.95);
+	}	
 }

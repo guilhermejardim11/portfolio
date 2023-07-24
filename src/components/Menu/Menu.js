@@ -3,15 +3,14 @@ import { useTranslation } from 'react-i18next';
 
 import styles from './Menu.module.scss';
 
+import Overlay from '../UI/Overlay';
 import Socials from '../Socials/Socials';
 
 const Menu = (props) => {
 	const [t] = useTranslation();
 
 	return (
-		<menu
-			className={`${styles.menu} ${props.isMenuOpen ? styles.open : ''}`}
-		>
+		<Overlay className={styles.menu} isOpen={props.isMenuOpen}>
 			<nav>
 				<NavLink
 					to='/'
@@ -52,7 +51,7 @@ const Menu = (props) => {
 			</nav>
 
 			<Socials className={styles.menu_socials} />
-		</menu>
+		</Overlay>
 	);
 };
 
