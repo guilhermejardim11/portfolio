@@ -9,6 +9,7 @@ import Menu from '../components/Menu/Menu';
 import Cookies from '../components/Cookies/Cookies';
 import ScrollTop from '../components/UI/ScrollTop';
 import { useTranslation } from 'react-i18next';
+import LanguageOverlay from '../components/Language/LanguageOverlay';
 
 const RootLayout = () => {
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -64,6 +65,7 @@ const RootLayout = () => {
 			<Footer />
 			<Cookies />
 			<ScrollTop onClick={scrollToTop} isScrolled={isScrolled} />
+			<LanguageOverlay isOpen={true} />
 		</div>
 	);
 };
