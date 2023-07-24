@@ -10,13 +10,13 @@ const HomePage = () => {
 	const projectList = useLoaderData();
 
 	return (
-		<main>
+		<>
 			<HomeBanner />
 			<ProjectSection projectList={projectList} />
 			<AboutSection />
 			<SkillsetSection />
 			<ContactsSection />
-		</main>
+		</>
 	);
 };
 

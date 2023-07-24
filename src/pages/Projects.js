@@ -1,3 +1,4 @@
+import { Fragment } from 'react';
 import { useLoaderData, useOutletContext } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 
@@ -13,7 +14,7 @@ const ProjectsPage = (props) => {
 	const [t] = useTranslation();
 
 	return (
-		<main className={styles.main}>
+		<Fragment className={styles.main}>
 			<PageBanner
 				title={t('projects')}
 				isScrolled={isScrolled}
@@ -27,7 +28,7 @@ const ProjectsPage = (props) => {
 					/>
 				</Section>
 			</div>
-		</main>
+		</Fragment>
 	);
 };
 
