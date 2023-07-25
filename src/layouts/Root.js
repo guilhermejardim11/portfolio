@@ -49,7 +49,7 @@ const RootLayout = (props) => {
 
 	return (
 		<div
-			className={styles.content}
+			className={styles.root}
 			onScroll={onScrollHandler}
 			ref={contentRef}
 			style={{ overflowY: isMenuOpen ? 'hidden' : 'auto' }}

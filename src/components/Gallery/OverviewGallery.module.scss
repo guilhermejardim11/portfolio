@@ -9,18 +9,6 @@
 	position: relative;
     aspect-ratio: 1.8;
 	transition: border-color 0.3s;
-
-	&::before {
-		content: '';
-		position: absolute;
-		top: 0;
-		right: 0;
-		bottom: 0;
-		left: 0;
-		background-color: $GRAY;
-		z-index: 1;
-		mix-blend-mode: color;
-	}
 }
 
 .content {

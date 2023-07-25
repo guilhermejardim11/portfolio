@@ -2,7 +2,6 @@ import { useTranslation } from 'react-i18next';
 
 import Banner from '../Banner/Banner';
 import Dot from '../UI/Dot';
-import LanguageSelector from '../Language/LanguageSelector';
 import DownIndicator from '../Banner/DownIndicator';
 
 const HomeBanner = () => {
@@ -15,8 +14,6 @@ const HomeBanner = () => {
 			<h2>{t('job')}</h2>
 
 			<DownIndicator />
-
-			<LanguageSelector />
 		</Banner>
 	);
 };
