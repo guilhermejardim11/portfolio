@@ -53,9 +53,6 @@ const RootLayout = (props) => {
 			onScroll={onScrollHandler}
 			ref={contentRef}
 			style={{ overflowY: isMenuOpen ? 'hidden' : 'auto' }}
-			data-theme={
-				localStorage.getItem('isDarkMode') === '1' ? 'dark' : 'light'
-			}
 		>
 			<Header
 				onMenuOpen={menuOpenHandler}

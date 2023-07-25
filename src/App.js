@@ -7,6 +7,10 @@ import ProjectsPage from './pages/Projects';
 import ProjectPage from './pages/Project';
 
 import { default as Imoukubo } from './projects/imoukubo';
+document.body.setAttribute(
+	'data-theme',
+	localStorage.getItem('isDarkMode') === '1' ? 'dark' : 'light'
+);
 
 const projectList = [
 	{

@@ -6,9 +6,7 @@ const ContextWrapper = (props) => {
 	const [isDarkMode, setIsDarkMode] = useState(false);
 
 	useEffect(() => {
-		if (localStorage.getItem('isDarkMode') === '1') {
-			setIsDarkMode(true);
-		}
+		if (localStorage.getItem('isDarkMode') === '1') setIsDarkMode(true);
 	}, []);
 
 	useEffect(() => {

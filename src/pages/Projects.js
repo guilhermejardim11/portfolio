@@ -7,7 +7,7 @@ import PageBanner from '../components/Page/PageBanner';
 import Section from '../components/Section/Section';
 import OverviewGallery from '../components/Gallery/OverviewGallery';
 
-const ProjectsPage = (props) => {
+const ProjectsPage = () => {
 	const projectList = useLoaderData();
 	const [isScrolled, isMenuOpen] = useOutletContext();
 	const [t] = useTranslation();

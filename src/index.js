@@ -12,13 +12,11 @@ import './i18next';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-	<StrictMode>
-		<ContextWrapper>
-			<Suspense fallback='loading'>
-				<App />
-			</Suspense>
-		</ContextWrapper>
-	</StrictMode>
+	<ContextWrapper>
+		<Suspense fallback='loading'>
+			<App />
+		</Suspense>
+	</ContextWrapper>
 );
 
 // If you want your app to work offline and load faster, you can change
