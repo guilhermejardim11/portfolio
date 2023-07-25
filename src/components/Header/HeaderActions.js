@@ -3,11 +3,11 @@ import styles from './HeaderActions.module.scss';
 import MenuButton from '../Menu/MenuButton';
 import ThemeButton from '../Theme/ThemeButton';
 
-const HeaderActions = ({ isMenuOpen, onMenuOpen }) => {
+const HeaderActions = () => {
 	return (
 		<div className={styles.actions}>
-			<ThemeButton isMenuOpen={isMenuOpen} />
-			<MenuButton onClick={onMenuOpen} isMenuOpen={isMenuOpen} />
+			<ThemeButton />
+			<MenuButton />
 		</div>
 	);
 };

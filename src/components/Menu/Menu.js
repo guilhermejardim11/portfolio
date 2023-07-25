@@ -1,5 +1,7 @@
+import { useContext } from 'react';
 import { NavLink } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import { MenuContext } from '../../context/MenuContext';
 
 import styles from './Menu.module.scss';
 
@@ -8,9 +10,10 @@ import Socials from '../Socials/Socials';
 
 const Menu = (props) => {
 	const [t] = useTranslation();
+	const menuContext = useContext(MenuContext);
 
 	return (
-		<Overlay className={styles.menu} isOpen={props.isMenuOpen}>
+		<Overlay className={styles.menu} isOpen={menuContext.isMenuOpen}>
 			<nav>
 				<NavLink
 					to='/'

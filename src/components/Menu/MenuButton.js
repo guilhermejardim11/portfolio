@@ -1,22 +1,32 @@
+import { useContext } from 'react';
+import { MenuContext } from '../../context/MenuContext';
+
 import styles from './MenuButton.module.scss';
 
 import Dot from '../UI/Dot';
 
-const MenuButton = (props) => {
-	const onClickHandler = () => {
-		props.onClick();
-	};
+const MenuButton = () => {
+	const menuContext = useContext(MenuContext);
 
 	return (
-		<button
-			type='button'
-			title='Menu Button'
-			className={`${styles.button} ${props.isMenuOpen && styles.active}`}
-			onClick={onClickHandler}
-		>
-			<Dot size='28' className={styles.dot} />
-			<i></i>
-		</button>
+		<MenuContext.Consumer>
+			{({ onMenuOpen }) => (
+				<button
+					type='button'
+					title='Menu Button'
+					className={`${styles.button} ${menuContext.isMenuOpen && styles.active}`}
+					onClick={() => {
+						onMenuOpen();
+					}}
+				>
+					<Dot
+						className={styles.dot}
+						size='28'
+					/>
+					<i></i>
+				</button>
+			)}
+		</MenuContext.Consumer>
 	);
 };
 
