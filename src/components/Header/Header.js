@@ -1,8 +1,7 @@
 import styles from './Header.module.scss';
 
 import HeaderLogo from './HeaderLogo';
-import MenuButton from '../Menu/MenuButton';
-import ThemeButton from '../Theme/ThemeButton';
+import HeaderActions from './HeaderActions';
 
 const Header = (props) => {
 	return (
@@ -13,13 +12,10 @@ const Header = (props) => {
 				}`}
 			>
 				<HeaderLogo />
-				<div className={styles.actions}>
-					<ThemeButton isMenuOpen={props.isMenuOpen} />
-					<MenuButton
-						onClick={props.onMenuOpen}
-						isMenuOpen={props.isMenuOpen}
-					/>
-				</div>
+				<HeaderActions
+					isMenuOpen={props.isMenuOpen}
+					onMenuOpen={props.onMenuOpen}
+				/>
 			</header>
 		</>
 	);
