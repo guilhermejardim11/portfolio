@@ -4,30 +4,30 @@
 
 	path {
 		&:nth-child(1) {
-			fill: #17182b;
+			fill: #17182b !important;
 		}
 
 		&:nth-child(2) {
-			fill: #04050d;
+			fill: #04050d !important;
 		}
 
 		&:nth-child(3) {
-			fill: #090a16;
-			opacity: 1;
+			fill: #090a16 !important;
+			opacity: 1 !important;
 		}
 	}
 }
 
 [data-theme='dark'] .logo path {
 	&:nth-child(1) {
-		fill: #ffffff;
+		fill: #ffffff !important;
 	}
 
 	&:nth-child(2) {
-		fill: #dfdfdf;
+		fill: #dfdfdf !important;
 	}
 
 	&:nth-child(3) {
-		fill: #ececec;
+		fill: #ececec !important;
 	}
 }

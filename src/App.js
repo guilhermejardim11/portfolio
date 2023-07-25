@@ -9,10 +9,7 @@ import ProjectPage from './pages/Project';
 import { default as Imoukubo } from './projects/imoukubo';
 import { default as Melsport } from './projects/melsport';
 
-document.body.setAttribute(
-	'data-theme',
-	localStorage.getItem('isDarkMode') === '1' ? 'dark' : 'light'
-);
+document.body.setAttribute('data-theme', localStorage.getItem('isDarkMode') === '1' ? 'dark' : 'light');
 
 const projectList = [Imoukubo, Melsport];
 
@@ -41,9 +38,7 @@ const router = createBrowserRouter(
 					path: 'projects/:ID',
 					element: <ProjectPage />,
 					loader: ({ params }) => {
-						return projectList.find(
-							(project) => project.id === params.ID
-						);
+						return projectList.find((project) => project.id === params.ID);
 					},
 				},
 			],
@@ -56,7 +51,10 @@ const router = createBrowserRouter(
 
 const App = () => {
 	return (
-		<RouterProvider router={router} future={{ v7_startTransition: true }} />
+		<RouterProvider
+			router={router}
+			future={{ v7_startTransition: true }}
+		/>
 	);
 };
 
