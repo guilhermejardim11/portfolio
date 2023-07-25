@@ -1,9 +1,7 @@
-import styles from './Image.module.scss';
-
 const Image = (props) => {
 	return (
 		<img
-			className={`${props.colorShift && styles.color_shift}`}
+			className={`${props.colorShift && 'color_shift'}`}
 			src={props.src}
 			title='image'
 			style={{

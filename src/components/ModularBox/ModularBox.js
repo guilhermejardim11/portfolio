@@ -3,7 +3,7 @@ import styles from './ModularBox.module.scss';
 const ModularBox = (props) => {
 	return (
 		<div
-			className={styles.modular_box}
+			className={`${styles.box} ${props.vertical && styles.vertical}`}
 			style={{
 				gap: props.gap,
 			}}
