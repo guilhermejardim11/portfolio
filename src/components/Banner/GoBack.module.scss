@@ -20,6 +20,7 @@
 		line-height: 1;
 		text-transform: uppercase;
 		color: var(--project-color-light, $MAGENTA);
+		transition: color $ANIMATION_TIME;
 	}
 }
 

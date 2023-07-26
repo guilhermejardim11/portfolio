@@ -11,6 +11,7 @@ import Header from '../components/Header/Header';
 import LanguageOverlay from '../components/Language/LanguageOverlay';
 import Cookies from '../components/Cookies/Cookies';
 import ScrollTop from '../components/UI/ScrollTop';
+import Loading from '../components/Loading/Loading';
 
 const RootLayout = (props) => {
 	const [isScrolled, setIsScrolled] = useState(false);
@@ -29,14 +30,16 @@ const RootLayout = (props) => {
 	}, [location.pathname, i18n.resolvedLanguage]);
 
 	return (
-		<div
-			className={`${styles.root} ${menuContext.isMenuOpen ? styles.locked : ''}`}
-			ref={contentRef}
-			onScroll={onScrollHandler}
-		>
-			<Header isScrolled={isScrolled} />
+		<>
+			<Loading />
+			<div
+				className={`${styles.root} ${menuContext.isMenuOpen ? styles.locked : ''}`}
+				ref={contentRef}
+				onScroll={onScrollHandler}
+			>
+				<Header isScrolled={isScrolled} />
 
-			{/* <AnimatePresence
+				{/* <AnimatePresence
 				initial={false}
 				mode='popLayout'
 			>
@@ -47,23 +50,24 @@ const RootLayout = (props) => {
 					animate={{ opacity: 1, x: 0 }}
 					exit={{ opacity: 0, x: 200 }}
 				> */}
-					<RootContent
-						children={props.children}
-						isMenuOpen={menuContext.isMenuOpen}
-						isScrolled={isScrolled}
-					/>
+				<RootContent
+					children={props.children}
+					isMenuOpen={menuContext.isMenuOpen}
+					isScrolled={isScrolled}
+				/>
 				{/* </motion.div>
 			</AnimatePresence> */}
 
-			<LanguageOverlay />
+				<LanguageOverlay />
 
-			<Cookies />
+				<Cookies />
 
-			<ScrollTop
-				contentRef={contentRef}
-				isScrolled={isScrolled}
-			/>
-		</div>
+				<ScrollTop
+					contentRef={contentRef}
+					isScrolled={isScrolled}
+				/>
+			</div>
+		</>
 	);
 };
 
