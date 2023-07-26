@@ -1,41 +1,33 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.5a3e8269.css",
-    "main.js": "/portfolio/static/js/main.fbac2a58.js",
+    "main.css": "/portfolio/static/css/main.46d4ef7e.css",
+    "main.js": "/portfolio/static/js/main.2d933fa6.js",
     "static/media/background.jpg": "/portfolio/static/media/background.67b9c9ccd78df6d0fcc1.jpg",
-    "static/media/imoukubo_2.jpg": "/portfolio/static/media/imoukubo_2.83f701765517c34b597c.jpg",
-    "static/media/imoukubo_5.jpg": "/portfolio/static/media/imoukubo_5.7f28fdf6eb29eab79e89.jpg",
-    "static/media/imoukubo_4.jpg": "/portfolio/static/media/imoukubo_4.a83c82cec715bd560c00.jpg",
-    "static/media/imoukubo_3.jpg": "/portfolio/static/media/imoukubo_3.c112bb094723591e24b7.jpg",
-    "static/media/thumb.jpg": "/portfolio/static/media/thumb.62ad372f88141b8b3500.jpg",
+    "static/media/thumb.jpg": "/portfolio/static/media/thumb.17c0e2b6fa3583d23b43.jpg",
     "service-worker.js": "/portfolio/service-worker.js",
+    "static/media/icons.svg": "/portfolio/static/media/icons.dc405f3e0abd8c02daf5574c9d9ce42c.svg",
     "static/media/avatar.jpg": "/portfolio/static/media/avatar.c2665cf4494635c027d5.jpg",
+    "static/media/fonts.svg": "/portfolio/static/media/fonts.11b165c66fa0aa4f60f7405f5b082908.svg",
     "static/media/logo_0.svg": "/portfolio/static/media/logo_0.38c8eb62d4ccb2eb2648f46622fd7453.svg",
     "static/media/logo_1.svg": "/portfolio/static/media/logo_1.721226091fc19643dd65d9cd52b64968.svg",
-    "static/media/font_0.svg": "/portfolio/static/media/font_0.7d00b464e600c5fab2784ee6d45db8f7.svg",
     "static/media/reactjs.svg": "/portfolio/static/media/reactjs.3b54c0b2749840c42ef2169721278281.svg",
     "static/media/logo_2.svg": "/portfolio/static/media/logo_2.7e99f850f9e63ecee1fde762c89ec8f9.svg",
-    "static/media/font_1.svg": "/portfolio/static/media/font_1.fd994a8c3a3eb5ce0e679e9de48d4757.svg",
     "static/media/github.svg": "/portfolio/static/media/github.7ad4687a679f82d402749c7cb3280d65.svg",
     "static/media/pattern.svg": "/portfolio/static/media/pattern.075f78ec59f724ef19d3.svg",
     "static/media/adobecc.svg": "/portfolio/static/media/adobecc.a20de8205e2f08b2040448338f418e36.svg",
     "static/media/dribbble.svg": "/portfolio/static/media/dribbble.b8307f32594f91e37724f5c6b9c6c4d8.svg",
     "static/media/figma.svg": "/portfolio/static/media/figma.5c41854cb80cf4ea2926cafc13df6786.svg",
     "index.html": "/portfolio/index.html",
-    "static/media/apartamento.svg": "/portfolio/static/media/apartamento.7b4629ea0358eb0e040d05dac3f69f37.svg",
     "static/media/javascript.svg": "/portfolio/static/media/javascript.c1a2bc654d2aee50b80bd3d6c3ae7b43.svg",
-    "static/media/terreno.svg": "/portfolio/static/media/terreno.b6937cf5c393e37549a944ebc693af66.svg",
-    "static/media/moradia.svg": "/portfolio/static/media/moradia.95cbaac81c1cb886f34f77e2195b8c5a.svg",
-    "static/media/comercio.svg": "/portfolio/static/media/comercio.206b2ec3bee258b32cb0e3f98eccb035.svg",
     "static/media/linkedin.svg": "/portfolio/static/media/linkedin.6a5d11e0d495a8ff8e6ac20b201dbf7c.svg",
     "static/media/css.svg": "/portfolio/static/media/css.559e2ff42bd923f9c55dc8d80f8a5454.svg",
     "static/media/html.svg": "/portfolio/static/media/html.389814ee7c0979ff64fe109108a74f68.svg",
     "static/media/getFetch.cjs": "/portfolio/static/media/getFetch.40f37ddea2378391108f.cjs",
-    "main.5a3e8269.css.map": "/portfolio/static/css/main.5a3e8269.css.map",
-    "main.fbac2a58.js.map": "/portfolio/static/js/main.fbac2a58.js.map"
+    "main.46d4ef7e.css.map": "/portfolio/static/css/main.46d4ef7e.css.map",
+    "main.2d933fa6.js.map": "/portfolio/static/js/main.2d933fa6.js.map"
   },
   "entrypoints": [
-    "static/css/main.5a3e8269.css",
-    "static/js/main.fbac2a58.js"
+    "static/css/main.46d4ef7e.css",
+    "static/js/main.2d933fa6.js"
   ]
 }
