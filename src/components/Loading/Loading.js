@@ -4,14 +4,15 @@ import Logo from '../UI/Logo';
 
 const boxVariants = {
 	initial: {
-		clipPath: 'inset(0 0 0 0)',
+		backdropFilter: 'blur(20px)',
+		opacity: 1,
 	},
 	animate: {
-		clipPath: 'inset(0 0 100% 0)',
+		backdropFilter: 'blur(5px)',
+		opacity: 0,
 		transition: {
 			duration: 0.75,
 			delay: 2.5,
-			ease: [0.87, 0, 0.13, 1],
 		},
 	},
 };
@@ -23,8 +24,9 @@ const logosVariants = {
 	animate: {
 		opacity: 0,
 		transition: {
-			duration: 0.2,
+			duration: 0.3,
 			delay: 2.3,
+			ease: [0, 0.2, 0.8, 1],
 		},
 	},
 };
