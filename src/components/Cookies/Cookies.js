@@ -8,12 +8,12 @@ import Button from '../UI/Button';
 
 const Cookies = () => {
 	const [t] = useTranslation();
-	const [agreedCookies, setAgreedCookies] = useState(false);
+	const [agreedCookies, setAgreedCookies] = useState(true);
 	const [hidePopup, setHidePopup] = useState(false);
 
 	useEffect(() => {
-		if (localStorage.getItem('agreedCookies') === '1') {
-			setAgreedCookies(true);
+		if (localStorage.getItem('agreedCookies') !== '1') {
+			setAgreedCookies(false);
 		}
 	}, []);
 

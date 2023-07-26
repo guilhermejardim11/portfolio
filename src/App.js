@@ -9,10 +9,9 @@ import Loading from './components/Loading/Loading';
 
 import { default as Imoukubo } from './projects/imoukubo';
 import { default as Melsport } from './projects/melsport';
+const projectList = [Imoukubo, Melsport];
 
 document.body.setAttribute('data-theme', localStorage.getItem('isDarkMode') === '1' ? 'dark' : 'light');
-
-const projectList = [Imoukubo, Melsport];
 
 const router = createBrowserRouter(
 	[

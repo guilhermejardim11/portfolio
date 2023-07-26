@@ -1,6 +1,7 @@
 import { useContext, useEffect, useRef, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import { AnimatePresence, motion } from 'framer-motion';
 import { MenuContext } from '../context/MenuContext';
 
 import styles from './Root.module.scss';
@@ -14,7 +15,7 @@ import ScrollTop from '../components/UI/ScrollTop';
 const RootLayout = (props) => {
 	const [isScrolled, setIsScrolled] = useState(false);
 	const [t, i18n] = useTranslation();
-	const { pathname } = useLocation();
+	const location = useLocation();
 	const menuContext = useContext(MenuContext);
 	const contentRef = useRef();
 
@@ -25,7 +26,7 @@ const RootLayout = (props) => {
 
 	useEffect(() => {
 		menuContext.onMenuClose();
-	}, [pathname, i18n.resolvedLanguage]);
+	}, [location.pathname, i18n.resolvedLanguage]);
 
 	return (
 		<div
@@ -35,11 +36,24 @@ const RootLayout = (props) => {
 		>
 			<Header isScrolled={isScrolled} />
 
-			<RootContent
-				children={props.children}
-				isMenuOpen={menuContext.isMenuOpen}
-				isScrolled={isScrolled}
-			/>
+			{/* <AnimatePresence
+				initial={false}
+				mode='popLayout'
+			>
+				<motion.div
+					class='motion-div'
+					key={location.pathname}
+					initial={{ opacity: 0, x: -200 }}
+					animate={{ opacity: 1, x: 0 }}
+					exit={{ opacity: 0, x: 200 }}
+				> */}
+					<RootContent
+						children={props.children}
+						isMenuOpen={menuContext.isMenuOpen}
+						isScrolled={isScrolled}
+					/>
+				{/* </motion.div>
+			</AnimatePresence> */}
 
 			<LanguageOverlay />
 
