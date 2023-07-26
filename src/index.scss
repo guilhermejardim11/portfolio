@@ -3,7 +3,8 @@
 html,
 body,
 #root,
-#root > div {
+#root > div,
+#motion-div {
 	height: 100%;
 	transition: height $ANIMATION_TIME;
 }
@@ -46,8 +47,7 @@ p {
 }
 
 .color_shift {
-	filter: invert(7%) sepia(6%) saturate(6450%) hue-rotate(200deg)
-		brightness(97%) contrast(92%);
+	filter: invert(7%) sepia(6%) saturate(6450%) hue-rotate(200deg) brightness(97%) contrast(92%);
 }
 
 [data-theme='dark'] {
@@ -55,7 +55,6 @@ p {
 	background-color: $D_INDIGO;
 
 	.color_shift {
-		filter: invert(88%) sepia(100%) saturate(46%) hue-rotate(148deg)
-			brightness(112%) contrast(100%);
+		filter: invert(88%) sepia(100%) saturate(46%) hue-rotate(148deg) brightness(112%) contrast(100%);
 	}
 }

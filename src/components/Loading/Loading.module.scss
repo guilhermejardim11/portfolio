@@ -1,0 +1,72 @@
+@import '../../variables.scss';
+
+.loading {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding: 28px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background-color: $WHITE2;
+	z-index: 999;
+
+	& > div {
+		position: relative;
+		height: 90px;
+		width: 90px;
+
+		& > div,
+		svg {
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: 100%;
+			width: 100%;
+		}
+
+		& > div:nth-child(1) {
+			z-index: 1;
+			background-color: $WHITE2;
+
+			path {
+				&:nth-child(1) {
+					fill: #8998e4 !important;
+				}
+
+				&:nth-child(2) {
+					fill: #6574be !important;
+				}
+
+				&:nth-child(3) {
+					fill: #a0aff7 !important;
+				}
+			}
+		}
+	}
+}
+
+[data-theme='dark'] .loading {
+	background-color: $D_INDIGO2;
+
+	& > div > div:nth-child(1) {
+		background-color: $D_INDIGO2;
+
+		path {
+			&:nth-child(1) {
+				fill: #515fa5 !important;
+			}
+
+			&:nth-child(2) {
+				fill: #333e75 !important;
+			}
+
+			&:nth-child(3) {
+				fill: #515fa5 !important;
+			}
+		}
+	}
+}

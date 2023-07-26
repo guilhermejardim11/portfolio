@@ -5,6 +5,7 @@ import ErrorPage from './pages/Error';
 import HomePage from './pages/Home';
 import ProjectsPage from './pages/Projects';
 import ProjectPage from './pages/Project';
+import Loading from './components/Loading/Loading';
 
 import { default as Imoukubo } from './projects/imoukubo';
 import { default as Melsport } from './projects/melsport';
@@ -51,10 +52,13 @@ const router = createBrowserRouter(
 
 const App = () => {
 	return (
-		<RouterProvider
-			router={router}
-			future={{ v7_startTransition: true }}
-		/>
+		<>
+			<Loading />
+			<RouterProvider
+				router={router}
+				future={{ v7_startTransition: true }}
+			/>
+		</>
 	);
 };
 
