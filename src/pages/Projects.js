@@ -1,5 +1,6 @@
-import { useLoaderData, useOutletContext } from 'react-router-dom';
+import { useOutletContext } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import { projectList } from '../database';
 
 import styles from './Projects.module.scss';
 
@@ -8,7 +9,6 @@ import Section from '../components/Section/Section';
 import OverviewGallery from '../components/Gallery/OverviewGallery';
 
 const ProjectsPage = () => {
-	const projectList = useLoaderData();
 	const [isScrolled, isMenuOpen] = useOutletContext();
 	const [t] = useTranslation();
 

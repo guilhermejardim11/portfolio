@@ -1,4 +1,4 @@
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 import RootLayout from './layouts/Root';
 import ErrorPage from './pages/Error';
@@ -6,54 +6,41 @@ import HomePage from './pages/Home';
 import ProjectsPage from './pages/Projects';
 import ProjectPage from './pages/Project';
 
-import { default as Imoukubo } from './projects/imoukubo';
-import { default as Melsport } from './projects/melsport';
-const projectList = [Imoukubo, Melsport];
-
 document.body.setAttribute('data-theme', localStorage.getItem('isDarkMode') === '1' ? 'dark' : 'light');
-
-const router = createBrowserRouter(
-	[
-		{
-			path: '/',
-			element: <RootLayout />,
-			errorElement: <ErrorPage />,
-			children: [
-				{
-					index: true,
-					element: <HomePage />,
-					loader: () => {
-						return projectList;
-					},
-				},
-				{
-					path: 'projects',
-					element: <ProjectsPage />,
-					loader: () => {
-						return projectList;
-					},
-				},
-				{
-					path: 'projects/:ID',
-					element: <ProjectPage />,
-					loader: ({ params }) => {
-						return projectList.find((project) => project.id === params.ID);
-					},
-				},
-			],
-		},
-	],
-	{
-		basename: '/portfolio/',
-	}
-);
 
 const App = () => {
 	return (
-		<RouterProvider
-			router={router}
+		<BrowserRouter
+			basename='/portfolio/'
 			future={{ v7_startTransition: true }}
-		/>
+		>
+			<Routes>
+				<Route
+					path='/'
+					element={<RootLayout />}
+				>
+					<Route
+						index={true}
+						element={<HomePage />}
+						exact
+					/>
+					<Route
+						path='projects'
+						element={<ProjectsPage />}
+						exact
+					/>
+					<Route
+						path='projects/:ID'
+						element={<ProjectPage />}
+						exact
+					/>
+					<Route
+						path='*'
+						element={<ErrorPage />}
+					/>
+				</Route>
+			</Routes>
+		</BrowserRouter>
 	);
 };
 

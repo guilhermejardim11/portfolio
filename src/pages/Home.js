@@ -1,4 +1,4 @@
-import { useLoaderData } from 'react-router-dom';
+import { projectList } from '../database';
 
 import HomeBanner from '../components/Home/HomeBanner';
 import ProjectSection from '../components/Home/Projects/ProjectsSection';
@@ -7,8 +7,6 @@ import ContactsSection from '../components/Home/Contacts/ContactsSection';
 import SkillsetSection from '../components/Home/Skillset/SkillsetSection';
 
 const HomePage = () => {
-	const projectList = useLoaderData();
-
 	return (
 		<>
 			<HomeBanner />
