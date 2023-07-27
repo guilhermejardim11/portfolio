@@ -1,4 +1,3 @@
-import { useRouteError } from 'react-router-dom';
 import { Trans, useTranslation } from 'react-i18next';
 
 import styles from './Error.module.scss';
@@ -7,7 +6,7 @@ import RootLayout from '../layouts/Root';
 import Banner from '../components/Banner/Banner';
 
 const ErrorPage = () => {
-	const error = useRouteError();
+	const error = null; // TODO
 	const [t] = useTranslation();
 
 	let emoji = '( •o•)';

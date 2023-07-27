@@ -9,6 +9,10 @@ body,
 	transition: height $ANIMATION_TIME;
 }
 
+.motion-div {
+	background-color: $WHITE;
+}
+
 body {
 	font-family: 'roc-grotesk', sans-serif;
 	font-weight: 400;
@@ -53,6 +57,10 @@ p {
 [data-theme='dark'] {
 	color: $WHITE;
 	background-color: $D_INDIGO;
+
+	.motion-div {
+		background-color: $D_INDIGO;
+	}
 
 	.color_shift {
 		filter: invert(88%) sepia(100%) saturate(46%) hue-rotate(148deg) brightness(112%) contrast(100%);

@@ -1,20 +1,27 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Route, Routes, useLocation } from 'react-router-dom';
+import { AnimatePresence } from 'framer-motion';
 
 import RootLayout from './layouts/Root';
-import ErrorPage from './pages/Error';
+import Loading from './components/Loading/Loading';
 import HomePage from './pages/Home';
 import ProjectsPage from './pages/Projects';
 import ProjectPage from './pages/Project';
+import ErrorPage from './pages/Error';
 
 document.body.setAttribute('data-theme', localStorage.getItem('isDarkMode') === '1' ? 'dark' : 'light');
 
-const App = () => {
+function _Routes() {
+	const location = useLocation();
+
 	return (
-		<BrowserRouter
-			basename='/portfolio/'
-			future={{ v7_startTransition: true }}
+		<AnimatePresence
+			initial={false}
+			mode='popLayout'
 		>
-			<Routes>
+			<Routes
+				location={location}
+				key={location.pathname}
+			>
 				<Route
 					path='/'
 					element={<RootLayout />}
@@ -34,13 +41,23 @@ const App = () => {
 						element={<ProjectPage />}
 						exact
 					/>
-					<Route
-						path='*'
-						element={<ErrorPage />}
-					/>
 				</Route>
 			</Routes>
-		</BrowserRouter>
+		</AnimatePresence>
+	);
+}
+
+const App = () => {
+	return (
+		<>
+			<Loading />
+			<BrowserRouter
+				basename='/portfolio/'
+				future={{ v7_startTransition: true }}
+			>
+				<_Routes />
+			</BrowserRouter>
+		</>
 	);
 };
 

@@ -1,7 +1,7 @@
 import { useContext, useEffect, useRef, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { AnimatePresence, motion } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { MenuContext } from '../context/MenuContext';
 
 import styles from './Root.module.scss';
@@ -11,7 +11,36 @@ import Header from '../components/Header/Header';
 import LanguageOverlay from '../components/Language/LanguageOverlay';
 import Cookies from '../components/Cookies/Cookies';
 import ScrollTop from '../components/UI/ScrollTop';
-import Loading from '../components/Loading/Loading';
+
+const contentVariants = {
+	initial: {
+		opacity: 0,
+		zIndex: 0,
+		transition: {
+			duration: 0.5,
+			ease: 'easeInOut',
+		},
+	},
+	animate: {
+		opacity: 1,
+		zIndex: 0,
+		borderRadius: '0',
+		transition: {
+			duration: 0.5,
+			ease: 'easeInOut',
+		},
+	},
+	exit: {
+		opacity: 1,
+		zIndex: -1,
+		transition: {
+			duration: 0.5,
+			zIndex: {
+				duration: 0,
+			},
+		},
+	},
+};
 
 const RootLayout = (props) => {
 	const [isScrolled, setIsScrolled] = useState(false);
@@ -30,44 +59,36 @@ const RootLayout = (props) => {
 	}, [location.pathname, i18n.resolvedLanguage]);
 
 	return (
-		<>
-			<Loading />
-			<div
-				className={`${styles.root} ${menuContext.isMenuOpen ? styles.locked : ''}`}
-				ref={contentRef}
-				onScroll={onScrollHandler}
-			>
-				<Header isScrolled={isScrolled} />
+		<div
+			className={`${styles.root} ${menuContext.isMenuOpen ? styles.locked : ''}`}
+			ref={contentRef}
+			onScroll={onScrollHandler}
+		>
+			<Header isScrolled={isScrolled} />
 
-				{/* <AnimatePresence
-				initial={false}
-				mode='popLayout'
+			<motion.div
+				className='motion-div'
+				variants={contentVariants}
+				initial='initial'
+				animate='animate'
+				exit='exit'
 			>
-				<motion.div
-					class='motion-div'
-					key={location.pathname}
-					initial={{ opacity: 0, x: -200 }}
-					animate={{ opacity: 1, x: 0 }}
-					exit={{ opacity: 0, x: 200 }}
-				> */}
 				<RootContent
 					children={props.children}
 					isMenuOpen={menuContext.isMenuOpen}
 					isScrolled={isScrolled}
 				/>
-				{/* </motion.div>
-			</AnimatePresence> */}
+			</motion.div>
 
-				<LanguageOverlay />
+			<LanguageOverlay />
 
-				<Cookies />
+			<Cookies />
 
-				<ScrollTop
-					contentRef={contentRef}
-					isScrolled={isScrolled}
-				/>
-			</div>
-		</>
+			<ScrollTop
+				contentRef={contentRef}
+				isScrolled={isScrolled}
+			/>
+		</div>
 	);
 };
 
