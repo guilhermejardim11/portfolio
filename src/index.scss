@@ -1,18 +1,5 @@
 @import './variables.scss';
 
-html,
-body,
-#root,
-#root > div,
-.motion-div {
-	height: 100%;
-	transition: height $ANIMATION_TIME;
-}
-
-.motion-div {
-	background-color: $WHITE;
-}
-
 body {
 	font-family: 'roc-grotesk', sans-serif;
 	font-weight: 400;
@@ -23,6 +10,8 @@ body {
 
 main {
 	min-height: calc(100% - 363px);
+	background-color: $WHITE;
+	transition: background-color $ANIMATION_TIME;
 }
 
 h1,
@@ -58,7 +47,7 @@ p {
 	color: $WHITE;
 	background-color: $D_INDIGO;
 
-	.motion-div {
+	main {
 		background-color: $D_INDIGO;
 	}
 

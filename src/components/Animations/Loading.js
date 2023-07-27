@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react';
-import { useLocation } from 'react-router-dom';
 import { AnimatePresence, motion } from 'framer-motion';
 
 import styles from './Loading.module.scss';
@@ -8,19 +7,14 @@ import Logo from '../UI/Logo';
 
 const boxVariants = {
 	initial: {
-		backdropFilter: 'blur(20px)',
-		opacity: 0,
-	},
-	animate: {
-		opacity: 1,
+		y: 0,
 	},
 	exit: {
-		backdropFilter: 'blur(5px)',
-		opacity: 0,
+		y: '-100%',
 		transition: {
-			duration: 0.75,
-			delay: 2.7,
-			opacity: { delay: 2.5, duration: 0.95 },
+			duration: 0.5,
+			delay: 2.2,
+			ease: [0.87, 0, 0.13, 1],
 		},
 		transitionEnd: { display: 'none' },
 	},
@@ -37,7 +31,7 @@ const logosVariants = {
 		opacity: 0,
 		transition: {
 			duration: 0.3,
-			delay: 2.3,
+			delay: 1.7,
 			ease: 'easeInOut',
 		},
 	},
@@ -54,7 +48,7 @@ const maskVariants = {
 	exit: {
 		clipPath: 'inset(0 0 100% 0)',
 		transition: {
-			duration: 1.5,
+			duration: 1,
 			delay: 0.2,
 			ease: [0.87, 0, 0.13, 1],
 		},

@@ -9,6 +9,8 @@ const ScrollTop = (props) => {
 	const { pathname } = useLocation();
 
 	const scrollToTop = () => {
+		if (props.contentRef == null) return;
+
 		return props.contentRef.current.scrollTo({
 			top: 0,
 			behavior: 'smooth',

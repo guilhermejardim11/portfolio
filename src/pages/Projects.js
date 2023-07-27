@@ -19,14 +19,14 @@ const ProjectsPage = () => {
 				isScrolled={isScrolled}
 				isMenuOpen={isMenuOpen}
 			/>
-			<main className={styles.main}>
+			<div className={styles.main}>
 				<Section>
 					<OverviewGallery
 						items={projectList}
 						linkPrefix='/projects/'
 					/>
 				</Section>
-			</main>
+			</div>
 		</>
 	);
 };
