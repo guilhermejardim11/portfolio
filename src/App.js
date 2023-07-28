@@ -1,68 +1,95 @@
-import { BrowserRouter, Route, Routes, useLocation } from 'react-router-dom';
-import { AnimatePresence } from 'framer-motion';
+import { useContext, useEffect, useRef } from 'react';
+import { BrowserRouter, Outlet, Route, Routes, useLocation } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
+import { AnimatePresence, motion } from 'framer-motion';
+import { MenuContext } from './context/MenuContext';
+import { ScrolledContext } from './context/ScrolledContext';
 
 import RootLayout from './layouts/Root';
 
+import Footer from './components/Footer/Footer';
 import Loading from './components/Animations/Loading';
-import Header from './components/Header/Header';
-import LanguageOverlay from './components/Language/LanguageOverlay';
-import Cookies from './components/Cookies/Cookies';
-import ScrollTop from './components/UI/ScrollTop';
 
 import HomePage from './pages/Home';
 import ProjectsPage from './pages/Projects';
 import ProjectPage from './pages/Project';
-import ErrorPage from './pages/Error';
+import SkillsPage from './pages/Skills';
+import Transition from './components/Animations/Transition';
 
 document.body.setAttribute('data-theme', localStorage.getItem('isDarkMode') === '1' ? 'dark' : 'light');
 
 const Router = () => {
+	const [t, i18n] = useTranslation();
 	const location = useLocation();
+	const contentRef = useRef();
+
+	const menuContext = useContext(MenuContext);
+	const scrolledContext = useContext(ScrolledContext);
+
+	const onScrollHandler = () => {
+		const scrollTop = contentRef.current.scrollTop;
+		scrolledContext.setIsScrolled(scrollTop > 50);
+	};
+
+	useEffect(() => {
+		menuContext.onMenuClose();
+	}, [location.pathname, i18n.resolvedLanguage]);
 
 	return (
-		<>
-			<Header />
+		<AnimatePresence
+			initial={false}
+			mode='wait'
+			onExitComplete={() => {
+				contentRef.current.scrollTo({
+					top: 0,
+				});
+			}}
+		>
+			<motion.main key={location.pathname}>
+				<Transition />
 
-			<AnimatePresence
-				initial={false}
-				mode='popLayout'
-			>
-				<Routes
-					location={location}
-					key={location.pathname}
+				<RootLayout
+					isScrolled={scrolledContext.isScrolled}
+					contentRef={contentRef}
 				>
-					<Route
-						path='/'
-						element={<RootLayout />}
+					<div
+						id='content'
+						ref={contentRef}
+						onScroll={onScrollHandler}
 					>
-						<Route
-							index={true}
-							element={<HomePage />}
-							exact
-						/>
-						<Route
-							path='projects'
-							element={<ProjectsPage />}
-							exact
-						/>
-						<Route
-							path='projects/:ID'
-							element={<ProjectPage />}
-							exact
-						/>
-					</Route>
-				</Routes>
-			</AnimatePresence>
+						<Routes location={location}>
+							<Route
+								path='/'
+								element={<Outlet />}
+							>
+								<Route
+									index={true}
+									element={<HomePage />}
+									exact
+								/>
+								<Route
+									path='projects'
+									element={<ProjectsPage />}
+									exact
+								/>
+								<Route
+									path='projects/:ID'
+									element={<ProjectPage />}
+									exact
+								/>
+								<Route
+									path='skills'
+									element={<SkillsPage />}
+									exact
+								/>
+							</Route>
+						</Routes>
 
-			<LanguageOverlay />
-
-			<Cookies />
-
-			<ScrollTop
-				contentRef={null}
-				isScrolled={false}
-			/>
-		</>
+						<Footer />
+					</div>
+				</RootLayout>
+			</motion.main>
+		</AnimatePresence>
 	);
 };
 

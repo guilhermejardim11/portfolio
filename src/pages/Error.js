@@ -6,13 +6,13 @@ import RootLayout from '../layouts/Root';
 import Banner from '../components/Banner/Banner';
 
 const ErrorPage = () => {
-	const error = null; // TODO
 	const [t] = useTranslation();
 
 	let emoji = '( •o•)';
 	let title = t('error.default.title');
 	let message = t('error.default.message');
 
+	const error = null; // TODO
 	if (error != null) {
 		switch (error.status) {
 			case 401:

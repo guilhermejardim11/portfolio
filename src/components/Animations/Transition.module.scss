@@ -1,0 +1,45 @@
+@import '../../variables.scss';
+
+.slide_in,
+.slide_out {
+	position: fixed;
+	top: 0;
+	right: 0;
+	height: 100%;
+	width: 100%;
+	background-color: $WHITE2;
+	z-index: 98;
+}
+
+.slide_in {
+	transform-origin: left;
+}
+
+.slide_out {
+	transform-origin: right;
+}
+
+.logo {
+	position: fixed;
+	top: calc(50% - 15vw);
+	left: calc(50% - 15vw);
+	height: 30vw;
+	width: 30vw;
+	z-index: 99;
+
+	svg {
+		height: 100%;
+		width: 100%;
+	}
+
+	path {
+		transition: fill ($ANIMATION_TIME + 0.1);
+	}
+}
+
+[data-theme='dark'] {
+	.slide_in,
+	.slide_out {
+		background-color: $D_INDIGO2;
+	}
+}

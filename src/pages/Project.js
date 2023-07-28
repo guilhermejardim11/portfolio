@@ -5,6 +5,7 @@ import { projectList } from '../database';
 
 import styles from './Project.module.scss';
 
+import PageTitle from '../components/Page/PageTitle';
 import ProjectBanner from '../components/Project/ProjectBanner';
 import ProjectDetails from '../components/Project/ProjectDetails';
 import Section from '../components/Section/Section';
@@ -27,6 +28,8 @@ const ProjectPage = () => {
 
 	return (
 		<>
+			<PageTitle title={''} />
+
 			<ProjectBanner title={project.title} />
 			<ProjectDetails
 				tags={project.tags}

@@ -13,12 +13,22 @@ const navlinkVariants = {
 	open: {
 		opacity: 1,
 		y: 0,
-		transition: { type: 'spring', stiffness: 300, damping: 24 },
+		transition: {
+			type: 'spring',
+			stiffness: 300,
+			damping: 24,
+		},
 	},
-	closed: { opacity: 0, y: 20, transition: { duration: 0.2 } },
+	closed: {
+		opacity: 0,
+		y: 20,
+		transition: {
+			duration: 0.2,
+		},
+	},
 };
 
-const Menu = (props) => {
+const Menu = () => {
 	const [t] = useTranslation();
 	const menuContext = useContext(MenuContext);
 
@@ -49,6 +59,7 @@ const Menu = (props) => {
 						to='/'
 						className={({ isActive }) => (isActive ? styles.active : undefined)}
 						end
+						onClick={() => menuContext.onMenuClose()}
 					>
 						{t('home')}
 					</NavLink>
@@ -59,6 +70,7 @@ const Menu = (props) => {
 						to='/projects'
 						className={({ isActive }) => (isActive ? styles.active : undefined)}
 						end
+						onClick={() => menuContext.onMenuClose()}
 					>
 						{t('projects')}
 					</NavLink>
@@ -69,6 +81,7 @@ const Menu = (props) => {
 						to='/skills'
 						className={({ isActive }) => (isActive ? styles.active : undefined)}
 						end
+						onClick={() => menuContext.onMenuClose()}
 					>
 						{t('skills')}
 					</NavLink>
@@ -79,6 +92,7 @@ const Menu = (props) => {
 						to='/contacts'
 						className={({ isActive }) => (isActive ? styles.active : undefined)}
 						end
+						onClick={() => menuContext.onMenuClose()}
 					>
 						{t('contacts')}
 					</NavLink>

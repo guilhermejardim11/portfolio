@@ -1,11 +1,14 @@
 import ThemeContextProvider from './ThemeContext';
 import MenuContextProvider from './MenuContext';
+import ScrolledContextProvider from './ScrolledContext';
 
 const ContextWrapper = (props) => {
 	return (
 		<ThemeContextProvider>
 			<MenuContextProvider>
-				{props.children}
+				<ScrolledContextProvider>
+					{props.children}
+				</ScrolledContextProvider>
 			</MenuContextProvider>
 		</ThemeContextProvider>
 	);

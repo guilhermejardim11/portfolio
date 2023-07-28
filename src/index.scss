@@ -6,10 +6,24 @@ body {
 	color: $INDIGO;
 	background-color: $WHITE;
 	transition: color $ANIMATION_TIME, background-color $ANIMATION_TIME;
+
+	--project-color-light: #{$MAGENTA};
+	--project-color-dark: #{$D_MAGENTA};
+}
+
+#content {
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	overflow-y: auto;
 }
 
 main {
+	position: absolute;
 	min-height: calc(100% - 363px);
+	width: 100%;
 	background-color: $WHITE;
 	transition: background-color $ANIMATION_TIME;
 }
