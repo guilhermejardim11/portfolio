@@ -4,9 +4,10 @@ import { ThemeContext } from '../context/ThemeContext';
 
 import Section from '../components/Section/Section';
 import SectionTitle from '../components/Section/SectionTitle';
+import Title from '../components/Project/Elements/Title';
+import NumberTitle from '../components/Project/Elements/NumberTitle';
 import ModularBox from '../components/ModularBox/ModularBox';
 import Image from '../components/ModularBox/Modules/Image';
-import ImageBox from '../components/ModularBox/ImageBox';
 import ColorModule from '../components/ModularBox/ColorBox';
 import SpriteBox from '../components/ModularBox/SpriteBox';
 
@@ -42,11 +43,207 @@ export function Content() {
 	return (
 		<>
 			<Section>
-				<SectionTitle title={t('project')} />
+				<Title
+					level={2}
+					title={t('UX Process')}
+				/>
 
-				<ModularBox gap={12} vertical>
+				<NumberTitle
+					level={3}
+					title={t('Strategy')}
+					index={1}
+				/>
+				<p>At first, imoukubo wasn’t even called like that, it was just a simple online real estate search platform, which was not up to date with the latest properties UKUBO had.</p>
+				<p>The focus of this project was to give the users the access to all the information about a property.</p>
+			</Section>
+
+			<Section>
+				<SectionTitle title={t('project')} />
+			</Section>
+
+			<Section>
+				<Title
+					level={2}
+					title={t('UX Process')}
+				/>
+				<Title
+					level={3}
+					title={t('UX Process')}
+				/>
+				<Title
+					level={4}
+					title={t('UX Process')}
+				/>
+				<Title
+					level={5}
+					title={t('UX Process')}
+				/>
+				<Title
+					level={6}
+					title={t('UX Process')}
+				/>
+			</Section>
+
+			<Section>
+				<Title
+					level={2}
+					title={t('UX Process')}
+					pos='center'
+				/>
+				<Title
+					level={3}
+					title={t('UX Process')}
+					pos='center'
+				/>
+				<Title
+					level={4}
+					title={t('UX Process')}
+					pos='center'
+				/>
+				<Title
+					level={5}
+					title={t('UX Process')}
+					pos='center'
+				/>
+				<Title
+					level={6}
+					title={t('UX Process')}
+					pos='center'
+				/>
+			</Section>
+
+			<Section>
+				<Title
+					level={2}
+					title={t('UX Process')}
+					pos='right'
+				/>
+				<Title
+					level={3}
+					title={t('UX Process')}
+					pos='right'
+				/>
+				<Title
+					level={4}
+					title={t('UX Process')}
+					pos='right'
+				/>
+				<Title
+					level={5}
+					title={t('UX Process')}
+					pos='right'
+				/>
+				<Title
+					level={6}
+					title={t('UX Process')}
+					pos='right'
+				/>
+			</Section>
+
+			<Section>
+				<NumberTitle
+					level={2}
+					title={t('Strategy')}
+					index={1}
+				/>
+				<NumberTitle
+					level={3}
+					title={t('Strategy')}
+					index={2}
+				/>
+				<NumberTitle
+					level={4}
+					title={t('Strategy')}
+					index={3}
+				/>
+				<NumberTitle
+					level={5}
+					title={t('Strategy')}
+					index={4}
+				/>
+				<NumberTitle
+					level={6}
+					title={t('Strategy')}
+					index={5}
+				/>
+			</Section>
+
+			<Section>
+				<NumberTitle
+					level={2}
+					title={t('Strategy')}
+					index={1}
+					pos='center'
+				/>
+				<NumberTitle
+					level={3}
+					title={t('Strategy')}
+					index={2}
+					pos='center'
+				/>
+				<NumberTitle
+					level={4}
+					title={t('Strategy')}
+					index={3}
+					pos='center'
+				/>
+				<NumberTitle
+					level={5}
+					title={t('Strategy')}
+					index={4}
+					pos='center'
+				/>
+				<NumberTitle
+					level={6}
+					title={t('Strategy')}
+					index={5}
+					pos='center'
+				/>
+			</Section>
+
+			<Section>
+				<NumberTitle
+					level={2}
+					title={t('Strategy')}
+					index={1}
+					pos='right'
+				/>
+				<NumberTitle
+					level={3}
+					title={t('Strategy')}
+					index={2}
+					pos='right'
+				/>
+				<NumberTitle
+					level={4}
+					title={t('Strategy')}
+					index={3}
+					pos='right'
+				/>
+				<NumberTitle
+					level={5}
+					title={t('Strategy')}
+					index={4}
+					pos='right'
+				/>
+				<NumberTitle
+					level={6}
+					title={t('Strategy')}
+					index={5}
+					pos='right'
+				/>
+			</Section>
+
+			<Section>
+				<ModularBox
+					gap={12}
+					vertical
+				>
 					<Image src={themeContext.isDarkMode ? logo_1 : logo_0} />
-					<Image src={logo_2} colorShift />
+					<Image
+						src={logo_2}
+						colorShift
+					/>
 				</ModularBox>
 
 				<ModularBox gap={28}>

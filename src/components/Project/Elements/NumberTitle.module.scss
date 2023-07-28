@@ -1,0 +1,62 @@
+.title {
+	span {
+		position: absolute;
+		left: 0;
+		top: -25%;
+		height: 120%;
+		font-size: 150%;
+		color: var(--project-color-light);
+		opacity: 0.5;
+		transform: translateX(-15%);
+		transition: color 0.3s;
+		z-index: -1;
+	}
+
+	&.center {
+		text-align: center;
+
+		span {
+			left: 50%;
+			transform: translateX(-50%);
+		}
+	}
+
+	&.right {
+		text-align: right;
+
+		span {
+			left: 100%;
+			transform: translateX(-100%);
+		}
+	}
+}
+
+h1.title {
+	padding-left: 16px;
+	padding-right: 16px;
+}
+
+h2.title {
+	padding-left: 14px;
+	padding-right: 14px;
+}
+
+h3.title {
+	padding-left: 12px;
+	padding-right: 12px;
+}
+
+h4.title {
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+h5.title {
+	padding-left: 8px;
+	padding-right: 8px;
+}
+
+h6.title {
+	padding-left: 6px;
+	padding-right: 6px;
+}

@@ -31,10 +31,12 @@ const ProjectPage = () => {
 			<PageTitle title={''} />
 
 			<ProjectBanner title={project.title} />
-			<ProjectDetails
+
+			{/* <ProjectDetails
 				tags={project.tags}
 				date={project.date}
-			/>
+			/> */}
+
 			<div className={styles.content}>
 				{project.content}
 
