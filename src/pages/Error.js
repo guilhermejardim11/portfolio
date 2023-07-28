@@ -5,25 +5,24 @@ import styles from './Error.module.scss';
 import RootLayout from '../layouts/Root';
 import Banner from '../components/Banner/Banner';
 
-const ErrorPage = () => {
+const ErrorPage = ({ status = null }) => {
 	const [t] = useTranslation();
 
 	let emoji = '( •o•)';
 	let title = t('error.default.title');
 	let message = t('error.default.message');
 
-	const error = null; // TODO
-	if (error != null) {
-		switch (error.status) {
+	if (status != null) {
+		switch (status) {
 			case 401:
 				emoji = '(˚ ˃̣̣̥⌓˂̣̣̥ )';
 				title = t('error.401.title');
 				message = (
 					<Trans
 						i18nKey='error.401.message'
-						values={{ error: error.status }}
+						values={{ error: status }}
 					>
-						You need an authorization type <b>{{ error }}</b> to access this page. Sad for you, of course.
+						You need an authorization type <b>{{ status }}</b> to access this page. Sad for you, of course.
 					</Trans>
 				);
 				break;
@@ -34,9 +33,9 @@ const ErrorPage = () => {
 				message = (
 					<Trans
 						i18nKey='error.403.message'
-						values={{ error: error.status }}
+						values={{ error: status }}
 					>
-						This place is forbidden, <b>{{ error }}</b>. Don't even try it.
+						This place is forbidden, <b>{{ status }}</b>. Don't even try it.
 					</Trans>
 				);
 				break;
@@ -47,9 +46,9 @@ const ErrorPage = () => {
 				message = (
 					<Trans
 						i18nKey='error.400.message'
-						values={{ error: error.status }}
+						values={{ error: status }}
 					>
-						Nothing to see here, <b>{{ error }}</b>. Move along!
+						Nothing to see here, <b>{{ status }}</b>. Move along!
 					</Trans>
 				);
 				break;
@@ -60,9 +59,9 @@ const ErrorPage = () => {
 				message = (
 					<Trans
 						i18nKey='error.503.message'
-						values={{ error: error.status }}
+						values={{ error: status }}
 					>
-						And that's all the information you're gonna get. Now move, <b>{{ error }}</b>...
+						And that's all the information you're gonna get. Now move, <b>{{ status }}</b>...
 					</Trans>
 				);
 				break;
@@ -73,9 +72,9 @@ const ErrorPage = () => {
 				message = (
 					<Trans
 						i18nKey='error.408.message'
-						values={{ error: error.status }}
+						values={{ error: status }}
 					>
-						Why would you stop my request prematurely, ah? Wait... You clicked the link '<b>{{ error }}</b>' times??? HOW?
+						Why would you stop my request prematurely, ah? Wait... You clicked the link '<b>{{ status }}</b>' times??? HOW?
 					</Trans>
 				);
 				break;
@@ -86,9 +85,9 @@ const ErrorPage = () => {
 				message = (
 					<Trans
 						i18nKey='error.404.message'
-						values={{ error: error.status }}
+						values={{ error: status }}
 					>
-						Seems like this page is missing. Perhaps you should stop trying to hack my <b>{{ error }}</b>th system.
+						Seems like this page is missing. Perhaps you should stop trying to hack my <b>{{ status }}</b>th system.
 					</Trans>
 				);
 				break;
@@ -99,9 +98,9 @@ const ErrorPage = () => {
 				message = (
 					<Trans
 						i18nKey='error.500.message'
-						values={{ error: error.status }}
+						values={{ error: status }}
 					>
-						Our server is, ah... taking a <b>{{ error }}</b> hour break! Yea, sure, why not...
+						Our server is, ah... taking a <b>{{ status }}</b> hour break! Yea, sure, why not...
 					</Trans>
 				);
 				break;

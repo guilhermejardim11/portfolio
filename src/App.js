@@ -9,12 +9,13 @@ import RootLayout from './layouts/Root';
 
 import Footer from './components/Footer/Footer';
 import Loading from './components/Animations/Loading';
+import Transition from './components/Animations/Transition';
 
 import HomePage from './pages/Home';
 import ProjectsPage from './pages/Projects';
 import ProjectPage from './pages/Project';
 import SkillsPage from './pages/Skills';
-import Transition from './components/Animations/Transition';
+import ErrorPage from './pages/Error';
 
 document.body.setAttribute('data-theme', localStorage.getItem('isDarkMode') === '1' ? 'dark' : 'light');
 
@@ -48,10 +49,7 @@ const Router = () => {
 			<motion.main key={location.pathname}>
 				<Transition />
 
-				<RootLayout
-					isScrolled={scrolledContext.isScrolled}
-					contentRef={contentRef}
-				>
+				<RootLayout contentRef={contentRef}>
 					<div
 						id='content'
 						ref={contentRef}
@@ -81,6 +79,10 @@ const Router = () => {
 									path='skills'
 									element={<SkillsPage />}
 									exact
+								/>
+								<Route
+									path='*'
+									element={<ErrorPage status={404} />}
 								/>
 							</Route>
 						</Routes>
