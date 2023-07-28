@@ -6,7 +6,7 @@
 	h5 {
 		margin-bottom: 1px;
 		font-size: 13px;
-		color: var(--project-color-light, $MAGENTA);
+		color: var(--project-color-light);
 		transition: color $ANIMATION_TIME;
 	}
 
@@ -18,5 +18,5 @@
 }
 
 [data-theme='dark'] .contact h5 {
-	color: var(--project-color-dark, $D_MAGENTA);
+	color: var(--project-color-dark);
 }

@@ -4,10 +4,10 @@
 	margin: 0 auto;
 	padding: 0 !important;
 	border-radius: 50%;
-	background-color: var(--project-color-light, $MAGENTA);
+	background-color: var(--project-color-light);
 	transition: background-color $ANIMATION_TIME;
 }
 
 [data-theme='dark'] .dot {
-	background-color: var(--project-color-dark, $D_MAGENTA);
+	background-color: var(--project-color-dark);
 }

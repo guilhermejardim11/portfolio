@@ -19,11 +19,11 @@
 		font-size: 12px;
 		line-height: 1;
 		text-transform: uppercase;
-		color: var(--project-color-light, $MAGENTA);
+		color: var(--project-color-light);
 		transition: color $ANIMATION_TIME;
 	}
 }
 
 [data-theme='dark'] .go_back div {
-	color: var(--project-color-dark, $D_MAGENTA);
+	color: var(--project-color-dark);
 }

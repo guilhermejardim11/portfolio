@@ -16,19 +16,19 @@
 		text-align: center;
 
 		&.active {
-			color: var(--project-color-light, $MAGENTA);
+			color: var(--project-color-light);
 			transition: color $ANIMATION_TIME;
 		}
 	}
 }
 
 .menu_socials li:not(:first-child):before {
-	background-color: var(--project-color-light, $MAGENTA);
+	background-color: var(--project-color-light);
 	transition: background-color $ANIMATION_TIME;
 }
 
 [data-theme='dark'] {
 	.menu nav a.active {
-		color: var(--project-color-dark, $D_MAGENTA);
+		color: var(--project-color-dark);
 	}
 }
