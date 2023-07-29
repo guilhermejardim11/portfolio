@@ -7,10 +7,6 @@ import styles from './Project.module.scss';
 
 import PageTitle from '../components/Page/PageTitle';
 import ProjectBanner from '../components/Project/ProjectBanner';
-import ProjectDetails from '../components/Project/ProjectDetails';
-import Section from '../components/Section/Section';
-import SectionTitle from '../components/Section/SectionTitle';
-import VisitProject from '../components/Project/VisitProject';
 
 const ProjectPage = () => {
 	const [t] = useTranslation();
@@ -29,35 +25,8 @@ const ProjectPage = () => {
 	return (
 		<>
 			<PageTitle title={''} />
-
 			<ProjectBanner title={project.title} />
-
-			{/* <ProjectDetails
-				tags={project.tags}
-				date={project.date}
-			/> */}
-
-			<div className={styles.content}>
-				{project.content}
-
-				<Section
-					background
-					pattern
-				>
-					<SectionTitle title={t('skills')} />
-					{/* <Skills list={project.skills} /> */}
-				</Section>
-
-				{project.visit && (
-					<Section background>
-						<VisitProject
-							label={t(`visit.${project.type}`)}
-							text={project.visit[0]}
-							url={project.visit[1]}
-						/>
-					</Section>
-				)}
-			</div>
+			<div className={styles.content}>{project.content}</div>
 		</>
 	);
 };

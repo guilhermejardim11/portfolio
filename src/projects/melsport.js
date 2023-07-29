@@ -5,6 +5,8 @@ import SectionTitle from '../components/Section/SectionTitle';
 import ModularBox from '../components/ModularBox/ModularBox';
 import ColorBox from '../components/ModularBox/ColorBox';
 import SpriteBox from '../components/ModularBox/SpriteBox';
+import Title from '../components/Project/Elements/Title';
+import NumberTitle from '../components/Project/Elements/NumberTitle';
 
 import thumbnail from '../assets/projects/melsport/thumb.jpg';
 import fonts from '../assets/projects/melsport/fonts.svg';
@@ -61,6 +63,179 @@ export function Content() {
 						isColorShift
 					/>
 				</ModularBox>
+			</Section>
+
+			<Section>
+				<Title
+					level={2}
+					title={t('UX Process')}
+				/>
+				<Title
+					level={3}
+					title={t('UX Process')}
+				/>
+				<Title
+					level={4}
+					title={t('UX Process')}
+				/>
+				<Title
+					level={5}
+					title={t('UX Process')}
+				/>
+				<Title
+					level={6}
+					title={t('UX Process')}
+				/>
+			</Section>
+
+			<Section>
+				<Title
+					level={2}
+					title={t('UX Process')}
+					pos='center'
+				/>
+				<Title
+					level={3}
+					title={t('UX Process')}
+					pos='center'
+				/>
+				<Title
+					level={4}
+					title={t('UX Process')}
+					pos='center'
+				/>
+				<Title
+					level={5}
+					title={t('UX Process')}
+					pos='center'
+				/>
+				<Title
+					level={6}
+					title={t('UX Process')}
+					pos='center'
+				/>
+			</Section>
+
+			<Section>
+				<Title
+					level={2}
+					title={t('UX Process')}
+					pos='right'
+				/>
+				<Title
+					level={3}
+					title={t('UX Process')}
+					pos='right'
+				/>
+				<Title
+					level={4}
+					title={t('UX Process')}
+					pos='right'
+				/>
+				<Title
+					level={5}
+					title={t('UX Process')}
+					pos='right'
+				/>
+				<Title
+					level={6}
+					title={t('UX Process')}
+					pos='right'
+				/>
+			</Section>
+
+			<Section>
+				<NumberTitle
+					level={2}
+					title={t('Strategy')}
+					index={1}
+				/>
+				<NumberTitle
+					level={3}
+					title={t('Strategy')}
+					index={2}
+				/>
+				<NumberTitle
+					level={4}
+					title={t('Strategy')}
+					index={3}
+				/>
+				<NumberTitle
+					level={5}
+					title={t('Strategy')}
+					index={4}
+				/>
+				<NumberTitle
+					level={6}
+					title={t('Strategy')}
+					index={5}
+				/>
+			</Section>
+
+			<Section>
+				<NumberTitle
+					level={2}
+					title={t('Strategy')}
+					index={1}
+					pos='center'
+				/>
+				<NumberTitle
+					level={3}
+					title={t('Strategy')}
+					index={2}
+					pos='center'
+				/>
+				<NumberTitle
+					level={4}
+					title={t('Strategy')}
+					index={3}
+					pos='center'
+				/>
+				<NumberTitle
+					level={5}
+					title={t('Strategy')}
+					index={4}
+					pos='center'
+				/>
+				<NumberTitle
+					level={6}
+					title={t('Strategy')}
+					index={5}
+					pos='center'
+				/>
+			</Section>
+
+			<Section>
+				<NumberTitle
+					level={2}
+					title={t('Strategy')}
+					index={1}
+					pos='right'
+				/>
+				<NumberTitle
+					level={3}
+					title={t('Strategy')}
+					index={2}
+					pos='right'
+				/>
+				<NumberTitle
+					level={4}
+					title={t('Strategy')}
+					index={3}
+					pos='right'
+				/>
+				<NumberTitle
+					level={5}
+					title={t('Strategy')}
+					index={4}
+					pos='right'
+				/>
+				<NumberTitle
+					level={6}
+					title={t('Strategy')}
+					index={5}
+					pos='right'
+				/>
 			</Section>
 		</>
 	);
