@@ -22,7 +22,8 @@ const ErrorPage = ({ status = null }) => {
 						i18nKey='error.401.message'
 						values={{ error: status }}
 					>
-						You need an authorization type <b>{{ status }}</b> to access this page. Sad for you, of course.
+						You need an authorization type <b>{{ status }}</b> to
+						access this page. Sad for you, of course.
 					</Trans>
 				);
 				break;
@@ -35,7 +36,8 @@ const ErrorPage = ({ status = null }) => {
 						i18nKey='error.403.message'
 						values={{ error: status }}
 					>
-						This place is forbidden, <b>{{ status }}</b>. Don't even try it.
+						This place is forbidden, <b>{{ status }}</b>. Don't even
+						try it.
 					</Trans>
 				);
 				break;
@@ -61,7 +63,8 @@ const ErrorPage = ({ status = null }) => {
 						i18nKey='error.503.message'
 						values={{ error: status }}
 					>
-						And that's all the information you're gonna get. Now move, <b>{{ status }}</b>...
+						And that's all the information you're gonna get. Now
+						move, <b>{{ status }}</b>...
 					</Trans>
 				);
 				break;
@@ -74,7 +77,8 @@ const ErrorPage = ({ status = null }) => {
 						i18nKey='error.408.message'
 						values={{ error: status }}
 					>
-						Why would you stop my request prematurely, ah? Wait... You clicked the link '<b>{{ status }}</b>' times??? HOW?
+						Why would you stop my request prematurely, ah? Wait...
+						You clicked the link '<b>{{ status }}</b>' times??? HOW?
 					</Trans>
 				);
 				break;
@@ -87,7 +91,8 @@ const ErrorPage = ({ status = null }) => {
 						i18nKey='error.404.message'
 						values={{ error: status }}
 					>
-						Seems like this page is missing. Perhaps you should stop trying to hack my <b>{{ status }}</b>th system.
+						Seems like this page is missing. Perhaps you should stop
+						trying to hack my <b>{{ status }}</b>th system.
 					</Trans>
 				);
 				break;
@@ -100,7 +105,8 @@ const ErrorPage = ({ status = null }) => {
 						i18nKey='error.500.message'
 						values={{ error: status }}
 					>
-						Our server is, ah... taking a <b>{{ status }}</b> hour break! Yea, sure, why not...
+						Our server is, ah... taking a <b>{{ status }}</b> hour
+						break! Yea, sure, why not...
 					</Trans>
 				);
 				break;
@@ -111,13 +117,11 @@ const ErrorPage = ({ status = null }) => {
 	}
 
 	return (
-		<RootLayout>
-			<Banner className={styles.banner}>
-				<h1>{emoji}</h1>
-				<h2>{title}</h2>
-				<p>{message}</p>
-			</Banner>
-		</RootLayout>
+		<Banner className={styles.banner}>
+			<h1>{emoji}</h1>
+			<h2>{title}</h2>
+			<p>{message}</p>
+		</Banner>
 	);
 };
 

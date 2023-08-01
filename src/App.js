@@ -12,7 +12,6 @@ import { MenuContext } from './context/MenuContext';
 
 import RootLayout from './layouts/Root';
 
-import Footer from './components/Footer/Footer';
 import Loading from './components/Animations/Loading';
 import Transition from './components/Animations/Transition';
 
@@ -75,8 +74,6 @@ const Router = () => {
 							/>
 						</Route>
 					</Routes>
-
-					<Footer />
 				</RootLayout>
 			</motion.main>
 		</AnimatePresence>
