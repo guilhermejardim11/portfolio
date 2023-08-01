@@ -1,7 +1,6 @@
 import { useContext } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import { MenuContext } from '../../context/MenuContext';
-import { ScrolledContext } from '../../context/ScrolledContext';
 
 import styles from './HeaderTitle.module.scss';
 
@@ -32,11 +31,14 @@ const titleVariants = {
 
 const HeaderTitle = () => {
 	const menuContext = useContext(MenuContext);
-	const scrolledContext = useContext(ScrolledContext);
 
 	return (
 		<AnimatePresence mode='wait'>
-			<motion.h1 className={`${styles.title} ${!menuContext.isMenuOpen && scrolledContext.isScrolled ? styles.scrolled : ''} ${menuContext.isMenuOpen ? styles.hidden : ''}`}>
+			<motion.h1
+				className={`${styles.title} ${
+					menuContext.isMenuOpen ? styles.hidden : ''
+				}`}
+			>
 				{menuContext.currentPageName && (
 					<motion.span
 						variants={titleVariants}
