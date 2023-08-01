@@ -10,10 +10,7 @@ const AboutSection = () => {
 	const [t] = useTranslation();
 
 	return (
-		<Section
-			background
-			pattern
-		>
+		<Section background>
 			<SectionTitle
 				title={t('about')}
 				to='/about'

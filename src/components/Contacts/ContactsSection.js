@@ -10,7 +10,7 @@ const ContactsSection = () => {
 	const [t] = useTranslation();
 
 	return (
-		<Section background className={styles.contacts}>
+		<Section background extend className={styles.contacts}>
 			<SectionTitle title={t('contacts')} />
 			<h4>
 				<span>{t('section.contacts.got_a_project')}</span>

@@ -5,11 +5,11 @@ import styles from './ScrollTop.module.scss';
 
 import IconButton from './IconButton';
 
-const ScrollTop = (props) => {
+const ScrollTop = () => {
 	const scrolledContext = useContext(ScrolledContext);
 
 	const scrollToTop = () => {
-		props.contentRef.current.scrollTo({
+		window.scrollTo({
 			top: 0,
 			behavior: 'smooth',
 		});

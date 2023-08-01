@@ -1,10 +1,18 @@
+@import '../../variables.scss';
+
 .scroll_down {
-	position: absolute;
+	position: fixed;
 	bottom: 14px;
 	left: 26px;
 	transform: rotate(-90deg);
 	transform-origin: top left;
+	z-index: 9;
 	animation: down-animation ease-in-out 3s infinite;
+	transition: opacity $ANIMATION_TIME;
+
+	&.hidden {
+		opacity: 0;
+	}
 
 	& > * {
 		display: inline-block;

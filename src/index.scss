@@ -11,21 +11,9 @@ body {
 	--project-color-dark: #{$D_MAGENTA};
 }
 
-#content {
-	position: fixed;
-	top: 0;
-	left: 0;
-	bottom: 0;
-	right: 0;
-	overflow-y: auto;
-}
-
 main {
-	position: absolute;
 	min-height: calc(100% - 363px);
-	width: 100%;
-	background-color: $WHITE;
-	transition: background-color $ANIMATION_TIME;
+	overflow: hidden;
 }
 
 h1,
@@ -74,18 +62,16 @@ p {
 }
 
 .color_shift {
-	filter: invert(7%) sepia(6%) saturate(6450%) hue-rotate(200deg) brightness(97%) contrast(92%);
+	filter: invert(7%) sepia(6%) saturate(6450%) hue-rotate(200deg)
+		brightness(97%) contrast(92%);
 }
 
 [data-theme='dark'] {
 	color: $WHITE;
 	background-color: $D_INDIGO;
 
-	main {
-		background-color: $D_INDIGO;
-	}
-
 	.color_shift {
-		filter: invert(88%) sepia(100%) saturate(46%) hue-rotate(148deg) brightness(112%) contrast(100%);
+		filter: invert(88%) sepia(100%) saturate(46%) hue-rotate(148deg)
+			brightness(112%) contrast(100%);
 	}
 }

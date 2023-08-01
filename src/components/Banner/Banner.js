@@ -1,15 +1,8 @@
 import styles from './Banner.module.scss';
 
-import background from '../../assets/images/background.jpg';
-
 const Banner = (props) => {
 	return (
-		<div
-			className={`${props.className} ${styles.banner}`}
-			style={{
-				backgroundImage: `url("${background}")`,
-			}}
-		>
+		<div className={`${props.className} ${styles.banner}`}>
 			{props.children}
 		</div>
 	);
