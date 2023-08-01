@@ -5,7 +5,7 @@ import { ThemeContext } from '../../context/ThemeContext';
 import Banner from '../Banner/Banner';
 import Dot from '../UI/Dot';
 import Blob from '../UI/Blob';
-import DownIndicator from '../Banner/DownIndicator';
+import DownIndicator from './DownIndicator';
 
 const HomeBanner = () => {
 	const [t] = useTranslation();

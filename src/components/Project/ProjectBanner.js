@@ -1,7 +1,7 @@
 import styles from './ProjectBanner.module.scss';
 
 import Banner from '../Banner/Banner';
-import GoBack from '../Banner/GoBack';
+import GoBack from '../GoBack/GoBack';
 
 const ProjectBanner = (props) => {
 	return (
