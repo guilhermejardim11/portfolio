@@ -23,13 +23,38 @@ const SkillsetSection = () => {
 				to='/skills'
 				text={t('view_all_f')}
 			/>
+
 			<div className={styles.skills}>
-				<SkillCounter label='Figma' icon={figma} level={4} />
-				<SkillCounter label='Adobe CC' icon={cc} level={3} />
-				<SkillCounter label='React.js' icon={react} level={4} />
-				<SkillCounter label='HTML' icon={html} level={5} />
-				<SkillCounter label='SASS/SCSS' icon={css} level={5} />
-				<SkillCounter label='JavaScript' icon={js} level={4} />
+				<SkillCounter
+					label={t('skill.name.figma')}
+					icon={figma}
+					progress={80}
+				/>
+				<SkillCounter
+					label={t('skill.name.cc')}
+					icon={cc}
+					progress={60}
+				/>
+				<SkillCounter
+					label={t('skill.name.react')}
+					icon={react}
+					progress={80}
+				/>
+				<SkillCounter
+					label={t('skill.name.html')}
+					icon={html}
+					progress={100}
+				/>
+				<SkillCounter
+					label={t('skill.name.css')}
+					icon={css}
+					progress={100}
+				/>
+				<SkillCounter
+					label={t('skill.name.js')}
+					icon={js}
+					progress={80}
+				/>
 			</div>
 		</Section>
 	);

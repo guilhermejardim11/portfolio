@@ -1,0 +1,58 @@
+@import '../../variables.scss';
+
+.skill {
+	display: grid;
+	grid-template-columns: 40px 1fr;
+	height: 42px;
+
+    margin-bottom: 12px;
+}
+
+.icon {
+	height: 100%;
+	width: auto;
+	aspect-ratio: 1;
+    background-color: $WHITE2;
+
+    img {
+        margin: 4px;
+        height: 32px;
+        width: 32px;
+    }
+}
+
+.info {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding: 0 10px;
+	gap: 4px;
+}
+
+.labels {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	font-family: 'roc-grotesk-wide', sans-serif;
+	font-weight: 600;
+	font-size: 12px;
+	line-height: 1;
+
+	span:nth-child(2) {
+		color: $LILAC;
+	}
+}
+
+.progress {
+	border-radius: 2px;
+	height: 4px;
+	width: 100%;
+	background-color: rgba($color: $D_LILAC2, $alpha: 0.2);
+	overflow: hidden;
+
+	& > * {
+		border-radius: 2px;
+		height: 100%;
+		background-color: $INDIGO;
+	}
+}

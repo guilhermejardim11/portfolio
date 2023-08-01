@@ -34,6 +34,24 @@
 		"website": "Visit website at"
 	},
 
+	"skill": {
+		"level": {
+			"unknown": "Unknown",
+			"basic": "Basic",
+			"intermidiate": "Intermidiate",
+			"advanced": "Advanced",
+			"expert": "Expert"
+		},
+		"name": {
+			"figma": "Figma",
+			"cc": "Adobe Creative Cloud",
+			"react": "React.js",
+			"html": "HTML",
+			"css": "CSS",
+			"js": "JavaScript"
+		}
+	},
+
 	"see_more": "See More",
 	"know_more": "Know More",
 	"view_all": "View All",
