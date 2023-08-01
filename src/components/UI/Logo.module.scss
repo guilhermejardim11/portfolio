@@ -1,23 +1,19 @@
 @import '../../variables.scss';
 
-.logo {
-	position: relative;
+.logo path {
+	transition: fill $ANIMATION_TIME;
 
-	path {
-		transition: fill $ANIMATION_TIME;
+	&:nth-child(1) {
+		fill: $INDIGO;
+	}
 
-		&:nth-child(1) {
-			fill: $INDIGO;
-		}
+	&:nth-child(2) {
+		fill: var(--project-color-light);
+	}
 
-		&:nth-child(2) {
-			fill: var(--project-color-light);
-		}
-
-		&:nth-child(3) {
-			fill: $INDIGO;
-			opacity: 0.3;
-		}
+	&:nth-child(3) {
+		fill: $INDIGO;
+		opacity: 0.3;
 	}
 }
 
