@@ -1,15 +1,23 @@
 @import '../../variables.scss';
 
 .section {
-	padding: 68px 28px;
-	position: relative;
+	padding: 0 28px 68px;
+
+	&:first-child {
+		margin-top: 0 !important;
+	}
 }
 
 .background {
-	margin: 28px 0;
+	margin: 28px 0 96px;
 	padding: 40px 28px;
 	background-color: $WHITE2;
 	transition: background-color $ANIMATION_TIME;
+
+	&:last-child,
+	&:nth-last-child(2) {
+		margin-bottom: 28px !important;
+	}
 
 	&::before,
 	&::after {
@@ -33,7 +41,7 @@
 	}
 
 	&.extend {
-		padding-bottom: 20px;
+		padding-bottom: 16px;
 
 		&::after {
 			top: 100%;
@@ -44,7 +52,7 @@
 
 [data-theme='dark'] .background {
 	background-color: $D_INDIGO3;
-	
+
 	&::before,
 	&::after {
 		background-color: $D_INDIGO3;

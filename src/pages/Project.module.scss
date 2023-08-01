@@ -2,8 +2,12 @@
 	& > * {
 		margin-bottom: 38px;
 
+		&:first-child {
+			margin-top: 0 !important;
+		}
+
 		&:last-child {
-			margin-bottom: 0;
+			margin-bottom: 0 !important;
 		}
 	}
 
