@@ -107,7 +107,7 @@ export function Content() {
 				{/* <Skills skills={project.skills} /> */}
 			</Section>
 
-			<Section background>
+			<Section background extend>
 				<VisitProject
 					label={t(`visit.website`)}
 					text={'imoukubo.com'}

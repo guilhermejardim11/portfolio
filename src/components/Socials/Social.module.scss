@@ -10,12 +10,5 @@
 	img {
 		height: 24px;
 		width: 24px;
-		filter: invert(7%) sepia(6%) saturate(6450%) hue-rotate(200deg)
-			brightness(97%) contrast(92%);
 	}
-}
-
-[data-theme='dark'] .social img {
-	filter: invert(88%) sepia(100%) saturate(46%) hue-rotate(148deg)
-		brightness(112%) contrast(100%);
 }

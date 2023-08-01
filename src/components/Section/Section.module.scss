@@ -2,27 +2,51 @@
 
 .section {
 	padding: 68px 28px;
+	position: relative;
 }
 
 .background {
-	&::before {
+	margin: 28px 0;
+	padding: 40px 28px;
+	background-color: $WHITE2;
+	transition: background-color $ANIMATION_TIME;
+
+	&::before,
+	&::after {
 		content: '';
-		border-radius: 50%;
 		position: absolute;
-		top: 0;
-		left: -100vw;
-		height: 100%;
-		width: 300vw;
-        aspect-ratio: 1;
+		left: 0;
+		right: 0;
+		height: 28px;
 		background-color: $WHITE2;
 		transition: background-color $ANIMATION_TIME;
 	}
 
-	&.extend::before {
-		height: 100vh;
+	&::before {
+		bottom: 100%;
+		clip-path: url(#curvedMaskTop);
+	}
+
+	&:not(.extend)::after {
+		top: 100%;
+		clip-path: url(#curvedMaskBottom);
+	}
+
+	&.extend {
+		padding-bottom: 20px;
+
+		&::after {
+			top: 100%;
+			height: calc(28px + 28px);
+		}
 	}
 }
 
-[data-theme='dark'] .background::before {
+[data-theme='dark'] .background {
 	background-color: $D_INDIGO3;
+	
+	&::before,
+	&::after {
+		background-color: $D_INDIGO3;
+	}
 }

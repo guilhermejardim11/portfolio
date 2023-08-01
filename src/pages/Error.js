@@ -2,7 +2,7 @@ import { Trans, useTranslation } from 'react-i18next';
 
 import styles from './Error.module.scss';
 
-import RootLayout from '../layouts/Root';
+import PageTitle from '../components/Page/PageTitle';
 import Banner from '../components/Banner/Banner';
 
 const ErrorPage = ({ status = null }) => {
@@ -117,11 +117,15 @@ const ErrorPage = ({ status = null }) => {
 	}
 
 	return (
-		<Banner className={styles.banner}>
-			<h1>{emoji}</h1>
-			<h2>{title}</h2>
-			<p>{message}</p>
-		</Banner>
+		<>
+			<PageTitle title={''} />
+
+			<Banner className={styles.banner}>
+				<h1>{emoji}</h1>
+				<h2>{title}</h2>
+				<p>{message}</p>
+			</Banner>
+		</>
 	);
 };
 

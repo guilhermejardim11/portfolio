@@ -8,14 +8,14 @@ const useParallax = (value, distance) => {
 
 const Blob = (props) => {
 	const { scrollYProgress } = useScroll();
-	const y = useParallax(scrollYProgress, window.innerHeight);
+	const y = useParallax(scrollYProgress, window.innerHeight - 200);
 
 	return (
 		<motion.div
 			className={styles.blob}
 			style={{
 				y,
-				top: `calc(50% - 300px + ${props.y}px)`,
+				top: `calc(50% - 328px + ${props.y}px)`,
 				left: `calc(50% - 70vw + ${props.x}px)`,
 				backgroundColor: props.color,
 				opacity: props.opacity,
