@@ -9,6 +9,10 @@ body {
 
 	--project-color-light: #{$MAGENTA};
 	--project-color-dark: #{$D_MAGENTA};
+
+	&.locked {
+		overflow: hidden;
+	}
 }
 
 main {

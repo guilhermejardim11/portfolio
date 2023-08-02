@@ -15,10 +15,14 @@ const MenuContextProvider = (props) => {
 
 	const openMenuHandler = () => {
 		setIsMenuOpen(!isMenuOpen);
+
+		if (!isMenuOpen) document.body.classList.add('locked');
+		else document.body.classList.remove('locked');
 	};
 
 	const closeMenuHandler = () => {
 		setIsMenuOpen(false);
+		document.body.classList.remove('locked');
 	};
 
 	const _resetCurrentPageName = () => {
