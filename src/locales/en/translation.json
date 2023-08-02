@@ -34,23 +34,31 @@
 		"website": "Visit website at"
 	},
 
-	"skill": {
-		"level": {
-			"unknown": "Unknown",
-			"basic": "Basic",
-			"intermidiate": "Intermidiate",
-			"advanced": "Advanced",
-			"expert": "Expert"
-		},
-		"name": {
-			"figma": "Figma",
-			"cc": "Adobe Creative Cloud",
-			"react": "React.js",
-			"html": "HTML",
-			"css": "CSS",
-			"js": "JavaScript"
-		}
-	},
+	"unknown": "Unknown",
+	"basic": "Basic",
+	"intermidiate": "Intermidiate",
+	"advanced": "Advanced",
+	"expert": "Expert",
+
+	"design": "Design",
+	"frontend": "Frontend",
+	"backend": "Backend",
+	"other": "Other",
+
+	"figma": "Figma",
+	"adobecc": "Adobe Creative Cloud",
+	"reactjs": "React.js",
+	"reactrouter": "React Router",
+	"redux": "Redux",
+	"html": "HTML",
+	"css": "CSS",
+	"sass": "SASS/SCSS",
+	"js": "JavaScript",
+	"adobexd": "Adobe Xd",
+	"wordpress": "Wordpress",
+	"php": "PHP",
+	"jquery": "jQuery",
+	"nodejs": "Node.js",
 
 	"see_more": "See More",
 	"know_more": "Know More",

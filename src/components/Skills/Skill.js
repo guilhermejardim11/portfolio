@@ -10,10 +10,10 @@ const Skill = (props) => {
 	const [level, setLevel] = useState();
 
 	const levels = {
-		expert: [75, 100],
-		advanced: [50, 75],
-		intermidiate: [25, 50],
-		basic: [0, 25],
+		expert: [90, 100],
+		advanced: [70, 90],
+		intermidiate: [50, 70],
+		basic: [0, 50],
 	};
 
 	useEffect(() => {
@@ -26,30 +26,28 @@ const Skill = (props) => {
 	}, [props.progress]);
 
 	return (
-		level && (
-			<Card className={styles.skill}>
-				<div className={styles.icon}>
-					<img
-						className='color_shift'
-						src={props.icon}
-						alt={props.title}
+		<Card className={styles.skill}>
+			<div className={styles.icon}>
+				<img
+					className='color_shift'
+					src={props.icon}
+					alt={props.title}
+				/>
+			</div>
+			<div className={styles.info}>
+				<div className={styles.labels}>
+					<span>{props.title}</span>
+					<span>{t(level)}</span>
+				</div>
+				<div className={styles.progress}>
+					<div
+						style={{
+							width: `${props.progress}%`,
+						}}
 					/>
 				</div>
-				<div className={styles.info}>
-					<div className={styles.labels}>
-						<span>{props.title}</span>
-						<span>{t(`skill.level.${level}`)}</span>
-					</div>
-					<div className={styles.progress}>
-						<div
-							style={{
-								width: props.progress >= 0 && `${props.progress}%`,
-							}}
-						/>
-					</div>
-				</div>
-			</Card>
-		)
+			</div>
+		</Card>
 	);
 };
 

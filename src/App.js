@@ -1,11 +1,5 @@
 import { useContext, useEffect } from 'react';
-import {
-	BrowserRouter,
-	Outlet,
-	Route,
-	Routes,
-	useLocation,
-} from 'react-router-dom';
+import { BrowserRouter, Outlet, Route, Routes, useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { AnimatePresence, motion } from 'framer-motion';
 import { MenuContext } from './context/MenuContext';
@@ -21,10 +15,7 @@ import ProjectPage from './pages/Project';
 import SkillsPage from './pages/Skills';
 import ErrorPage from './pages/Error';
 
-document.body.setAttribute(
-	'data-theme',
-	localStorage.getItem('isDarkMode') === '1' ? 'dark' : 'light'
-);
+document.body.setAttribute('data-theme', localStorage.getItem('isDarkMode') === '1' ? 'dark' : 'light');
 
 const Router = () => {
 	const [t, i18n] = useTranslation();
@@ -51,8 +42,15 @@ const Router = () => {
 
 				<RootLayout>
 					<Routes location={location}>
-						<Route path='/' element={<Outlet />}>
-							<Route index={true} element={<HomePage />} exact />
+						<Route
+							path='/'
+							element={<Outlet />}
+						>
+							<Route
+								index={true}
+								element={<HomePage />}
+								exact
+							/>
 							<Route
 								path='projects'
 								element={<ProjectsPage />}

@@ -5,20 +5,21 @@
 	grid-template-columns: 40px 1fr;
 	height: 42px;
 
-    margin-bottom: 12px;
+	margin-bottom: 12px;
 }
 
 .icon {
 	height: 100%;
 	width: auto;
 	aspect-ratio: 1;
-    background-color: $WHITE2;
+	background-color: $WHITE2;
+	transition: background-color $ANIMATION_TIME;
 
-    img {
-        margin: 4px;
-        height: 32px;
-        width: 32px;
-    }
+	img {
+		margin: 4px;
+		height: 32px;
+		width: 32px;
+	}
 }
 
 .info {
@@ -40,6 +41,7 @@
 
 	span:nth-child(2) {
 		color: $LILAC;
+		transition: color $ANIMATION_TIME;
 	}
 }
 
@@ -48,11 +50,32 @@
 	height: 4px;
 	width: 100%;
 	background-color: rgba($color: $D_LILAC2, $alpha: 0.2);
+	transition: background-color $ANIMATION_TIME;
 	overflow: hidden;
 
 	& > * {
 		border-radius: 2px;
 		height: 100%;
+		width: 0;
 		background-color: $INDIGO;
+		transition: background-color $ANIMATION_TIME;
+	}
+}
+
+[data-theme='dark'] {
+	.icon {
+		background-color: $D_INDIGO2;
+	}
+
+	.labels span:nth-child(2) {
+		color: $D_LILAC2;
+	}
+
+	.progress {
+		background-color: $D_INDIGO2;
+
+		& > * {
+			background-color: $WHITE;
+		}
 	}
 }

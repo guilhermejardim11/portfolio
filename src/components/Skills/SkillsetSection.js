@@ -26,34 +26,34 @@ const SkillsetSection = () => {
 
 			<div className={styles.skills}>
 				<SkillCounter
-					label={t('skill.name.figma')}
+					label={t('figma')}
 					icon={figma}
 					progress={80}
 				/>
 				<SkillCounter
-					label={t('skill.name.cc')}
+					label={t('adobecc')}
 					icon={cc}
 					progress={60}
 				/>
 				<SkillCounter
-					label={t('skill.name.react')}
+					label={t('react')}
 					icon={react}
 					progress={80}
 				/>
 				<SkillCounter
-					label={t('skill.name.html')}
+					label={t('html')}
 					icon={html}
 					progress={100}
 				/>
 				<SkillCounter
-					label={t('skill.name.css')}
+					label={t('scss')}
 					icon={css}
-					progress={100}
+					progress={80}
 				/>
 				<SkillCounter
-					label={t('skill.name.js')}
+					label={t('js')}
 					icon={js}
-					progress={80}
+					progress={70}
 				/>
 			</div>
 		</Section>
