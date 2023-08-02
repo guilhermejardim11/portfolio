@@ -1,0 +1,22 @@
+@import '../../variables.scss';
+
+.banner {
+	padding-bottom: calc(28px + 5vh) !important;
+
+	h1 {
+		margin-bottom: 3px;
+		font-size: 45px !important;
+	}
+
+	h2 {
+		margin-top: 14px;
+		font-size: 20px;
+		line-height: 10px;
+		color: var(--project-color-light);
+		transition: color $ANIMATION_TIME;
+	}
+}
+
+[data-theme='dark'] .banner h2 {
+	color: var(--project-color-dark);
+}

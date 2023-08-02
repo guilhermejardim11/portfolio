@@ -2,6 +2,8 @@ import { useContext } from 'react';
 import { useTranslation } from 'react-i18next';
 import { ThemeContext } from '../../context/ThemeContext';
 
+import styles from './HomeBanner.module.scss';
+
 import Banner from '../Banner/Banner';
 import Dot from '../UI/Dot';
 import Blob from '../UI/Blob';
@@ -12,10 +14,11 @@ const HomeBanner = () => {
 	const themeContext = useContext(ThemeContext);
 
 	return (
-		<Banner>
-			<h1 style={{ fontSize: '45px' }}>{t('hello')}</h1>
+		<Banner className={styles.banner}>
+			<h1>{t('hello')}</h1>
 			<Dot />
-			<h2>{t('job')}</h2>
+			<h2>{t('uxui_designer')} &</h2>
+			<h2>{t('frontend_developer')}</h2>
 
 			<Blob
 				color={themeContext.isDarkMode ? '#BC2F5B' : '#FF226C'}

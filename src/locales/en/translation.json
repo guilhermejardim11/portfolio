@@ -1,6 +1,7 @@
 {
 	"hello": "Hello! I'm Guilherme",
-	"job": "UI/UX Designer",
+	"uxui_designer": "UI/UX Designer",
+	"frontend_developer": "Frontend Developer",
 
 	"home": "Home",
 	"project": "Project",
@@ -17,7 +18,7 @@
 
 	"section": {
 		"about": {
-			"desc": "Hi there! I'm Guilherme Jardim and I'm a UX/UI Designer from Portugal, and I have the goal to improve the quality of my projects and broaden my skillset!",
+			"desc": "Hi there! I'm Guilherme Jardim and I'm a UX/UI Designer and Frontend Developer from Portugal, and I have the goal to improve the quality of my projects and broaden my skillset!",
 			"years": "years of experience",
 			"uxui_projects": "UX/UI Projects",
 			"frontend_projects": "Front-End Projects",

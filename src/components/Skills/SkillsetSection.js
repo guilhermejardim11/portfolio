@@ -10,7 +10,7 @@ import figma from '../../assets/icons/figma.svg';
 import cc from '../../assets/icons/adobecc.svg';
 import react from '../../assets/icons/reactjs.svg';
 import html from '../../assets/icons/html.svg';
-import css from '../../assets/icons/css.svg';
+import sass from '../../assets/icons/sass.svg';
 import js from '../../assets/icons/javascript.svg';
 
 const SkillsetSection = () => {
@@ -46,8 +46,8 @@ const SkillsetSection = () => {
 					progress={100}
 				/>
 				<SkillCounter
-					label={t('scss')}
-					icon={css}
+					label={t('sass')}
+					icon={sass}
 					progress={80}
 				/>
 				<SkillCounter
