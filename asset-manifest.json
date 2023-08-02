@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.bb20f9a2.css",
-    "main.js": "/portfolio/static/js/main.ae3454fc.js",
+    "main.css": "/portfolio/static/css/main.914b3c00.css",
+    "main.js": "/portfolio/static/js/main.ab486e2c.js",
     "static/media/thumb.jpg": "/portfolio/static/media/thumb.17c0e2b6fa3583d23b43.jpg",
     "service-worker.js": "/portfolio/service-worker.js",
     "static/media/icons.svg": "/portfolio/static/media/icons.dc405f3e0abd8c02daf5574c9d9ce42c.svg",
@@ -16,6 +16,7 @@
     "static/media/github.svg": "/portfolio/static/media/github.848f9a875cbafbf1326f18eceb94ac4b.svg",
     "static/media/redux.svg": "/portfolio/static/media/redux.e08f219a6dcfecb980d72b35512a4487.svg",
     "static/media/nodejs.svg": "/portfolio/static/media/nodejs.ac87094fe66566034d45e2f8a370c725.svg",
+    "static/media/pattern.svg": "/portfolio/static/media/pattern.38d60a22de75a4bc72f1.svg",
     "static/media/adobecc.svg": "/portfolio/static/media/adobecc.4c1b11f54db84e96902b810bda9a4620.svg",
     "static/media/reactrouter.svg": "/portfolio/static/media/reactrouter.fac53c5d0d8bbf354140f57c607adf08.svg",
     "static/media/wordpress.svg": "/portfolio/static/media/wordpress.33fd4b97bf2cae1979087a9ffa1bf2e4.svg",
@@ -29,11 +30,11 @@
     "static/media/css.svg": "/portfolio/static/media/css.d90722f244bb4be867406a2900e44b98.svg",
     "static/media/getFetch.cjs": "/portfolio/static/media/getFetch.40f37ddea2378391108f.cjs",
     "static/media/html.svg": "/portfolio/static/media/html.e13cb66c0762022b35f4142141c5354a.svg",
-    "main.bb20f9a2.css.map": "/portfolio/static/css/main.bb20f9a2.css.map",
-    "main.ae3454fc.js.map": "/portfolio/static/js/main.ae3454fc.js.map"
+    "main.914b3c00.css.map": "/portfolio/static/css/main.914b3c00.css.map",
+    "main.ab486e2c.js.map": "/portfolio/static/js/main.ab486e2c.js.map"
   },
   "entrypoints": [
-    "static/css/main.bb20f9a2.css",
-    "static/js/main.ae3454fc.js"
+    "static/css/main.914b3c00.css",
+    "static/js/main.ab486e2c.js"
   ]
 }
