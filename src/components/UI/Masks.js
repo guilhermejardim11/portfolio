@@ -1,8 +1,14 @@
 const CurvedMasks = () => {
 	return (
-		<svg width='0' height='0'>
+		<svg
+			width='0'
+			height='0'
+		>
 			<defs>
-				<clipPath id='curvedMaskTop' clipPathUnits='objectBoundingBox'>
+				<clipPath
+					id='curvedMaskTop'
+					clipPathUnits='objectBoundingBox'
+				>
 					<path
 						d='
                             M 0,1
@@ -11,7 +17,10 @@ const CurvedMasks = () => {
                         '
 					/>
 				</clipPath>
-				<clipPath id='curvedMaskBottom' clipPathUnits='objectBoundingBox'>
+				<clipPath
+					id='curvedMaskBottom'
+					clipPathUnits='objectBoundingBox'
+				>
 					<path
 						d='
                             M 1,0
