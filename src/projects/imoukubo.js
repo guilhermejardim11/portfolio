@@ -3,7 +3,6 @@ import { useTranslation } from 'react-i18next';
 import { ThemeContext } from '../context/ThemeContext';
 
 import Section from '../components/Section/Section';
-import SectionTitle from '../components/Section/SectionTitle';
 import Title from '../components/Project/Elements/Title';
 import NumberTitle from '../components/Project/Elements/NumberTitle';
 import VisitProject from '../components/Project/VisitProject';
@@ -19,22 +18,16 @@ import logo_2 from '../assets/projects/imoukubo/logo_2.svg';
 import icons from '../assets/projects/imoukubo/icons.svg';
 import fonts from '../assets/projects/imoukubo/fonts.svg';
 
-import img_1 from '../assets/projects/imoukubo/thumb.jpg';
-
-export default {
+const details = {
 	id: 'imoukubo',
 	title: 'imoukubo',
-	type: 'website',
-	tags: ['Brand Identity', 'UX/UI', 'Development'],
-	date: new Date(Date.UTC(2012, 11, 20)),
 	thumbnail: thumbnail,
 	colors: ['#FF8020', '#FE6E01'],
+	categories: ['branding', 'website'],
+	tags: ['iconography', 'palette', 'branding'],
 	skills: ['html', 'css_scss', 'javascript', 'rest_api', 'wordpress'],
-	visit: ['imoukubo.com', 'https://www.imoukubo.com/'],
 	content: <Content />,
 };
-
-const palette = ['#FE6E01', '#2F3543', '#647697', '#FFFFFF'];
 
 export function Content() {
 	const [t] = useTranslation();
@@ -42,10 +35,12 @@ export function Content() {
 
 	return (
 		<>
-			<img
-				src={img_1}
-				alt='imoukubo 1'
-			/>
+			<Section>
+				<img
+					src={thumbnail}
+					alt='thumbnail'
+				/>
+			</Section>
 
 			<Section>
 				<Title
@@ -87,7 +82,7 @@ export function Content() {
 				</ModularBox>
 
 				<ModularBox>
-					<ColorModule palette={palette} />
+					<ColorModule palette={['#FE6E01', '#2F3543', '#647697', '#FFFFFF']} />
 				</ModularBox>
 
 				<ModularBox>
@@ -102,12 +97,15 @@ export function Content() {
 				</ModularBox>
 			</Section>
 
-			<Section>
+			{/* <Section>
 				<SectionTitle title={t('skills')} />
-				{/* <Skills skills={project.skills} /> */}
-			</Section>
+				<Skills skills={project.skills} />
+			</Section> */}
 
-			<Section background extend>
+			<Section
+				background
+				extend
+			>
 				<VisitProject
 					label={t(`visit.website`)}
 					text={'imoukubo.com'}
@@ -117,3 +115,5 @@ export function Content() {
 		</>
 	);
 }
+
+export default details;
