@@ -8,10 +8,10 @@ import SkillCounter from './SkillCounter';
 
 import figma from '../../assets/icons/figma.svg';
 import cc from '../../assets/icons/adobecc.svg';
-import react from '../../assets/icons/reactjs.svg';
+import reactjs from '../../assets/icons/reactjs.svg';
 import html from '../../assets/icons/html.svg';
 import sass from '../../assets/icons/sass.svg';
-import js from '../../assets/icons/javascript.svg';
+import javascript from '../../assets/icons/javascript.svg';
 
 const SkillsetSection = () => {
 	const [t] = useTranslation();
@@ -31,13 +31,13 @@ const SkillsetSection = () => {
 					progress={80}
 				/>
 				<SkillCounter
-					label={t('adobecc')}
+					label={t('cc')}
 					icon={cc}
 					progress={60}
 				/>
 				<SkillCounter
-					label={t('react')}
-					icon={react}
+					label={t('reactjs')}
+					icon={reactjs}
 					progress={80}
 				/>
 				<SkillCounter
@@ -51,8 +51,8 @@ const SkillsetSection = () => {
 					progress={80}
 				/>
 				<SkillCounter
-					label={t('js')}
-					icon={js}
+					label={t('javascript')}
+					icon={javascript}
 					progress={70}
 				/>
 			</div>

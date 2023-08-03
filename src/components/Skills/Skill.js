@@ -28,11 +28,13 @@ const Skill = (props) => {
 	return (
 		<Card className={styles.skill}>
 			<div className={styles.icon}>
-				<img
-					className='color_shift'
-					src={props.icon}
-					alt={props.title}
-				/>
+				{props.icon && (
+					<img
+						className='color_shift'
+						src={props.icon}
+						alt={props.title}
+					/>
+				)}
 			</div>
 			<div className={styles.info}>
 				<div className={styles.labels}>
