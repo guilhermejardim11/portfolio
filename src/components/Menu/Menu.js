@@ -87,7 +87,7 @@ const Menu = () => {
 					</NavLink>
 				</motion.div>
 
-				<motion.div variants={navlinkVariants}>
+				{/* <motion.div variants={navlinkVariants}>
 					<NavLink
 						to='/contacts'
 						className={({ isActive }) => (isActive ? styles.active : undefined)}
@@ -96,7 +96,7 @@ const Menu = () => {
 					>
 						{t('contacts')}
 					</NavLink>
-				</motion.div>
+				</motion.div> */}
 			</motion.nav>
 
 			<Socials className={styles.menu_socials} />
