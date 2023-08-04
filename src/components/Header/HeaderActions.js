@@ -1,13 +1,13 @@
 import styles from './HeaderActions.module.scss';
 
-import MenuButton from '../Menu/MenuButton';
 import ThemeButton from '../Theme/ThemeButton';
+// import Language from '../Language/Language';
 
 const HeaderActions = () => {
 	return (
 		<div className={styles.actions}>
 			<ThemeButton />
-			<MenuButton />
+			{/* <Language /> */}
 		</div>
 	);
 };

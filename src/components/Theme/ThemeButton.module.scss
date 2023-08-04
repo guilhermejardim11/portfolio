@@ -1,69 +1,45 @@
 @import '../../variables.scss';
 
 .button {
+	height: 28px;
+	width: 52px;
 	opacity: 0;
 	pointer-events: none;
-	transition: opacity ($ANIMATION_TIME - 0.1s);
-
-	svg {
-		height: 28px;
-		width: 51px;
-	}
 
 	path {
-		&:nth-child(1),
-		&:nth-child(2),
-		&:nth-child(3) {
-			transition: fill $ANIMATION_TIME, transform $ANIMATION_TIME,
-				opacity $ANIMATION_TIME;
-		}
+		fill: var(--project-color-light);
+		transition: fill $ANIMATION_TIME, transform $ANIMATION_TIME, opacity $ANIMATION_TIME;
+	}
 
-		&:nth-child(1) {
-			fill: $INDIGO;
-		}
+	.sun {
+		transform: translate(3px, 3px);
+		opacity: 1;
+	}
 
-		&:nth-child(2),
-		&:nth-child(3) {
-			fill: var(--project-color-light);
-		}
+	.moon {
+		transform: translate(4px, 4px);
+		opacity: 0;
+	}
 
-		&:nth-child(2) {
-			transform: translate(-1935px, -200px);
-		}
-
-		&:nth-child(3) {
-			transform: translate(60px, -243px);
+	&.active {
+		.sun {
+			transform: translate(calc(100% - 21px), 3px);
 			opacity: 0;
+		}
+
+		.moon {
+			transform: translate(calc(100% - 20px), 4px);
+			opacity: 1;
 		}
 	}
 
 	&.shown {
 		opacity: 1;
 		pointer-events: all;
-	}
-
-	&.active path {
-		&:nth-child(2) {
-			transform: translate(-1912px, -200px);
-			opacity: 0;
-		}
-
-		&:nth-child(3) {
-			transform: translate(83px, -243px);
-			opacity: 1;
-		}
+		cursor: pointer;
 	}
 }
 
-[data-theme='dark'] .button {
-	path {
-		&:nth-child(1) {
-			fill: $WHITE;
-		}
-
-		&:nth-child(2),
-		&:nth-child(3) {
-			fill: var(--project-color-dark);
-		}
-	}
+[data-theme='dark'] .button path {
+	fill: var(--project-color-dark);
 }

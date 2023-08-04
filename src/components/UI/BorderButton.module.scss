@@ -1,0 +1,16 @@
+@import '../../variables.scss';
+
+.button {
+	border: 2px solid $INDIGO;
+	border-radius: 16px;
+	transition: border-color $ANIMATION_TIME, opacity ($ANIMATION_TIME - 0.1s);
+
+	svg {
+		height: 100%;
+		width: 100%;
+	}
+}
+
+[data-theme='dark'] .button {
+	border-color: $WHITE;
+}

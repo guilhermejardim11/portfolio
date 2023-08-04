@@ -1,7 +1,21 @@
-.logo {
-    padding: 6px 14px;
+@import '../../variables.scss';
 
-    svg {
-        height: 12vw;
-    }
+@media (max-width: $SCREEN_SM_MAX) {
+	.logo {
+		padding: 6px 14px;
+
+		svg {
+			height: 12vw;
+		}
+	}
+}
+
+@media (min-width: $SCREEN_MD_MIN) {
+	.logo {
+		padding: 0;
+
+		svg {
+			height: 50px;
+		}
+	}
 }

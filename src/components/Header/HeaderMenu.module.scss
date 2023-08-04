@@ -1,0 +1,33 @@
+@import '../../variables.scss';
+
+.menu {
+	display: flex;
+	justify-content: center;
+	gap: 50px;
+	position: absolute;
+	left: 50%;
+	width: 0;
+
+	a {
+		font-family: 'roc-grotesk-wide', sans-serif;
+		font-size: 20px;
+		font-weight: 600;
+		line-height: 1;
+		text-transform: lowercase;
+		transition: opacity $ANIMATION_TIME;
+
+		&.active {
+			color: var(--project-color-light);
+		}
+
+		&:not(.active):hover {
+			opacity: 0.5;
+		}
+	}
+}
+
+[data-theme='dark'] {
+	.menu a.active {
+		color: var(--project-color-dark);
+	}
+}

@@ -4,21 +4,18 @@
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	border-bottom: 1px solid transparent;
-	padding: 43px 16px 14px;
+	border: 0px solid transparent;
 	position: fixed;
 	top: 0;
 	right: 0;
 	left: 0;
 	z-index: 10;
-	transition: border-color ($ANIMATION_TIME - 0.1s), padding-top $ANIMATION_TIME, background-color $ANIMATION_TIME;
+	transition: border-color ($ANIMATION_TIME - 0.1s), padding $ANIMATION_TIME, background-color $ANIMATION_TIME;
 
 	&::before {
-		content: "";
+		content: '';
 		position: absolute;
 		top: 0;
-		left: 0;
-		right: 0;
 		bottom: 0;
 		background-image: linear-gradient($WHITE 10%, transparent 100%);
 		opacity: 0;
@@ -27,13 +24,56 @@
 	}
 
 	&.scrolled {
-		padding: 9px 16px 7px;
-		border-color: $WHITE;
+		border-bottom-color: $WHITE;
 		backdrop-filter: blur(1.6px);
 		background-color: rgba($WHITE, 0.95);
 
 		&::before {
 			opacity: 1;
+		}
+	}
+}
+
+@media (max-width: $SCREEN_SM_MAX) {
+	.header {
+		padding: 43px 16px 14px;
+		border-bottom-width: 1px;
+
+		&::before {
+			right: 0;
+			left: 0;
+		}
+
+		&.scrolled {
+			padding-top: 9px;
+			padding-bottom: 7px;
+
+			&::before {
+				opacity: 1;
+			}
+		}
+	}
+}
+
+@media (min-width: $SCREEN_MD_MIN) {
+	.header {
+		padding: 43px calc((100vw - 1280px - 56px) / 2) 14px;
+		border-right-width: 50px;
+		border-bottom-width: 2px;
+		border-left-width: 50px;
+
+		&::before {
+			right: -50px;
+			left: -50px;
+		}
+
+		&.scrolled {
+			padding-top: 13px;
+			padding-bottom: 10px;
+
+			&::before {
+				opacity: 1;
+			}
 		}
 	}
 }
@@ -44,7 +84,7 @@
 	}
 
 	&.scrolled {
-		border-color: $D_INDIGO2;
+		border-bottom-color: $D_INDIGO3;
 		background-color: rgba($D_INDIGO, 0.95);
-	}	
+	}
 }

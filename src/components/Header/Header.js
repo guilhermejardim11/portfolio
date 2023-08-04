@@ -5,8 +5,10 @@ import { DeviceContext } from '../../context/DeviceContext';
 import styles from './Header.module.scss';
 
 import HeaderLogo from './HeaderLogo';
-import HeaderTitle from './HeaderTitle';
+import HeaderMenu from './HeaderMenu';
 import HeaderActions from './HeaderActions';
+import HeaderTitle from './HeaderTitle';
+import HeaderMobileActions from './HeaderMobileActions';
 
 const Header = () => {
 	const menuContext = useContext(MenuContext);
@@ -15,8 +17,17 @@ const Header = () => {
 	return (
 		<header className={`${styles.header} ${!menuContext.isMenuOpen && deviceContext.isScrolled ? styles.scrolled : ''}`}>
 			<HeaderLogo />
-			<HeaderTitle />
-			<HeaderActions />
+			{deviceContext.isDesktop ? (
+				<>
+					<HeaderMenu />
+					<HeaderActions />
+				</>
+			) : (
+				<>
+					<HeaderTitle />
+					<HeaderMobileActions />
+				</>
+			)}
 		</header>
 	);
 };
