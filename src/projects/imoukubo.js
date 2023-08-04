@@ -7,9 +7,9 @@ import Title from '../components/Project/Elements/Title';
 import NumberTitle from '../components/Project/Elements/NumberTitle';
 import VisitProject from '../components/Project/VisitProject';
 import ModularBox from '../components/ModularBox/ModularBox';
-import Image from '../components/ModularBox/Modules/Image';
-import ColorModule from '../components/ModularBox/ColorBox';
+import ColorBox from '../components/ModularBox/ColorBox';
 import SpriteBox from '../components/ModularBox/SpriteBox';
+import Image from '../components/ModularBox/Modules/Image';
 
 import thumbnail from '../assets/projects/imoukubo/thumb.jpg';
 import logo_0 from '../assets/projects/imoukubo/logo_0.svg';
@@ -82,7 +82,7 @@ export function Content() {
 				</ModularBox>
 
 				<ModularBox>
-					<ColorModule palette={['#FE6E01', '#2F3543', '#647697', '#FFFFFF']} />
+					<ColorBox palette={['#FE6E01', '#2F3543', '#647697', '#FFFFFF']} />
 				</ModularBox>
 
 				<ModularBox>
