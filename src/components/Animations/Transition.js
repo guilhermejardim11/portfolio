@@ -23,8 +23,8 @@ const logoVariants = {
 		x: 0,
 	},
 	hidden: {
-		x: '-200%',
-		transitionEnd: { x: '200%' },
+		x: '-80vw',
+		transitionEnd: { x: '80vw' },
 	},
 	transition: {
 		duration: 0.7,

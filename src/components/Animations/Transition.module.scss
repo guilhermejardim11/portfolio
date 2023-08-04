@@ -13,10 +13,6 @@
 
 .logo {
 	position: absolute;
-	top: calc(50% - 15vw);
-	left: calc(50% - 15vw);
-	height: 30vw;
-	width: 30vw;
 	z-index: 99;
 	overflow: hidden;
 
@@ -27,6 +23,24 @@
 
 	path {
 		transition: fill ($ANIMATION_TIME + 0.1);
+	}
+}
+
+@media (max-width: $SCREEN_SM_MAX) {
+	.logo {
+		top: calc(50% - 15vw);
+		left: calc(50% - 15vw);
+		height: 30vw;
+		width: 30vw;
+	}
+}
+
+@media (min-width: $SCREEN_MD_MIN) {
+	.logo {
+		top: calc(50% - 75px);
+		left: calc(50% - 75px);
+		height: 150px;
+		width: 150px;
 	}
 }
 

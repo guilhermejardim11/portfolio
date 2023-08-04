@@ -1,6 +1,5 @@
 import { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import { useTranslation } from 'react-i18next';
 import { projectList } from '../database';
 
 import styles from './Project.module.scss';
@@ -9,8 +8,6 @@ import PageTitle from '../components/Page/PageTitle';
 import ProjectBanner from '../components/Project/ProjectBanner';
 
 const ProjectPage = () => {
-	const [t] = useTranslation();
-
 	let params = useParams();
 	const project = projectList.find((project) => project.id === params.ID);
 

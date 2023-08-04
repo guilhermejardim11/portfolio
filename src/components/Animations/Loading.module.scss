@@ -15,9 +15,6 @@
 	z-index: 999;
 
 	& > div {
-		height: 30vw;
-		width: 30vw;
-
 		& > div,
 		svg {
 			position: absolute;
@@ -45,6 +42,20 @@
 				}
 			}
 		}
+	}
+}
+
+@media (max-width: $SCREEN_SM_MAX) {
+	.loading > div {
+		height: 30vw;
+		width: 30vw;
+	}
+}
+
+@media (min-width: $SCREEN_MD_MIN) {
+	.loading > div {
+		height: 150px;
+		width: 150px;
 	}
 }
 
