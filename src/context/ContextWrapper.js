@@ -1,14 +1,14 @@
 import ThemeContextProvider from './ThemeContext';
 import MenuContextProvider from './MenuContext';
-import ScrolledContextProvider from './ScrolledContext';
+import DeviceContextProvider from './DeviceContext';
 
 const ContextWrapper = (props) => {
 	return (
 		<ThemeContextProvider>
 			<MenuContextProvider>
-				<ScrolledContextProvider>
+				<DeviceContextProvider>
 					{props.children}
-				</ScrolledContextProvider>
+				</DeviceContextProvider>
 			</MenuContextProvider>
 		</ThemeContextProvider>
 	);

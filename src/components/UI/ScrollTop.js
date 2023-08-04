@@ -1,12 +1,12 @@
 import { useContext } from 'react';
-import { ScrolledContext } from '../../context/ScrolledContext';
+import { DeviceContext } from '../../context/DeviceContext';
 
 import styles from './ScrollTop.module.scss';
 
 import IconButton from './IconButton';
 
 const ScrollTop = () => {
-	const scrolledContext = useContext(ScrolledContext);
+	const deviceContext = useContext(DeviceContext);
 
 	const scrollToTop = () => {
 		window.scrollTo({
@@ -17,7 +17,7 @@ const ScrollTop = () => {
 
 	return (
 		<IconButton
-			className={`${styles.button} ${!scrolledContext.isScrolled ? styles.hidden : ''}`}
+			className={`${styles.button} ${!deviceContext.isScrolled ? styles.hidden : ''}`}
 			title='Scroll Top'
 			onClick={scrollToTop}
 		/>

@@ -1,6 +1,6 @@
 import { useContext } from 'react';
 import { MenuContext } from '../../context/MenuContext';
-import { ScrolledContext } from '../../context/ScrolledContext';
+import { DeviceContext } from '../../context/DeviceContext';
 
 import styles from './Header.module.scss';
 
@@ -10,10 +10,10 @@ import HeaderActions from './HeaderActions';
 
 const Header = () => {
 	const menuContext = useContext(MenuContext);
-	const scrolledContext = useContext(ScrolledContext);
+	const deviceContext = useContext(DeviceContext);
 
 	return (
-		<header className={`${styles.header} ${!menuContext.isMenuOpen && scrolledContext.isScrolled ? styles.scrolled : ''}`}>
+		<header className={`${styles.header} ${!menuContext.isMenuOpen && deviceContext.isScrolled ? styles.scrolled : ''}`}>
 			<HeaderLogo />
 			<HeaderTitle />
 			<HeaderActions />
