@@ -10,7 +10,7 @@
 	right: 0;
 	left: 0;
 	z-index: 10;
-	transition: border-color ($ANIMATION_TIME - 0.1s), padding $ANIMATION_TIME, background-color $ANIMATION_TIME;
+	transition: border-color ($ANIMATION_TIME - 0.1s), padding-top $ANIMATION_TIME, padding-bottom $ANIMATION_TIME, background-color $ANIMATION_TIME;
 
 	&::before {
 		content: '';

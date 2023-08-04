@@ -1,8 +1,12 @@
+@import '../../variables.scss';
+
 .blob {
 	border-radius: 50%;
 	position: absolute;
-	height: 140vw;
-	width: 140vw;
+	top: calc(50% - 465px);
+	left: calc(50% - 465px);
+	height: 930px;
+	width: 930px;
 	z-index: -1;
-	// filter: blur(30px);
+	transition: background-color $ANIMATION_TIME;
 }

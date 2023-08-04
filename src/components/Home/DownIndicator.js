@@ -13,7 +13,7 @@ const DownIndicator = () => {
 	return (
 		<div className={`${styles.scroll_down} ${deviceContext.isScrolled ? styles.hidden : ''}`}>
 			<Arrow />
-			<div>{t('swipe')}</div>
+			<div>{deviceContext.isDesktop ? t('scroll') : t('swipe')}</div>
 		</div>
 	);
 };
