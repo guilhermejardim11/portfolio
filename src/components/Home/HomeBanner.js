@@ -9,6 +9,7 @@ import Banner from '../Banner/Banner';
 import Dot from '../UI/Dot';
 import Blob from '../UI/Blob';
 import DownIndicator from './DownIndicator';
+import Socials from '../Socials/Socials';
 
 const HomeBanner = () => {
 	const [t] = useTranslation();
@@ -19,7 +20,7 @@ const HomeBanner = () => {
 		<Banner className={styles.banner}>
 			<h1>
 				{t('hello')}
-				<br />
+				{deviceContext.isDesktop ? <br /> : ' '}
 				{t('im_guilherme')}
 			</h1>
 			<Dot size={deviceContext.isDesktop ? 20 : 16} />
@@ -47,6 +48,8 @@ const HomeBanner = () => {
 				offsetY={250}
 				opacity={0.3}
 			/>
+
+			{deviceContext.isDesktop && <Socials className={styles.socials} />}
 
 			<DownIndicator />
 		</Banner>
