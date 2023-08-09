@@ -10,17 +10,25 @@
 	right: 0;
 	left: 0;
 	z-index: 10;
-	transition: border-color ($ANIMATION_TIME - 0.1s), padding-top $ANIMATION_TIME, padding-bottom $ANIMATION_TIME, background-color $ANIMATION_TIME;
+	transition: border-color $ANIMATION_TIME, padding-top $ANIMATION_TIME, padding-bottom $ANIMATION_TIME, background-color $ANIMATION_TIME;
 
-	&::before {
+	&::before,
+	&::after {
 		content: '';
 		position: absolute;
 		top: 0;
 		bottom: 0;
-		background-image: linear-gradient($WHITE 10%, transparent 100%);
 		opacity: 0;
 		z-index: -1;
-		transition: opacity $ANIMATION_TIME, background-image $ANIMATION_TIME;
+		transition: opacity $ANIMATION_TIME;
+	}
+
+	&::before {
+		background-image: linear-gradient($WHITE 10%, transparent 100%);
+	}
+
+	&::after {
+		background-image: linear-gradient($D_INDIGO 10%, transparent 100%);
 	}
 
 	&.scrolled {
@@ -47,10 +55,6 @@
 		&.scrolled {
 			padding-top: 9px;
 			padding-bottom: 7px;
-
-			&::before {
-				opacity: 1;
-			}
 		}
 	}
 }
@@ -62,7 +66,8 @@
 		border-bottom-width: 2px;
 		border-left-width: 50px;
 
-		&::before {
+		&::before,
+		&::after {
 			right: -50px;
 			left: -50px;
 		}
@@ -70,21 +75,21 @@
 		&.scrolled {
 			padding-top: 13px;
 			padding-bottom: 10px;
-
-			&::before {
-				opacity: 1;
-			}
 		}
 	}
 }
 
 [data-theme='dark'] .header {
-	&:before {
-		background-image: linear-gradient($D_INDIGO 10%, transparent 100%);
-	}
-
 	&.scrolled {
 		border-bottom-color: $D_INDIGO3;
 		background-color: rgba($D_INDIGO, 0.95);
+
+		&::before {
+			opacity: 0;
+		}
+
+		&::after {
+			opacity: 1;
+		}
 	}
 }

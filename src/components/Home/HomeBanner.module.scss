@@ -11,6 +11,8 @@
 
 @media (max-width: $SCREEN_SM_MAX) {
 	.banner {
+		margin-bottom: 28px;
+
 		h1 {
 			margin-bottom: 3px;
 			font-size: 45px !important;
@@ -26,6 +28,8 @@
 
 @media (min-width: $SCREEN_MD_MIN) {
 	.banner {
+		margin-bottom: 120px;
+
 		h1 {
 			margin-bottom: 8px;
 			font-size: 70px !important;

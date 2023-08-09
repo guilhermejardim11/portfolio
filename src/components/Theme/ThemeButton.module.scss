@@ -40,6 +40,20 @@
 	}
 }
 
+@media (min-width: $SCREEN_MD_MIN) {
+	.button:hover {
+		&:not(.active) .sun {
+			transform: translate(6px, 3px);
+			opacity: 0.5;
+		}
+
+		&.active .moon {
+			transform: translate(calc(100% - 23px), 4px);
+			opacity: 0.5;
+		}
+	}
+}
+
 [data-theme='dark'] .button path {
 	fill: var(--project-color-dark);
 }

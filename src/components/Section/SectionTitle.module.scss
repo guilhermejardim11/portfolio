@@ -4,12 +4,9 @@
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	margin-bottom: 38px;
 	z-index: 1;
 
 	h3 {
-		padding-left: 14px;
-		font-size: 28px;
 		text-transform: lowercase;
 
 		&::before {
@@ -18,8 +15,6 @@
 			position: absolute;
 			left: 0;
 			top: -2px;
-			height: 32px;
-			width: 32px;
 			background-color: var(--project-color-light);
 			transition: background-color $ANIMATION_TIME;
 			z-index: -1;
@@ -30,19 +25,75 @@
 		margin-top: 2px;
 		font-family: 'roc-grotesk-wide', sans-serif;
 		font-weight: 600;
-		font-size: 10px;
 		line-height: 1;
 		text-transform: uppercase;
 		color: var(--project-color-light);
 		transition: color $ANIMATION_TIME;
 
-		& > * {
-			display: inline-block;
-			vertical-align: middle;
+		svg {
+			position: absolute;
+			right: 0;
+			top: -1px;
+		}
+	}
+}
+
+@media (max-width: $SCREEN_SM_MAX) {
+	.title {
+		margin-bottom: 38px;
+
+		h3 {
+			padding-left: 14px;
+			font-size: 28px;
+
+			&::before {
+				height: 32px;
+				width: 32px;
+			}
 		}
 
-		svg {
-			margin: -2px 0 0 8px;
+		a {
+			padding-right: 32px;
+			font-size: 10px;
+
+			svg {
+			}
+		}
+	}
+}
+
+@media (min-width: $SCREEN_MD_MIN) {
+	.title {
+		margin-bottom: 68px;
+
+		h3 {
+			padding-left: 24px;
+			font-size: 50px;
+
+			&::before {
+				height: 54px;
+				width: 54px;
+			}
+		}
+
+		a {
+			padding-right: 45px;
+			font-size: 16px;
+			transition: opacity $ANIMATION_TIME;
+
+			svg {
+				height: 16px;
+				width: auto;
+				transition: right $ANIMATION_TIME;
+			}
+
+			&:hover {
+				opacity: 0.75;
+
+				svg {
+					right: -6px;
+				}
+			}
 		}
 	}
 }

@@ -4,7 +4,7 @@ import styles from './Blob.module.scss';
 
 const useParallax = (value, distance) => {
 	const absDistance = Math.abs(distance);
-	return useTransform(value, [0, 1], [distance, distance + absDistance]);
+	return useTransform(value, [0, 1], [distance, distance + absDistance * 3]);
 };
 
 const Blob = (props) => {

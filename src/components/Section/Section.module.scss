@@ -1,11 +1,7 @@
 @import '../../variables.scss';
 
-.section {
-	padding: 0 28px 68px;
-
-	&:first-child {
-		margin-top: 0 !important;
-	}
+.section:first-child {
+	margin-top: 0 !important;
 }
 
 .background {
@@ -47,6 +43,21 @@
 			top: 100%;
 			height: calc(28px + 28px);
 		}
+	}
+}
+
+@media (max-width: $SCREEN_SM_MAX) {
+	.section {
+		padding: 0 28px 68px;
+	}
+}
+
+@media (min-width: $SCREEN_MD_MIN) {
+	.section {
+		padding: 0 calc((100vw - 1280px - 56px) / 2) 150px;
+		border: 0px solid transparent;
+		border-right-width: 50px;
+		border-left-width: 50px;
 	}
 }
 

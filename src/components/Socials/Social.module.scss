@@ -1,3 +1,5 @@
+@import '../../variables.scss';
+
 .social {
 	&::marker {
 		display: none;
@@ -10,5 +12,15 @@
 	img {
 		height: 24px;
 		width: 24px;
+	}
+}
+
+@media (min-width: $SCREEN_MD_MIN) {
+	.social a {
+		transition: opacity $ANIMATION_TIME;
+
+		&:hover {
+			opacity: 0.5;
+		}
 	}
 }
