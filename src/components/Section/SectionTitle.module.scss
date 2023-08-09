@@ -7,16 +7,14 @@
 	z-index: 1;
 
 	h3 {
-		padding-left: 22px;
 		position: relative;
-		text-transform: lowercase;
 
 		&::before {
 			content: '';
 			border-radius: 50%;
 			position: absolute;
 			left: 0;
-			top: -17%;
+			top: -20%;
 			height: 120%;
 			aspect-ratio: 1;
 			background-color: var(--project-color-light);
@@ -48,7 +46,7 @@
 		margin-bottom: 38px;
 
 		h3 {
-			padding-left: 14px;
+			padding-left: 16px;
 			font-size: 28px;
 		}
 
@@ -62,6 +60,10 @@
 @media (min-width: $SCREEN_MD_MIN) {
 	.title {
 		margin-bottom: 68px;
+
+		h3 {
+			padding-left: 22px;
+		}
 
 		a {
 			padding-right: 42px;

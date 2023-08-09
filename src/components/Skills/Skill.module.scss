@@ -61,12 +61,12 @@
 		aspect-ratio: 1;
 		background-color: $WHITE2;
 		transition: background-color $ANIMATION_TIME;
-	}
 
-	img {
-		margin: 4px;
-		height: 32px;
-		width: 32px;
+		img {
+			margin: 4px;
+			height: 32px;
+			width: 32px;
+		}
 	}
 
 	.info {
@@ -98,14 +98,9 @@
 		padding: 16px 8px;
 		height: 160px;
 		width: 160px;
-
-		transition-duration: 300ms;
-		transition-property: transform, box-shadow;
-		transition-timing-function: ease-out;
-		transform: rotate3d(0);
 	}
 
-	img {
+	.icon img {
 		height: 60px;
 		width: 60px;
 	}
