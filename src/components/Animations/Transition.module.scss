@@ -9,12 +9,14 @@
 	background-color: $WHITE2;
 	z-index: 98;
 	overflow: hidden;
+	will-change: left;
 }
 
 .logo {
 	position: absolute;
 	z-index: 99;
 	overflow: hidden;
+	will-change: transform;
 
 	svg {
 		height: 100%;

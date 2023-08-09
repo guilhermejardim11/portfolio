@@ -16,7 +16,6 @@ body {
 }
 
 main {
-	min-height: calc(100% - 363px);
 	overflow: hidden;
 }
 
@@ -25,10 +24,6 @@ main {
 	flex-direction: column;
 	justify-content: space-between;
 	min-height: 100vh;
-}
-
-.page_content {
-	padding-top: 160px;
 }
 
 h1,
@@ -42,26 +37,6 @@ h6 {
 	line-height: 1;
 }
 
-h2 {
-	font-size: 28px;
-}
-
-h3 {
-	font-size: 24px;
-}
-
-h4 {
-	font-size: 20px;
-}
-
-h5 {
-	font-size: 16px;
-}
-
-h6 {
-	font-size: 12px;
-}
-
 b {
 	font-weight: 600;
 }
@@ -71,19 +46,90 @@ i {
 	font-style: italic;
 }
 
-p {
-	font-size: 16px;
-	line-height: 30px;
-}
-
 .color_shift {
-	filter: invert(7%) sepia(6%) saturate(6450%) hue-rotate(200deg)
-		brightness(97%) contrast(92%);
+	filter: invert(7%) sepia(6%) saturate(6450%) hue-rotate(200deg) brightness(97%) contrast(92%);
 }
 
 .icon_white {
-	filter: invert(88%) sepia(100%) saturate(46%) hue-rotate(148deg)
-		brightness(112%) contrast(100%);
+	filter: invert(88%) sepia(100%) saturate(46%) hue-rotate(148deg) brightness(112%) contrast(100%);
+}
+
+@media (max-width: $SCREEN_SM_MAX) {
+	main {
+		min-height: calc(100% - 363px);
+	}
+
+	.page_content {
+		padding-top: 120px;
+	}
+
+	h1 {
+		font-size: 38px;
+	}
+
+	h2 {
+		font-size: 28px;
+	}
+
+	h3 {
+		font-size: 24px;
+	}
+
+	h4 {
+		font-size: 20px;
+	}
+
+	h5 {
+		font-size: 16px;
+	}
+
+	h6 {
+		font-size: 12px;
+	}
+
+	p {
+		font-size: 16px;
+		line-height: 30px;
+	}
+}
+
+@media (min-width: $SCREEN_MD_MIN) {
+	main {
+		// min-height: calc(100% - 363px);
+	}
+
+	.page_content {
+		padding-top: 150px;
+	}
+
+	h1 {
+		font-size: 68px;
+	}
+
+	h2 {
+		font-size: 50px;
+	}
+
+	h3 {
+		font-size: 38px;
+	}
+
+	h4 {
+		font-size: 28px;
+	}
+
+	h5 {
+		font-size: 22px;
+	}
+
+	h6 {
+		font-size: 16px;
+	}
+
+	p {
+		font-size: 22px;
+		line-height: 44px;
+	}
 }
 
 [data-theme='dark'] {
@@ -91,7 +137,6 @@ p {
 	background-color: $D_INDIGO;
 
 	.color_shift {
-		filter: invert(88%) sepia(100%) saturate(46%) hue-rotate(148deg)
-			brightness(112%) contrast(100%);
+		filter: invert(88%) sepia(100%) saturate(46%) hue-rotate(148deg) brightness(112%) contrast(100%);
 	}
 }

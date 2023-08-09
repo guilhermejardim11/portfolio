@@ -7,6 +7,8 @@
 	z-index: 1;
 
 	h3 {
+		padding-left: 22px;
+		position: relative;
 		text-transform: lowercase;
 
 		&::before {
@@ -14,7 +16,9 @@
 			border-radius: 50%;
 			position: absolute;
 			left: 0;
-			top: -2px;
+			top: -17%;
+			height: 120%;
+			aspect-ratio: 1;
 			background-color: var(--project-color-light);
 			transition: background-color $ANIMATION_TIME;
 			z-index: -1;
@@ -32,8 +36,9 @@
 
 		svg {
 			position: absolute;
-			right: 0;
 			top: -1px;
+			right: 0;
+			width: auto;
 		}
 	}
 }
@@ -45,19 +50,11 @@
 		h3 {
 			padding-left: 14px;
 			font-size: 28px;
-
-			&::before {
-				height: 32px;
-				width: 32px;
-			}
 		}
 
 		a {
 			padding-right: 32px;
 			font-size: 10px;
-
-			svg {
-			}
 		}
 	}
 }
@@ -66,25 +63,14 @@
 	.title {
 		margin-bottom: 68px;
 
-		h3 {
-			padding-left: 24px;
-			font-size: 50px;
-
-			&::before {
-				height: 54px;
-				width: 54px;
-			}
-		}
-
 		a {
-			padding-right: 45px;
-			font-size: 16px;
+			padding-right: 42px;
+			font-size: 14px;
 			transition: opacity $ANIMATION_TIME;
 
 			svg {
-				height: 16px;
-				width: auto;
-				transition: right $ANIMATION_TIME;
+				height: 14px;
+				transition: right ($ANIMATION_TIME - 0.1s);
 			}
 
 			&:hover {

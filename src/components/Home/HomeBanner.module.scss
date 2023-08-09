@@ -1,17 +1,13 @@
 @import '../../variables.scss';
 
-.banner {
-	padding-bottom: calc(28px + 5vh) !important;
-
-	h2 {
-		color: var(--project-color-light);
-		transition: color $ANIMATION_TIME;
-	}
+.banner h2 {
+	color: var(--project-color-light);
+	transition: color $ANIMATION_TIME;
 }
 
 @media (max-width: $SCREEN_SM_MAX) {
 	.banner {
-		margin-bottom: 28px;
+		padding-bottom: calc(28px + 5vh) !important;
 
 		h1 {
 			margin-bottom: 3px;
@@ -28,7 +24,7 @@
 
 @media (min-width: $SCREEN_MD_MIN) {
 	.banner {
-		margin-bottom: 120px;
+		padding-bottom: 38px !important;
 
 		h1 {
 			margin-bottom: 8px;

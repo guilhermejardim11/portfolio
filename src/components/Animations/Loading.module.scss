@@ -13,6 +13,7 @@
 	left: 0;
 	background-color: $WHITE2;
 	z-index: 999;
+	will-change: transform;
 
 	& > div {
 		& > div,

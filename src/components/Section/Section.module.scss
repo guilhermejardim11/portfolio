@@ -1,63 +1,69 @@
 @import '../../variables.scss';
 
-.section:first-child {
-	margin-top: 0 !important;
-}
-
-.background {
-	margin: 28px 0 96px;
-	padding: 40px 28px;
-	background-color: $WHITE2;
-	transition: background-color $ANIMATION_TIME;
-
-	&:last-child,
-	&:nth-last-child(2) {
-		margin-bottom: 28px !important;
+.section {
+	&:first-child {
+		margin-top: 0 !important;
 	}
 
-	&::before,
-	&::after {
-		content: '';
-		position: absolute;
-		left: 0;
-		right: 0;
-		height: 28px;
+	&.background {
 		background-color: $WHITE2;
 		transition: background-color $ANIMATION_TIME;
-	}
 
-	&::before {
-		bottom: 100%;
-		clip-path: url(#curvedMaskTop);
-	}
+		&::before,
+		&::after {
+			content: '';
+			position: absolute;
+			left: 0;
+			right: 0;
+			height: 28px;
+			background-color: $WHITE2;
+			transition: background-color $ANIMATION_TIME;
+		}
 
-	&:not(.extend)::after {
-		top: 100%;
-		clip-path: url(#curvedMaskBottom);
-	}
-
-	&.extend {
-		padding-bottom: 16px;
+		&::before {
+			bottom: 100%;
+			clip-path: url(#curvedMaskTop);
+		}
 
 		&::after {
 			top: 100%;
-			height: calc(28px + 28px);
+		}
+
+		&:not(.extend)::after {
+			clip-path: url(#curvedMaskBottom);
 		}
 	}
 }
 
 @media (max-width: $SCREEN_SM_MAX) {
 	.section {
-		padding: 0 28px 68px;
+		padding: 50px 28px;
+
+		&.background {
+			margin: 50px 0;
+
+			&.extend {
+				margin-bottom: 28px;
+				padding-bottom: 16px;
+
+				&::after {
+					height: calc(28px + 28px);
+				}
+			}
+		}
 	}
 }
 
 @media (min-width: $SCREEN_MD_MIN) {
 	.section {
-		padding: 0 calc((100vw - 1280px - 56px) / 2) 150px;
-		border: 0px solid transparent;
-		border-right-width: 50px;
-		border-left-width: 50px;
+		padding: 90px $SCREEN_DESKTOP_PADDING;
+		border-right: 50px solid transparent;
+		border-left: 50px solid transparent;
+
+		&:first-child,
+		&:not(.background) + .section:not(.background) {
+			padding-top: 28px;
+		}
 	}
 }
 

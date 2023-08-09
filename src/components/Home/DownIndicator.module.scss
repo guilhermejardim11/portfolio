@@ -30,6 +30,7 @@
 		transform: rotate(-90deg);
 		transform-origin: top left;
 		animation-name: down-animation;
+		will-change: transform;
 
 		svg {
 			transform: scaleX(-1);
@@ -54,6 +55,7 @@
 		left: 50%;
 		transform: translateX(-50%);
 		animation-name: down-animation-desktop;
+		will-change: transform;
 
 		svg {
 			position: absolute;
