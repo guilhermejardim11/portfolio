@@ -1,42 +1,15 @@
 @import '../../variables.scss';
 
-.skill {
-	display: grid;
-	grid-template-columns: 40px 1fr;
-	height: 42px;
-
-	margin-bottom: 12px;
-}
-
-.icon {
-	height: 100%;
-	width: auto;
-	aspect-ratio: 1;
-	background-color: $WHITE2;
-	transition: background-color $ANIMATION_TIME;
-
-	img {
-		margin: 4px;
-		height: 32px;
-		width: 32px;
-	}
-}
-
 .info {
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
-	padding: 0 10px;
-	gap: 4px;
 }
 
 .labels {
 	display: flex;
-	justify-content: space-between;
 	align-items: center;
 	font-family: 'roc-grotesk-wide', sans-serif;
 	font-weight: 600;
-	font-size: 12px;
 	line-height: 1;
 
 	span:nth-child(2) {
@@ -48,8 +21,7 @@
 .progress {
 	border-radius: 2px;
 	height: 4px;
-	width: 100%;
-	background-color: rgba($color: $D_LILAC2, $alpha: 0.2);
+	background-color: $WHITE2;
 	transition: background-color $ANIMATION_TIME;
 	overflow: hidden;
 
@@ -63,10 +35,6 @@
 }
 
 [data-theme='dark'] {
-	.icon {
-		background-color: $D_INDIGO2;
-	}
-
 	.labels span:nth-child(2) {
 		color: $D_LILAC2;
 	}
@@ -77,5 +45,87 @@
 		& > * {
 			background-color: $WHITE;
 		}
+	}
+}
+
+@media (max-width: $SCREEN_SM_MAX) {
+	.skill {
+		display: grid;
+		grid-template-columns: 40px 1fr;
+		height: 42px;
+	}
+
+	.icon {
+		height: 100%;
+		width: auto;
+		aspect-ratio: 1;
+		background-color: $WHITE2;
+		transition: background-color $ANIMATION_TIME;
+	}
+
+	img {
+		margin: 4px;
+		height: 32px;
+		width: 32px;
+	}
+
+	.info {
+		justify-content: center;
+		padding: 0 10px;
+		gap: 4px;
+	}
+
+	.labels {
+		justify-content: space-between;
+		font-size: 12px;
+	}
+
+	.progress {
+		width: 100%;
+	}
+
+	[data-theme='dark'] .icon {
+		background-color: $D_INDIGO2;
+	}
+}
+
+@media (min-width: $SCREEN_MD_MIN) {
+	.skill {
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		justify-content: space-between;
+		padding: 16px 8px;
+		height: 160px;
+		width: 160px;
+
+		transition-duration: 300ms;
+		transition-property: transform, box-shadow;
+		transition-timing-function: ease-out;
+		transform: rotate3d(0);
+	}
+
+	img {
+		height: 60px;
+		width: 60px;
+	}
+
+	.info {
+		gap: 6px;
+		width: 100%;
+	}
+
+	.labels {
+		flex-direction: column;
+		gap: 8px;
+		font-size: 14px;
+		text-align: center;
+	}
+
+	.progress {
+		position: absolute;
+		bottom: -16px;
+		left: -10px;
+		width: calc(100% + 20px);
 	}
 }

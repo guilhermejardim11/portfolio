@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 import Template from './Template';
 import Section from '../components/Section/Section';
 import SectionTitle from '../components/Section/SectionTitle';
-import Skill from '../components/Skills/Skill';
+import SkillGroup from '../components/Skills/SkillGroup';
 
 import figma from '../assets/icons/figma.svg';
 import xd from '../assets/icons/xd.svg';
@@ -128,27 +128,27 @@ const SkillsPage = () => {
 			{
 				title: t('postman'),
 				icon: postman,
-				progress: 55,
+				progress: 45,
 			},
 			{
 				title: t('sql'),
 				icon: sql,
-				progress: 40,
+				progress: 20,
 			},
 			{
 				title: t('mysql'),
 				icon: mysql,
-				progress: 60,
+				progress: 30,
 			},
 			{
 				title: t('csharp'),
 				icon: csharp,
-				progress: 30,
+				progress: 40,
 			},
 			{
 				title: t('java'),
 				icon: java,
-				progress: 30,
+				progress: 40,
 			},
 		],
 		editors: [
@@ -211,15 +211,7 @@ const SkillsPage = () => {
 		skillOutput.push(
 			<Section key={key}>
 				<SectionTitle title={t(key)} />
-
-				{skills[key].map((value) => (
-					<Skill
-						key={value.title}
-						title={t(value.title)}
-						icon={value.icon}
-						progress={value.progress}
-					/>
-				))}
+				<SkillGroup skills={skills[key]} />
 			</Section>
 		);
 	}

@@ -1,0 +1,16 @@
+@import '../../variables.scss';
+
+@media (max-width: $SCREEN_SM_MAX) {
+	.skill_group {
+		display: grid;
+		gap: 12px;
+	}
+}
+
+@media (min-width: $SCREEN_MD_MIN) {
+	.skill_group {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 16px;
+	}
+}
