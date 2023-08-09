@@ -13,16 +13,19 @@ const MenuContextProvider = (props) => {
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
 	const [currentPageName, setCurrentPageName] = useState('');
 
-	const openMenuHandler = () => {
-		setIsMenuOpen(!isMenuOpen);
+	const isMenuOpenHandler = (_isMenuOpen) => {
+		setIsMenuOpen(_isMenuOpen);
 
-		if (!isMenuOpen) document.body.classList.add('locked');
+		if (_isMenuOpen) document.body.classList.add('locked');
 		else document.body.classList.remove('locked');
 	};
 
+	const openMenuHandler = () => {
+		isMenuOpenHandler(!isMenuOpen);
+	};
+
 	const closeMenuHandler = () => {
-		setIsMenuOpen(false);
-		document.body.classList.remove('locked');
+		isMenuOpenHandler(false);
 	};
 
 	const _resetCurrentPageName = () => {

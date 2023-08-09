@@ -1,12 +1,17 @@
+import { useContext } from 'react';
+import { DeviceContext } from '../../context/DeviceContext';
+
 import LanguageOverlay from '../Language/LanguageOverlay';
 import Menu from '../Menu/Menu';
 import Header from './Header';
 
-const HeaderWrapper = ({ menuOpenHandler, isScrolled, isMenuOpen }) => {
+const HeaderWrapper = () => {
+	const deviceContext = useContext(DeviceContext);
+
 	return (
 		<>
 			<Header />
-			<Menu />
+			{!deviceContext.isDesktop && <Menu />}
 			<LanguageOverlay />
 		</>
 	);
