@@ -24,17 +24,14 @@
 	}
 
 	a {
-		margin-top: 2px;
 		font-family: 'roc-grotesk-wide', sans-serif;
 		font-weight: 600;
-		line-height: 1;
 		text-transform: uppercase;
 		color: var(--project-color-light);
 		transition: color $ANIMATION_TIME;
 
 		svg {
 			position: absolute;
-			top: -1px;
 			right: 0;
 			width: auto;
 		}
@@ -51,8 +48,13 @@
 		}
 
 		a {
+			margin-top: 2px;
 			padding-right: 32px;
 			font-size: 10px;
+
+			svg {
+				top: 1px;
+			}
 		}
 	}
 }
@@ -66,11 +68,13 @@
 		}
 
 		a {
+			margin-top: 3px;
 			padding-right: 42px;
 			font-size: 14px;
 			transition: opacity $ANIMATION_TIME;
 
 			svg {
+				top: 2px;
 				height: 14px;
 				transition: right ($ANIMATION_TIME - 0.1s);
 			}
