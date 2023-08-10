@@ -1,34 +1,82 @@
 @import '../../variables.scss';
 
-.gallery li:not(:last-child) {
-	margin-bottom: 38px;
+.gallery {
+	display: grid;
 }
 
 .thumbnail {
-    border-bottom: 1px solid $WHITE2;
-    aspect-ratio: 1.8;
-	transition: border-color 0.3s;
+	border-bottom: 1px solid $WHITE2;
+	transition: border-color $ANIMATION_TIME;
 }
 
 .content {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-    padding: 0 16px;
-    height: 50px;
 
-	h2 {
-		font-size: 20px;
+	div {
+		line-height: 1;
 	}
 
-	h3 {
-		font-size: 12px;
+	span {
+		font-family: 'roc-grotesk-wide', sans-serif;
+		font-weight: 600;
 		color: $LILAC;
+		transition: color $ANIMATION_TIME;
 	}
 }
 
 .tags {
-    display: flex;
+	display: flex;
+}
+
+@media (max-width: $SCREEN_SM_MAX) {
+	.gallery {
+		gap: 38px;
+	}
+
+	.content {
+		padding: 0 16px;
+		height: 50px;
+
+		h2 {
+			margin-bottom: -4px;
+			font-size: 20px;
+		}
+
+		span {
+			font-size: 12px;
+		}
+	}
+}
+
+@media (min-width: $SCREEN_MD_MIN) {
+	.gallery {
+		grid-template-columns: 1fr 1fr;
+		gap: 28px;
+	}
+
+	.content {
+		padding: 0 20px;
+		height: 68px;
+
+		h2 {
+			font-size: 32px;
+		}
+
+		span {
+			font-size: 14px;
+		}
+	}
+
+	.tags {
+		gap: 2px;
+
+		img {
+			height: 24px;
+			width: auto;
+		}
+	}
 }
 
 [data-theme='dark'] .thumbnail {

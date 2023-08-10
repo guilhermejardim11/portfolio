@@ -21,47 +21,49 @@ const OverviewGallery = (props) => {
 	const [t] = useTranslation();
 
 	return (
-		<ul className={styles.gallery}>
+		<div className={styles.gallery}>
 			{props.items.map((item) => (
-				<li key={item.id}>
-					<Link to={`${props.linkPrefix}${item.id}`}>
-						<Card>
-							<div className={styles.thumbnail}>
-								<img
-									src={item.thumbnail}
-									alt={item.title}
-								/>
+				<Link
+					key={item.id}
+					className={styles.entry}
+					to={`${props.linkPrefix}${item.id}`}
+				>
+					<Card>
+						<div className={styles.thumbnail}>
+							<img
+								src={item.thumbnail}
+								alt={item.title}
+							/>
+						</div>
+						<div className={styles.content}>
+							<div>
+								<h2>{item.title}</h2>
+								<span>
+									{item.categories.map((category, index) => {
+										if (index === 0) return t(category);
+										if (index === item.categories.length - 1) return ` & ${t(category)}`;
+										return `, ${t(category)}`;
+									})}
+								</span>
 							</div>
-							<div className={styles.content}>
-								<div>
-									<h2>{item.title}</h2>
-									<h3>
-										{item.categories.map((category, index) => {
-											if (index === 0) return t(category);
-											if (index === item.categories.length - 1) return ` & ${t(category)}`;
-											return `, ${t(category)}`;
-										})}
-									</h3>
-								</div>
-								<div className={styles.tags}>
-									{item.tags.map(
-										(tag) =>
-											icons[tag] && (
-												<img
-													key={tag}
-													src={icons[tag]}
-													alt={tag}
-													className='color_shift'
-												/>
-											)
-									)}
-								</div>
+							<div className={styles.tags}>
+								{item.tags.map(
+									(tag) =>
+										icons[tag] && (
+											<img
+												key={tag}
+												src={icons[tag]}
+												alt={tag}
+												className='color_shift'
+											/>
+										)
+								)}
 							</div>
-						</Card>
-					</Link>
-				</li>
+						</div>
+					</Card>
+				</Link>
 			))}
-		</ul>
+		</div>
 	);
 };
 

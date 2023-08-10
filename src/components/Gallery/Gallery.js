@@ -1,5 +1,7 @@
+import { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import { DeviceContext } from '../../context/DeviceContext';
 
 import styles from './Gallery.module.scss';
 
@@ -17,16 +19,20 @@ const icons = {
 
 const Gallery = (props) => {
 	const [t] = useTranslation();
+	const deviceContext = useContext(DeviceContext);
 
 	return (
 		<div className={styles.gallery}>
 			{props.items.map((item) => (
-				<div key={item.id}>
-					<Link to={`${props.linkPrefix}${item.id}`}>
-						<img
-							src={item.thumbnail}
-							alt={item.title}
-						/>
+				<Link
+					key={item.id}
+					to={`${props.linkPrefix}${item.id}`}
+				>
+					<img
+						src={item.thumbnail}
+						alt={item.title}
+					/>
+					{deviceContext.isDesktop && (
 						<div className={styles.content}>
 							<div>
 								<div>
@@ -54,8 +60,8 @@ const Gallery = (props) => {
 								</div>
 							</div>
 						</div>
-					</Link>
-				</div>
+					)}
+				</Link>
 			))}
 		</div>
 	);
