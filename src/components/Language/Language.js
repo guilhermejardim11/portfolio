@@ -1,11 +1,26 @@
+import { useState } from 'react';
+
 import LanguageButton from './LanguageButton';
-import LanguageOverlay from './LanguageOverlay';
+import LanguageModal from './LanguageModal';
 
 const Language = () => {
+	const [isLangOverlayOpen, setIsLangOverlayOpen] = useState(false);
+
+	const onOpenLangOverlayHandler = () => {
+		setIsLangOverlayOpen(true);
+	};
+
+	const onCloseLanguageOverlayHandler = () => {
+		setIsLangOverlayOpen(false);
+	};
+
 	return (
 		<>
-			<LanguageButton />
-			<LanguageOverlay />
+			<LanguageButton onClick={onOpenLangOverlayHandler} />
+			<LanguageModal
+				isOpen={isLangOverlayOpen}
+				onClose={onCloseLanguageOverlayHandler}
+			/>
 		</>
 	);
 };

@@ -1,6 +1,8 @@
 {
-	"hello": "Olá! Sou o Guilherme",
-	"job": "Designer UI/UX",
+	"hello": "Olá!",
+	"im_guilherme": "Sou o Guilherme",
+	"uxui_designer": "Designer UI/UX",
+	"frontend_developer": "Desenvolvedor Frontend",
 
 	"home": "Home",
 	"project": "Projetos",
@@ -11,9 +13,17 @@
 	"contacts": "Contactos",
 	"concept": "Contactos",
 
+	"typography": "Tipografia",
+	"iconography": "Iconografia",
+	"palette": "Paleta",
+	"branding": "Branding",
+	"website": "Website",
+
 	"privacy_policy": "Política de Privacidade",
 	"terms_and_conditions": "Termos e Condições",
 	"sitemap": "Mapa do site",
+
+	"language_selection": "Seleção de Idioma",
 
 	"section": {
 		"about": {
@@ -34,15 +44,65 @@
 		"website": "Visita o website em"
 	},
 
+	"unknown": "Desconhecido",
+	"basic": "Básico",
+	"intermidiate": "Intermédio",
+	"advanced": "Avançado",
+	"expert": "Experiente",
+
+	"ux_ui": "UX/UI",
+	"frontend": "Frontend",
+	"backend": "Backend",
+	"editors": "Editores",
+	"version_control": "Controlo de Versões",
+	"project_management": "Gestão de Projeto",
+	"others": "Outros",
+
+	"cc": "Adobe Creative Cloud",
+	"figma": "Figma",
+	"xd": "Adobe Xd",
+	"illustrator": "Adobe Illustrator",
+	"photoshop": "Adobe Photoshop",
+	"premiere": "Adobe Premiere Pro",
+	"aftereffects": "Adobe After Effects",
+	"reactjs": "React.js",
+	"reactrouter": "React Router",
+	"redux": "Redux",
+	"javascript": "Javascript",
+	"sass": "SASS/SCSS",
+	"typescript": "Typescript",
+	"jquery": "jQuery",
+	"css": "CSS",
+	"html": "HTML",
+	"php": "PHP",
+	"postman": "Postman",
+	"sql": "SQL",
+	"mysql": "MySQL",
+	"csharp": "C#",
+	"java": "Java",
+	"wordpress": "Wordpress",
+	"nodejs": "Node.js",
+	"notion": "Notion",
+	"azuredevops": "Azure DevOps",
+	"visualstudio": "Visual Studio",
+	"visualstudiocode": "Visual Studio Code",
+	"git": "Git",
+	"github": "GitHub",
+	"jira": "Jira",
+
 	"see_more": "Ver Mais",
 	"know_more": "Saber Mais",
 	"view_all": "Ver Todos",
 	"view_all_f": "Ver Todas",
 	"swipe": "Arrasta",
+	"scroll": "Scroll",
+	"go_back": "Voltar",
 
 	"accept": "Aceitar",
 
 	"email": "Email",
+	"date": "Data",
+	"tags": "Tags",
 
 	"copyright": "© Copyright {{date}} Guilherme Jardim.",
 	"rights": "Todos os direitos reservados.",

@@ -1,7 +1,6 @@
 import { useContext } from 'react';
 import { DeviceContext } from '../../context/DeviceContext';
 
-import LanguageOverlay from '../Language/LanguageOverlay';
 import Menu from '../Menu/Menu';
 import Header from './Header';
 
@@ -12,7 +11,6 @@ const HeaderWrapper = () => {
 		<>
 			<Header />
 			{!deviceContext.isDesktop && <Menu />}
-			<LanguageOverlay />
 		</>
 	);
 };

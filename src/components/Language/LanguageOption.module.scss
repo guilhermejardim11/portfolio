@@ -1,0 +1,38 @@
+@import '../../variables.scss';
+
+.option {
+	display: grid;
+	align-items: center;
+	grid-template-columns: 38px 1fr;
+	gap: 12px;
+	font-family: 'roc-grotesk-wide', sans-serif;
+	font-size: 16px;
+	font-weight: 600;
+	text-align: left;
+	color: $INDIGO !important;
+	transition: color $ANIMATION_TIME;
+
+	&.disabled {
+		opacity: 0.25;
+		pointer-events: none;
+	}
+
+	.icon {
+		border: $BORDER_WIDTH solid $INDIGO;
+		border-radius: 50%;
+		height: 38px;
+		width: 38px;
+	}
+
+	img {
+		margin: $BORDER_WIDTH;
+		border-radius: 50%;
+		height: calc(100% - ($BORDER_WIDTH * 2));
+		width: calc(100% - ($BORDER_WIDTH * 2));
+		object-fit: cover;
+	}
+
+	&.selected {
+		color: var(--project-color-light) !important;
+	}
+}

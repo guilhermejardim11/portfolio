@@ -1,11 +1,7 @@
 import styles from './Overlay.module.scss';
 
 const Overlay = (props) => {
-	return (
-		<div className={`${props.className} ${props.isOpen ? styles.open : ''} ${styles.overlay}`}>
-			{props.children}
-		</div>
-	);
+	return <div className={`${styles.overlay} ${props.isOpen ? styles.open : ''} ${props.className}`}>{props.children}</div>;
 };
 
 export default Overlay;

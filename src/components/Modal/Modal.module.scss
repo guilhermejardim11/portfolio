@@ -1,0 +1,56 @@
+@import '../../variables.scss';
+
+.modal {
+	padding-top: 150px !important;
+}
+
+.header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+	padding: 47px 16px 14px 28px;
+
+	span {
+		flex: 1;
+		font-family: 'roc-grotesk-wide', sans-serif;
+		font-size: 20px;
+		font-weight: 600;
+	}
+}
+
+.button {
+	position: relative;
+
+	i {
+		position: absolute;
+		top: calc(50% - ($BORDER_WIDTH / 2));
+		left: calc(50% - ($BORDER_WIDTH / 2));
+		height: $BORDER_WIDTH;
+		width: $BORDER_WIDTH;
+		background-color: transparent;
+
+		&::before,
+		&::after {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: calc(-10px + ($BORDER_WIDTH / 2));
+			height: $BORDER_WIDTH;
+			width: 20px;
+			background-color: $INDIGO;
+			transition: background-color 0.2s;
+		}
+
+		&::before {
+			transform: rotate(45deg);
+		}
+
+		&::after {
+			transform: rotate(135deg);
+		}
+	}
+}

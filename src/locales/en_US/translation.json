@@ -23,6 +23,8 @@
 	"terms_and_conditions": "Terms and Conditions",
 	"sitemap": "Sitemap",
 
+	"language_selection": "Language Selection",
+
 	"section": {
 		"about": {
 			"desc": "Hi there! I'm Guilherme Jardim and I'm a UX/UI Designer and Frontend Developer from Portugal, and I have the goal to improve the quality of my projects and broaden my skillset!",
@@ -93,6 +95,7 @@
 	"view_all": "View All",
 	"view_all_f": "View All",
 	"swipe": "Swipe",
+	"scroll": "Scroll",
 	"go_back": "Go Back",
 
 	"accept": "Accept",
