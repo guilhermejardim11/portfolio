@@ -3,6 +3,7 @@
 body {
 	font-family: 'roc-grotesk', sans-serif;
 	font-weight: 400;
+    line-height: 1;
 	color: $INDIGO;
 	background-color: $WHITE;
 	transition: color $ANIMATION_TIME, background-color $ANIMATION_TIME;

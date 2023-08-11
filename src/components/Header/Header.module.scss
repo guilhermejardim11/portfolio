@@ -23,18 +23,17 @@
 	}
 
 	&::before {
-		background-image: linear-gradient($WHITE 10%, transparent 100%);
+		background-image: linear-gradient($WHITE 10%, rgba($WHITE, 0.90) 100%);
 		border-bottom: 2px solid $WHITE;
 	}
 
 	&::after {
-		background-image: linear-gradient($D_INDIGO 10%, transparent 100%);
-		border-bottom: 2px solid $D_INDIGO3;
+		background-image: linear-gradient($D_INDIGO 10%, rgba($D_INDIGO, 0.97) 100%);
+		border-bottom: 2px solid $D_INDIGO;
 	}
 
 	&.scrolled {
 		backdrop-filter: blur(1.6px);
-		background-color: rgba($WHITE, 0.95);
 
 		&::before {
 			opacity: 1;
@@ -80,8 +79,6 @@
 
 [data-theme='dark'] .header {
 	&.scrolled {
-		background-color: rgba($D_INDIGO, 0.95);
-
 		&::before {
 			opacity: 0;
 		}

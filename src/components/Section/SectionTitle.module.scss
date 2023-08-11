@@ -32,6 +32,7 @@
 
 		svg {
 			position: absolute;
+			top: -2px;
 			right: 0;
 			width: auto;
 		}
@@ -51,10 +52,6 @@
 			margin-top: 2px;
 			padding-right: 32px;
 			font-size: 10px;
-
-			svg {
-				top: 1px;
-			}
 		}
 	}
 }
@@ -71,10 +68,9 @@
 			margin-top: 3px;
 			padding-right: 42px;
 			font-size: 14px;
-			transition: opacity $ANIMATION_TIME;
+			transition: color $ANIMATION_TIME, opacity $ANIMATION_TIME;
 
 			svg {
-				top: 2px;
 				height: 14px;
 				transition: right ($ANIMATION_TIME - 0.1s);
 			}
