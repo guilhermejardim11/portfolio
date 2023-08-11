@@ -11,7 +11,7 @@ import ColorBox from '../components/ModularBox/ColorBox';
 import SpriteBox from '../components/ModularBox/SpriteBox';
 import Image from '../components/ModularBox/Modules/Image';
 
-import thumbnail from '../assets/projects/imoukubo/thumb.jpg';
+import image_1 from '../assets/projects/imoukubo/imoukubo_1.png';
 import logo_0 from '../assets/projects/imoukubo/logo_0.svg';
 import logo_1 from '../assets/projects/imoukubo/logo_1.svg';
 import logo_2 from '../assets/projects/imoukubo/logo_2.svg';
@@ -21,7 +21,7 @@ import fonts from '../assets/projects/imoukubo/fonts.svg';
 const details = {
 	id: 'imoukubo',
 	title: 'imoukubo',
-	thumbnail: thumbnail,
+	thumbnail: image_1,
 	colors: ['#FF8020', '#FE6E01'],
 	categories: ['branding', 'website'],
 	tags: ['iconography', 'palette', 'branding'],
@@ -37,7 +37,7 @@ export function Content() {
 		<>
 			<Section>
 				<img
-					src={thumbnail}
+					src={image_1}
 					alt='thumbnail'
 				/>
 			</Section>
