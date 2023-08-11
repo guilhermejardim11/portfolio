@@ -9,7 +9,7 @@
 	font-size: 0;
 
 	.dot {
-		border: 1px solid rgba($LILAC2, 0.25);
+		border: $BORDER_WIDTH solid rgba($LILAC2, 0.25);
 		position: absolute;
 		top: 6px;
 		left: 6px;

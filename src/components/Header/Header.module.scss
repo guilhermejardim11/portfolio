@@ -23,13 +23,13 @@
 	}
 
 	&::before {
-		background-image: linear-gradient($WHITE 10%, rgba($WHITE, 0.90) 100%);
-		border-bottom: 2px solid $WHITE;
+		background-image: linear-gradient($WHITE 10%, rgba($WHITE, 0.9) 100%);
+		border-bottom: $BORDER_WIDTH solid $WHITE;
 	}
 
 	&::after {
 		background-image: linear-gradient($D_INDIGO 10%, rgba($D_INDIGO, 0.97) 100%);
-		border-bottom: 2px solid $D_INDIGO;
+		border-bottom: $BORDER_WIDTH solid $D_INDIGO;
 	}
 
 	&.scrolled {
@@ -44,7 +44,6 @@
 @media (max-width: $SCREEN_SM_MAX) {
 	.header {
 		padding: 43px 16px 14px;
-		border-bottom-width: 1px;
 
 		&::before {
 			right: 0;

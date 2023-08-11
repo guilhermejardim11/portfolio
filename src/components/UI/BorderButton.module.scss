@@ -1,7 +1,7 @@
 @import '../../variables.scss';
 
 .button {
-	border: 2px solid $INDIGO;
+	border: $BORDER_WIDTH solid $INDIGO;
 	border-radius: 16px;
 	transition: border-color $ANIMATION_TIME, opacity ($ANIMATION_TIME - 0.1s);
 

@@ -5,7 +5,7 @@
 }
 
 .thumbnail {
-	border-bottom: 1px solid $WHITE2;
+	border-bottom: $BORDER_WIDTH solid $WHITE2;
 	transition: border-color $ANIMATION_TIME;
 }
 

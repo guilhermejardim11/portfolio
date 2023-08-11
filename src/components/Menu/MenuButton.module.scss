@@ -15,7 +15,7 @@
 		position: absolute;
 		top: 24px;
 		left: 16px;
-		height: 2px;
+		height: $BORDER_WIDTH;
 		width: 12px;
 		background-color: $INDIGO;
 		transition: left 0.4s, transform 0.4s, background-color 0.2s;
@@ -24,7 +24,7 @@
 		&::after {
 			content: '';
 			position: absolute;
-			height: 2px;
+			height: $BORDER_WIDTH;
 			background-color: $INDIGO;
 			transition: top 0.4s, left 0.4s, width 0.4s, transform 0.4s, background-color 0.2s;
 		}

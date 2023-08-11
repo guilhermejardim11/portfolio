@@ -3,7 +3,7 @@
 .banner {
 	align-items: flex-start;
 	padding: 130px 28px 6px;
-	border-bottom: 1px solid $WHITE2;
+	border-bottom: $BORDER_WIDTH solid $WHITE2;
 	height: auto;
 	transition: border-color $ANIMATION_TIME;
 

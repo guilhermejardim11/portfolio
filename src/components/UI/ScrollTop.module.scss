@@ -9,8 +9,8 @@
 
 	i {
 		margin-top: 6px;
-		border-top: 2px solid $INDIGO;
-		border-left: 2px solid $INDIGO;
+		border-top: $BORDER_WIDTH solid $INDIGO;
+		border-left: $BORDER_WIDTH solid $INDIGO;
 		height: 10px;
 		width: 10px;
 		transform: rotate(45deg);

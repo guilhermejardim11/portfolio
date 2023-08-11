@@ -2,7 +2,7 @@
 
 .card {
 	border-radius: 12px;
-	border: 1px solid $WHITE2;
+	border: $BORDER_WIDTH solid $WHITE2;
 	background-color: $WHITE;
 	overflow: hidden;
 	transition: border-color $ANIMATION_TIME, background-color $ANIMATION_TIME;

@@ -14,7 +14,7 @@
 
 		&::before {
 			content: '';
-			border: 2px solid $GRAY;
+			border: $BORDER_WIDTH solid $GRAY;
 			border-radius: 50%;
 			position: absolute;
 			top: -4px;
