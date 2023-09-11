@@ -104,8 +104,8 @@
 	"date": "Date",
 	"tags": "Tags",
 
-	"copyright": "© Copyright {{date}} Guilherme Jardim.",
-	"rights": "All rights reserved.",
+	"copyright": "Guilherme Jardim © {{date}}",
+	"rights": "All rights reserved",
 
 	"cookies": {
 		"title": "Cookies",

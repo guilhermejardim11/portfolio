@@ -1,15 +1,20 @@
 @import "../../variables.scss";
 
 .copyright {
-    margin-bottom: 15px;
     font-family: "roc-grotesk-wide", sans-serif;
     font-weight: 600;
     font-size: 14px;
     color: $LILAC;
-    text-align: center;
     transition: color $ANIMATION_TIME;
 }
 
 [data-theme='dark'] .copyright {
     color: $D_LILAC;
+}
+
+
+@media (max-width: $SCREEN_SM_MAX) {
+    .copyright {
+        text-align: center;
+    }
 }

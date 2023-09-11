@@ -2,10 +2,7 @@
 
 .footer {
 	display: flex;
-	flex-direction: column;
-	align-items: center;
 	margin: 28px 0 0;
-	padding: 22px 28px 50px;
 	background-color: $LILAC2;
 	transition: background-color $ANIMATION_TIME;
 	z-index: 0;
@@ -14,27 +11,40 @@
 		content: '';
 		position: absolute;
 		top: -28px;
-		left: 0;
-		right: 0;
 		height: 28px;
 		background-color: $LILAC2;
 		clip-path: url(#curvedMaskTop);
 		z-index: -1;
 		transition: background-color $ANIMATION_TIME;
 	}
-
+	
 	&::after {
 		content: '';
 		position: absolute;
 		top: 0;
-		left: 0;
-		right: 0;
-		height: 100%;
-		background-image: radial-gradient(circle at 50% 100%, $D_LILAC2, transparent 80%);
+		bottom: 0;
 		mask-image: url(../../assets/images/pattern.svg);
 		opacity: 0.2;
 		z-index: -1;
 		transition: opacity $ANIMATION_TIME;
+	}
+}
+
+.title,
+.links a {
+	font-family: 'roc-grotesk-wide', sans-serif;
+	font-weight: 600;
+}
+
+.links {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+	padding: 0;
+	list-style: none;
+
+	a {
+		font-size: 15px;
 	}
 }
 
@@ -47,5 +57,80 @@
 
 	&::after {
 		opacity: 0.1;
+	}
+}
+
+@media (max-width: $SCREEN_SM_MAX) {
+	.footer {
+		flex-direction: column;
+		align-items: center;
+		padding: 40px 28px 60px;
+		gap: 28px;
+
+		&::before {
+			left: 0;
+			right: 0;
+		}
+
+		&::after {
+			left: 0;
+			right: 0;
+			background-image: radial-gradient(circle farthest-side at bottom center, $D_LILAC2, transparent 100%);
+		}
+	}
+
+	.links {
+		align-items: center;
+	}
+}
+
+@media (min-width: $SCREEN_MD_MIN) {
+	.footer {
+		justify-content: space-between;
+		padding: 92px $SCREEN_DESKTOP_PADDING 90px;
+		border-right: 50px solid transparent;
+		border-left: 50px solid transparent;
+
+		&::before {
+			left: -50px;
+			right: -50px;
+		}
+	
+		&::after {
+			left: -25vw;
+			right: -25vw;
+			background-image: radial-gradient(ellipse farthest-side at bottom center, $D_LILAC2, transparent 100%);
+		}
+
+		& > div {
+			&:first-child {
+				display: flex;
+				flex-direction: column;
+				align-items: flex-start;
+				gap: 20px;
+			}
+
+			&:not(:first-child) {
+				margin-top: 20px;
+			}
+		}
+	}
+
+	.title {
+		margin-bottom: 20px;
+		font-size: 20px;
+		color: $LILAC;
+	}
+
+	.socials {
+		margin: -10px 0 0 -16px;
+	}
+
+	.links a {
+		transition: opacity $ANIMATION_TIME;
+
+		&:hover {
+			opacity: 0.5;
+		}
 	}
 }
