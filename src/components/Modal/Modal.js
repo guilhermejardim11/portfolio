@@ -9,17 +9,19 @@ const Modal = (props) => {
 			className={styles.modal}
 			isOpen={props.isOpen}
 		>
-			<div className={styles.header}>
-				<span>{props.title}</span>
+			<div className={styles.content}>
+				<div className={styles.header}>
+					<span>{props.title}</span>
 
-				<IconButton
-					className={styles.button}
-					title='Close Modal'
-					onClick={props.onClose}
-				/>
+					<IconButton
+						className={styles.button}
+						title='Close Modal'
+						onClick={props.onClose}
+					/>
+				</div>
+
+				{props.children}
 			</div>
-
-			{props.children}
 		</Overlay>
 	);
 };

@@ -1,23 +1,13 @@
 @import '../../variables.scss';
 
-.modal {
-	padding-top: 150px !important;
-}
-
 .header {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	position: absolute;
-	top: 0;
-	right: 0;
-	left: 0;
-	padding: 47px 16px 14px 28px;
 
 	span {
 		flex: 1;
 		font-family: 'roc-grotesk-wide', sans-serif;
-		font-size: 20px;
 		font-weight: 600;
 	}
 }
@@ -51,6 +41,67 @@
 
 		&::after {
 			transform: rotate(135deg);
+		}
+	}
+}
+
+[data-theme='dark'] {
+	.button i {
+		&::before,
+		&::after {
+			background-color: $WHITE;
+		}
+	}
+}
+
+@media (max-width: $SCREEN_SM_MAX) {
+	.content {
+		height: 100%;
+		width: 100%;
+	}
+
+	.header {
+		margin: 19px -12px 38px 0;
+
+		span {
+			margin-top: 4px;
+			font-size: 20px;
+		}
+	}
+}
+
+@media (min-width: $SCREEN_MD_MIN) {
+	.modal {
+		justify-content: center;
+	}
+
+	.content {
+		padding: 28px 38px 38px;
+		border: $BORDER_WIDTH solid $GRAY;
+		border-radius: 12px;
+		width: 100%;
+		max-width: 600px;
+		background-color: $WHITE;
+		overflow: hidden;
+	}
+
+	.header {
+		margin: 0 -12px 50px 0;
+
+		span {
+			margin-top: 4px;
+			font-size: 28px;
+		}
+	}
+
+	.button {
+		cursor: pointer;
+	}
+
+	[data-theme='dark'] {
+		.content {
+			border-color: $D_INDIGO2;
+			background-color: $D_INDIGO3;
 		}
 	}
 }

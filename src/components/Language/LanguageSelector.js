@@ -57,8 +57,8 @@ const LanguageSelector = (props) => {
 				<LanguageOption
 					key={lang}
 					onClick={() => {
+						if(i18n.resolvedLanguage !== lang) props.onClose();
 						i18n.changeLanguage(lang);
-						props.onClose();
 					}}
 					label={langs[lang].native}
 					flag={langs[lang].flag}

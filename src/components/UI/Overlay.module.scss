@@ -6,17 +6,16 @@
 	align-items: center;
 	padding: 28px;
 	position: fixed;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
+    top: 0;
+    height: 100vh;
+    width: 100vw;
 	z-index: 12;
 	backdrop-filter: blur(5px);
 	background-color: rgba($WHITE2, 0.95);
 	opacity: 0;
 	pointer-events: none;
 	transition: opacity $ANIMATION_TIME, background-color $ANIMATION_TIME;
-
+	
 	&.open {
 		opacity: 1;
 		pointer-events: all;
@@ -26,5 +25,17 @@
 [data-theme='dark'] {
 	.overlay {
 		background-color: rgba($D_INDIGO, 0.97);
+	}
+}
+
+@media (max-width: $SCREEN_SM_MAX) {
+	.overlay {
+		left: 0;
+	}
+}
+
+@media (min-width: $SCREEN_MD_MIN) {
+	.overlay {
+		left: -50px;
 	}
 }
