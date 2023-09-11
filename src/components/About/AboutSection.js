@@ -11,11 +11,7 @@ const AboutSection = () => {
 
 	return (
 		<Section background>
-			<SectionTitle
-				title={t('about')}
-				to='/about'
-				text={t('know_more')}
-			/>
+			<SectionTitle title={t('about')} />
 			<Profile />
 			<Dot style={{ marginTop: '38px', marginBottom: '24px' }} />
 			<Experience />

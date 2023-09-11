@@ -8,10 +8,12 @@ const Language = () => {
 
 	const onOpenLangOverlayHandler = () => {
 		setIsLangOverlayOpen(true);
+		document.body.classList.add('locked');
 	};
 
 	const onCloseLanguageOverlayHandler = () => {
 		setIsLangOverlayOpen(false);
+		document.body.classList.remove('locked');
 	};
 
 	return (

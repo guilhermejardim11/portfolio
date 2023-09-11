@@ -12,10 +12,6 @@ const divVariants = {
 	hidden: {
 		left: 0,
 	},
-	transition: {
-		duration: 0.7,
-		ease: [0.87, 0, 0.13, 1],
-	},
 };
 
 const logoVariants = {
@@ -25,10 +21,6 @@ const logoVariants = {
 	hidden: {
 		x: '-80vw',
 		transitionEnd: { x: '80vw' },
-	},
-	transition: {
-		duration: 0.7,
-		ease: [0.87, 0, 0.13, 1],
 	},
 };
 
