@@ -22,3 +22,9 @@
 	border-color: rgba(#000000, 0.5);
 	background-color: $D_INDIGO2;
 }
+
+@media (min-width: $SCREEN_MD_MIN) {
+	.button {
+		cursor: pointer;
+	}
+}
