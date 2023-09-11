@@ -216,7 +216,7 @@ const SkillsPage = () => {
 		);
 	}
 
-	return <Template title={t('skills')}>{skillOutput}</Template>;
+	return <Template title='skills'>{skillOutput}</Template>;
 };
 
 export default SkillsPage;

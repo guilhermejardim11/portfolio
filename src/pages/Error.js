@@ -118,7 +118,7 @@ const ErrorPage = ({ status = null }) => {
 
 	return (
 		<>
-			<PageTitle title={'Error'} />
+			<PageTitle title='error' />
 
 			<Banner className={styles.banner}>
 				<h1>{emoji}</h1>

@@ -13,7 +13,7 @@ const ProjectsPage = () => {
 	const deviceContext = useContext(DeviceContext);
 
 	return (
-		<Template title={t('projects')}>
+		<Template title='projects'>
 			<Section>
 				{deviceContext.isDesktop ? (
 					<Gallery

@@ -7,6 +7,10 @@
 .thumbnail {
 	border-bottom: $BORDER_WIDTH solid $WHITE2;
 	transition: border-color $ANIMATION_TIME;
+
+	img {
+		width: 100%;
+	}
 }
 
 .content {

@@ -3,6 +3,7 @@ import { AnimatePresence, motion } from 'framer-motion';
 import { MenuContext } from '../../context/MenuContext';
 
 import styles from './HeaderTitle.module.scss';
+import { useTranslation } from 'react-i18next';
 
 const titleVariants = {
 	initial: {
@@ -30,6 +31,7 @@ const titleVariants = {
 };
 
 const HeaderTitle = () => {
+	const [t] = useTranslation();
 	const menuContext = useContext(MenuContext);
 
 	return (
@@ -47,7 +49,7 @@ const HeaderTitle = () => {
 						exit='exit'
 						key={menuContext.currentPageName}
 					>
-						{menuContext.currentPageName}
+						{t(menuContext.currentPageName)}
 					</motion.span>
 				)}
 			</motion.h1>
