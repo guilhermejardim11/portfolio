@@ -36,6 +36,10 @@
 	font-weight: 600;
 }
 
+.title {
+	color: $LILAC;
+}
+
 .links {
 	display: flex;
 	flex-direction: column;
@@ -48,15 +52,21 @@
 	}
 }
 
-[data-theme='dark'] .footer {
-	background-color: $D_INDIGO2;
-
-	&::before {
+[data-theme='dark'] {
+	.footer {
 		background-color: $D_INDIGO2;
+	
+		&::before {
+			background-color: $D_INDIGO2;
+		}
+	
+		&::after {
+			opacity: 0.1;
+		}
 	}
 
-	&::after {
-		opacity: 0.1;
+	.title {
+		color: $D_LILAC;
 	}
 }
 
@@ -119,7 +129,6 @@
 	.title {
 		margin-bottom: 20px;
 		font-size: 20px;
-		color: $LILAC;
 	}
 
 	.socials {
