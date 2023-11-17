@@ -31,7 +31,7 @@ const HomeBanner = () => {
 			</h2>
 
 			<Blob
-				color={themeContext.isDarkMode ? '#9ea5f6' : '#9ea5f6'}
+				color={themeContext.isDarkMode ? '#212440' : '#9ea5f6'}
 				offsetY={100}
 			/>
 
