@@ -31,22 +31,8 @@ const HomeBanner = () => {
 			</h2>
 
 			<Blob
-				color={themeContext.isDarkMode ? '#BC2F5B' : '#FF226C'}
-				offsetX={-260}
-				offsetY={-400}
-				opacity={0.2}
-			/>
-			<Blob
-				color={themeContext.isDarkMode ? '#353761' : '#6C7FDC'}
-				offsetX={370}
+				color={themeContext.isDarkMode ? '#9ea5f6' : '#9ea5f6'}
 				offsetY={100}
-				opacity={0.2}
-			/>
-			<Blob
-				color={themeContext.isDarkMode ? '#222441' : '#BDC7F5'}
-				offsetX={-280}
-				offsetY={250}
-				opacity={0.3}
 			/>
 
 			{deviceContext.isDesktop && <Socials className={styles.socials} />}

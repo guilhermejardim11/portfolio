@@ -3,10 +3,10 @@
 .blob {
 	border-radius: 50%;
 	position: absolute;
-	top: calc(50% - 465px);
-	left: calc(50% - 465px);
-	height: 930px;
-	width: 930px;
+	top: calc(80vh - 50vw);
+	right: -40vw;
+	height: 100vw;
+	width: 100vw;
 	z-index: -1;
 	transition: background-color $ANIMATION_TIME;
 }
